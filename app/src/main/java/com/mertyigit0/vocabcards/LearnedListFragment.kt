@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class WordListFragment : Fragment() {
+
+class LearnedListFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
+
         }
     }
 
@@ -21,8 +23,8 @@ class WordListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_word_list, container, false)
+        return inflater.inflate(R.layout.fragment_learned_list, container, false)
     }
 
-  
+
 }
