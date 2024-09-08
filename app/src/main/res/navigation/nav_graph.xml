@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wordListFragment">
 
+    <fragment
+        android:id="@+id/learnedListFragment"
+        android:name="com.mertyigit0.vocabcards.LearnedListFragment"
+        android:label="fragment_learned_list"
+        tools:layout="@layout/fragment_learned_list" />
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.mertyigit0.vocabcards.WordListFragment"
+        android:label="fragment_word_list"
+        tools:layout="@layout/fragment_word_list" />
 </navigation>
