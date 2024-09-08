@@ -29,11 +29,16 @@ class WordListFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(WordListViewModel::class.java)
 
-        // RecyclerView setup
-        viewModel.wordList.observe(viewLifecycleOwner, { wordList ->
+        // RecyclerView ve SwipeRefreshLayout setup
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
             adapter = WordAdapter(wordList)
-            binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
             binding.recyclerView.adapter = adapter
-        })
+        }
+
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            viewModel.shuffleWords()
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
     }
 }
