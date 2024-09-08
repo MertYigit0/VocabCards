@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <!-- Word List Fragment Menu Item -->
     <item
-        android:id="@+id/nav_word_list"
+        android:id="@+id/wordListFragment"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/words"/>
+        android:title="@string/words" />
 
     <!-- Learned List Fragment Menu Item -->
     <item
-        android:id="@+id/nav_learned_list"
+        android:id="@+id/learnedListFragment"
         android:icon="@drawable/ic_launcher_background"
-         android:title="@string/learned"/>
+        android:title="@string/learned" />
+
 </menu>
