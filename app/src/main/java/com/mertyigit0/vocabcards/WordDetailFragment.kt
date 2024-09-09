@@ -1,5 +1,6 @@
 package com.mertyigit0.vocabcards
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,12 +11,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
+import java.io.IOException
+
 class WordDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentWordDetailBinding
     private val args: WordDetailFragmentArgs by navArgs()
     private lateinit var word: Word
     private lateinit var viewModel: WordDetailViewModel
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +60,16 @@ class WordDetailFragment : Fragment() {
                         def.definition
                     }
                 }
+
+                // Set up the button to play audio
+                val audioUrl = it.phonetics.firstOrNull()?.audio
+                if (audioUrl != null) {
+                    binding.btnPlayAudio.setOnClickListener {
+                        playAudio(audioUrl)
+                    }
+                } else {
+                    binding.btnPlayAudio.visibility = View.GONE
+                }
             }
         }
 
@@ -74,6 +88,24 @@ class WordDetailFragment : Fragment() {
     private fun updateButton(isLearned: Boolean) {
         binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
     }
+
+    private fun playAudio(url: String) {
+        mediaPlayer?.release() // Önceki örneği serbest bırak
+        mediaPlayer = MediaPlayer().apply {
+            try {
+                setDataSource(url) // URL'yi ayarla
+                prepare() // Hazırla
+                start() // Başlat
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // Hata durumunda kullanıcıya bilgi verebilirsiniz
+            }
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer?.release() // Release media player when the fragment is destroyed
+    }
 }
-
-
