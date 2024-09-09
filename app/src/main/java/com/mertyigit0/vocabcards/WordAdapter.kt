@@ -15,6 +15,7 @@ class WordAdapter(
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(word: Word) {
             itemView.findViewById<TextView>(R.id.tvEnglishWord).text = word.english
+            itemView.findViewById<TextView>(R.id.tvTurkishWord).text = word.turkish
             itemView.setOnClickListener { onItemClick(word) }
         }
     }

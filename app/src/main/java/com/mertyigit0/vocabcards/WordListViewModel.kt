@@ -7,53 +7,23 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+
 class WordListViewModel(application: Application) : AndroidViewModel(application) {
 
+    private val repository = WordRepository(application)
     private val _wordList = MutableLiveData<List<Word>>()
     val wordList: LiveData<List<Word>> get() = _wordList
 
-    private val allWords = listOf(
-        Word("Apple", "Elma"),
-        Word("Book", "Kitap"),
-        Word("Car", "Araba"),
-        Word("Dog", "Köpek")
-
-    )
-
     init {
-        loadWords()
-    }
-
-    private fun loadWords() {
-        // Öğrenilmiş kelimeleri al
-        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        _wordList.value = getShuffledWords(learnedWords)
-    }
-
-    private fun getShuffledWords(learnedWords: Set<String>): List<Word> {
-        val remainingWords = allWords.filter { !learnedWords.contains(it.english) }
-        return remainingWords.shuffled()  // Öğrenilmemiş kelimeleri rastgele sırala
+        updateWordList()
     }
 
     fun shuffleWords() {
-        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        _wordList.value = getShuffledWords(learnedWords)
-    }
-
-    fun removeWord(word: Word) {
-        val updatedList = _wordList.value?.filter { it != word }
-        _wordList.value = updatedList
-    }
-
-    fun addWord(word: Word) {
-        val updatedList = _wordList.value?.toMutableList() ?: mutableListOf()
-        updatedList.add(word)
-        _wordList.value = updatedList
+        _wordList.value = repository.getRemainingWords().shuffled()
     }
 
     fun updateWordList() {
-        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        _wordList.value = getShuffledWords(learnedWords)
+        _wordList.value = repository.getRemainingWords().shuffled()
     }
 }
 
