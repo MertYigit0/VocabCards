@@ -27,4 +27,28 @@
         android:layout_height="wrap_content"
         android:text="Learned" />
 
+
+    <TextView
+        android:id="@+id/tvWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="Learned"/>
+
+    <TextView
+        android:id="@+id/tvPhonetic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:text="Learned"/>
+
+    <TextView
+        android:id="@+id/tvDefinitions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Learned"/>
+
 </LinearLayout>

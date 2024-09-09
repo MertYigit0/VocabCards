@@ -37,9 +37,9 @@ class WordListFragment : Fragment() {
         }
         binding.recyclerView.adapter = adapter
 
-        viewModel.wordList.observe(viewLifecycleOwner, { wordList ->
+        viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
             adapter.updateData(wordList)
-        })
+        }
 
         binding.swipeRefreshLayout.setOnRefreshListener {
             viewModel.shuffleWords()

@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
-
 class WordDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentWordDetailBinding
@@ -43,6 +43,22 @@ class WordDetailFragment : Fragment() {
         // Check if the word is learned
         viewModel.checkIfWordIsLearned(word)
 
+        // Trigger fetching word details from the API
+        viewModel.fetchWordDetails(word.english)
+
+        // Observe word details from the API
+        viewModel.wordDetail.observe(viewLifecycleOwner) { wordResponse ->
+            wordResponse?.let {
+                binding.tvWord.text = it.word
+                binding.tvPhonetic.text = it.phonetic
+                binding.tvDefinitions.text = it.meanings.joinToString("\n") { meaning ->
+                    meaning.partOfSpeech + ": " + meaning.definitions.joinToString(", ") { def ->
+                        def.definition
+                    }
+                }
+            }
+        }
+
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
             // Navigate based on updated status
@@ -59,3 +75,5 @@ class WordDetailFragment : Fragment() {
         binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
     }
 }
+
+
