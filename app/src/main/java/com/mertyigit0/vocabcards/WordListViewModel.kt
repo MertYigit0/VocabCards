@@ -1,85 +1,61 @@
 package com.mertyigit0.vocabcards
 
+import android.app.Application
+import android.content.Context
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class WordListViewModel : ViewModel() {
+class WordListViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _wordList = MutableLiveData<List<Word>>()
     val wordList: LiveData<List<Word>> get() = _wordList
+
+    private val allWords = listOf(
+        Word("Apple", "Elma"),
+        Word("Book", "Kitap"),
+        Word("Car", "Araba"),
+        Word("Dog", "Köpek")
+    )
 
     init {
         loadWords()
     }
 
     private fun loadWords() {
-        _wordList.value = getShuffledWords()
+        // Öğrenilmiş kelimeleri almak
+        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
+        // Güncellenmiş listeyi ayarla
+        _wordList.value = getShuffledWords(learnedWords)
     }
 
-    private fun getShuffledWords(): List<Word> {
-        val words = listOf(
-            Word("Apple", "Elma"),
-            Word("Book", "Kitap"),
-            Word("Car", "Araba"),
-            Word("Dog", "Köpek"),
-            Word("House", "Ev"),
-            Word("Table", "Masa"),
-            Word("Chair", "Koltuk"),
-            Word("Phone", "Telefon"),
-            Word("Pen", "Kalem"),
-            Word("Computer", "Bilgisayar"),
-            Word("Glass", "Bardak"),
-            Word("Window", "Pencere"),
-            Word("Door", "Kapı"),
-            Word("Street", "Sokak"),
-            Word("City", "Şehir"),
-            Word("Country", "Ülke"),
-            Word("Map", "Harita"),
-            Word("Bag", "Çanta"),
-            Word("Shoes", "Ayakkabı"),
-            Word("Shirt", "Gömlek"),
-            Word("Pants", "Pantolon"),
-            Word("Jacket", "Ceket"),
-            Word("Hat", "Şapka"),
-            Word("Bed", "Yatak"),
-            Word("Lamp", "Lamba"),
-            Word("Clock", "Saat"),
-            Word("Mirror", "Ayna"),
-            Word("Fan", "Vantilatör"),
-            Word("Refrigerator", "Buzdolabı"),
-            Word("Washing Machine", "Çamaşır Makinesi"),
-            Word("Oven", "Fırın"),
-            Word("Stove", "Ocak"),
-            Word("Sink", "Lavabo"),
-            Word("Toothbrush", "Diş Fırçası"),
-            Word("Toothpaste", "Diş Macunu"),
-            Word("Soap", "Sabun"),
-            Word("Towel", "Havlu"),
-            Word("Shampoo", "Şampuan"),
-            Word("Conditioner", "Saç Kremi"),
-            Word("Bread", "Ekmek"),
-            Word("Butter", "Tereyağı"),
-            Word("Milk", "Süt"),
-            Word("Cheese", "Peynir"),
-            Word("Egg", "Yumurta"),
-            Word("Chicken", "Tavuk"),
-            Word("Fish", "Balık"),
-            Word("Meat", "Et"),
-            Word("Rice", "Pirinç"),
-            Word("Pasta", "Makarna"),
-            Word("Fruit", "Meyve"),
-            Word("Vegetable", "Sebze"),
-            Word("Juice", "Meyve Suyu"),
-            Word("Coffee", "Kahve"),
-            Word("Tea", "Çay")
-        )
-        return words.shuffled()  // Kelimeleri rastgele sırala
+    private fun getShuffledWords(learnedWords: Set<String>): List<Word> {
+        val remainingWords = allWords.filter { !learnedWords.contains(it.english) }
+        return remainingWords.shuffled()  // Öğrenilmemiş kelimeleri rastgele sırala
     }
 
-
-    // Rastgele sıralama fonksiyonu
     fun shuffleWords() {
-        _wordList.value = getShuffledWords()
+        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
+        _wordList.value = getShuffledWords(learnedWords)
+    }
+
+    fun removeWord(word: Word) {
+        val updatedList = _wordList.value?.filter { it != word }
+        _wordList.value = updatedList
+    }
+
+    fun addWord(word: Word) {
+        val updatedList = _wordList.value?.toMutableList() ?: mutableListOf()
+        updatedList.add(word)
+        _wordList.value = updatedList
+    }
+
+    fun updateWordList() {
+        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
+        _wordList.value = getShuffledWords(learnedWords)
     }
 }
+
+
+

@@ -1,32 +1,37 @@
 package com.mertyigit0.vocabcards
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mertyigit0.vocabcards.databinding.ItemWordBinding
 
 class WordAdapter(
-    private val wordList: List<Word>,
-    private val onItemClick: (Word) -> Unit // Tıklama olayını işlemek için bir lambda fonksiyonu
+    private var wordList: List<Word>,
+    private val onItemClick: (Word) -> Unit
 ) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
-    class WordViewHolder(val binding: ItemWordBinding) : RecyclerView.ViewHolder(binding.root)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
-        val binding = ItemWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return WordViewHolder(binding)
-    }
-
-    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        val word = wordList[position]
-        holder.binding.tvEnglishWord.text = word.english
-        holder.binding.tvTurkishWord.text = word.turkish
-
-        // Tıklama olayını ayarla
-        holder.itemView.setOnClickListener {
-            onItemClick(word)
+    inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(word: Word) {
+            itemView.findViewById<TextView>(R.id.tvEnglishWord).text = word.english
+            itemView.setOnClickListener { onItemClick(word) }
         }
     }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_word, parent, false)
+        return WordViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
+        holder.bind(wordList[position])
+    }
+
     override fun getItemCount(): Int = wordList.size
+
+    fun updateData(newWordList: List<Word>) {
+        wordList = newWordList
+        notifyDataSetChanged()
+    }
 }

@@ -9,7 +9,14 @@
         android:id="@+id/learnedListFragment"
         android:name="com.mertyigit0.vocabcards.LearnedListFragment"
         android:label="fragment_learned_list"
-        tools:layout="@layout/fragment_learned_list" />
+        tools:layout="@layout/fragment_learned_list" >
+        <action
+            android:id="@+id/action_learnedListFragment_to_wordDetailFragment"
+            app:destination="@id/wordDetailFragment" />
+        <action
+            android:id="@+id/action_learnedListFragment_to_wordDetailFragment2"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/wordListFragment"
@@ -33,6 +40,12 @@
             android:name="word"
             app:argType="com.mertyigit0.vocabcards.Word"
             app:nullable="false" />
+        <action
+            android:id="@+id/action_wordDetailFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+        <action
+            android:id="@+id/action_wordDetailFragment_to_learnedListFragment"
+            app:destination="@id/learnedListFragment" />
     </fragment>
 
 </navigation>
