@@ -54,7 +54,10 @@ dependencies {
 
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+    implementation(libs.androidx.swiperefreshlayout)
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
 
 
