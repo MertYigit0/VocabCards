@@ -24,9 +24,8 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     }
 
     private fun loadWords() {
-        // Öğrenilmiş kelimeleri almak
+        // Öğrenilmiş kelimeleri al
         val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        // Güncellenmiş listeyi ayarla
         _wordList.value = getShuffledWords(learnedWords)
     }
 
@@ -56,6 +55,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         _wordList.value = getShuffledWords(learnedWords)
     }
 }
+
 
 
 
