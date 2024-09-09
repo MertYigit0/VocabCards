@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mertyigit0.vocabcards.databinding.FragmentWordListBinding
 
@@ -31,8 +32,20 @@ class WordListFragment : Fragment() {
 
         // RecyclerView ve SwipeRefreshLayout setup
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        adapter = WordAdapter(viewModel.wordList.value ?: emptyList()) { word ->
+            // Tıklama olayını işle
+            val action = WordListFragmentDirections.actionWordListFragmentToWordDetailFragment(word)
+            findNavController().navigate(action)
+        }
+        binding.recyclerView.adapter = adapter
+
         viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
-            adapter = WordAdapter(wordList)
+            adapter = WordAdapter(wordList) { word ->
+                val action =
+                    WordListFragmentDirections.actionWordListFragmentToWordDetailFragment(word)
+                findNavController().navigate(action)
+            }
             binding.recyclerView.adapter = adapter
         }
 

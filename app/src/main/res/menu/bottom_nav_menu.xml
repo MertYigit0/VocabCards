@@ -5,13 +5,13 @@
     <!-- Word List Fragment Menu Item -->
     <item
         android:id="@+id/wordListFragment"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/baseline_view_list_24"
         android:title="@string/words" />
 
     <!-- Learned List Fragment Menu Item -->
     <item
         android:id="@+id/learnedListFragment"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/baseline_backpack_24"
         android:title="@string/learned" />
 
 </menu>
