@@ -1,21 +1,22 @@
 package com.mertyigit0.vocabcards
 
 import android.app.Application
+import android.media.MediaPlayer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.IOException
 
 class WordDetailViewModel(application: Application) : AndroidViewModel(application) {
-
     private val _isLearned = MutableLiveData<Boolean>()
     val isLearned: LiveData<Boolean> get() = _isLearned
     val wordDetail = MutableLiveData<WordResponse?>()
 
-
     private val prefsHelper = PrefsHelper
+    private var mediaPlayer: MediaPlayer? = null
 
     fun checkIfWordIsLearned(word: Word) {
         val learnedWords = prefsHelper.getLearnedWords(getApplication())
@@ -29,7 +30,6 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
         } else {
             prefsHelper.addLearnedWord(getApplication(), word)
         }
-        // Update the learned status after toggling
         checkIfWordIsLearned(word)
     }
 
@@ -48,5 +48,23 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
                 wordDetail.value = null
             }
         })
+    }
+
+    fun playAudio(url: String) {
+        mediaPlayer?.release() // Önceki örneği serbest bırak
+        mediaPlayer = MediaPlayer().apply {
+            try {
+                setDataSource(url) // URL'yi ayarla
+                prepare() // Hazırla
+                start() // Başlat
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        mediaPlayer?.release() // Fragment yok edilirken media player'ı serbest bırak
     }
 }

@@ -65,7 +65,7 @@ class WordDetailFragment : Fragment() {
                 val audioUrl = it.phonetics.firstOrNull()?.audio
                 if (audioUrl != null) {
                     binding.btnPlayAudio.setOnClickListener {
-                        playAudio(audioUrl)
+                        viewModel.playAudio(audioUrl)
                     }
                 } else {
                     binding.btnPlayAudio.visibility = View.GONE
@@ -88,21 +88,6 @@ class WordDetailFragment : Fragment() {
     private fun updateButton(isLearned: Boolean) {
         binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
     }
-
-    private fun playAudio(url: String) {
-        mediaPlayer?.release() // Önceki örneği serbest bırak
-        mediaPlayer = MediaPlayer().apply {
-            try {
-                setDataSource(url) // URL'yi ayarla
-                prepare() // Hazırla
-                start() // Başlat
-            } catch (e: IOException) {
-                e.printStackTrace()
-                // Hata durumunda kullanıcıya bilgi verebilirsiniz
-            }
-        }
-    }
-
 
     override fun onDestroy() {
         super.onDestroy()
