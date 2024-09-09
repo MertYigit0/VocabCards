@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mertyigit0.vocabcards.databinding.FragmentWordListBinding
 
@@ -29,8 +30,7 @@ class WordListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(WordListViewModel::class.java)
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
+        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = WordAdapter(viewModel.wordList.value ?: emptyList()) { word ->
             val action = WordListFragmentDirections.actionWordListFragmentToWordDetailFragment(word)
             findNavController().navigate(action)

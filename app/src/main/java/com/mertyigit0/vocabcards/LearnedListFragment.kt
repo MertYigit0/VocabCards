@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mertyigit0.vocabcards.databinding.FragmentLearnedListBinding
 
@@ -31,7 +32,7 @@ class LearnedListFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(LearnedListViewModel::class.java)
 
         // Initialize RecyclerView
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = WordAdapter(emptyList()) { word ->
             val action = LearnedListFragmentDirections.actionLearnedListFragmentToWordDetailFragment(word)
             findNavController().navigate(action)
