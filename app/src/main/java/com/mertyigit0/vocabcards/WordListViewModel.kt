@@ -17,6 +17,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         Word("Book", "Kitap"),
         Word("Car", "Araba"),
         Word("Dog", "Köpek")
+
     )
 
     init {
