@@ -5,16 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
-
 
 class WordDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentWordDetailBinding
     private val args: WordDetailFragmentArgs by navArgs()
     private lateinit var word: Word
+    private lateinit var viewModel: WordDetailViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,35 +28,34 @@ class WordDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel = ViewModelProvider(this).get(WordDetailViewModel::class.java)
         word = args.word
+
+        // Setup UI
         binding.tvDetailEnglishWord.text = word.english
         binding.tvDetailTurkishWord.text = word.turkish
 
+        // Observe learned status
+        viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
+            updateButton(isLearned)
+        }
+
         // Check if the word is learned
-        val isLearned = PrefsHelper.getLearnedWords(requireContext()).contains(word.english)
-        updateButton(isLearned)
-
-
+        viewModel.checkIfWordIsLearned(word)
 
         binding.learnedButton.setOnClickListener {
-            val isCurrentlyLearned = PrefsHelper.getLearnedWords(requireContext()).contains(word.english)
-            if (isCurrentlyLearned) {
-                PrefsHelper.removeLearnedWord(requireContext(), word)
-                // Notify WordListFragment to add word back to the list
-                findNavController().navigate(WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment())
+            viewModel.toggleWordLearningStatus(word)
+            // Navigate based on updated status
+            val action = if (viewModel.isLearned.value == true) {
+                WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
             } else {
-                PrefsHelper.addLearnedWord(requireContext(), word)
-                // Notify LearnedListFragment to update the list
-                findNavController().navigate(WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment())
+                WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
             }
+            findNavController().navigate(action)
         }
     }
 
     private fun updateButton(isLearned: Boolean) {
-        if (isLearned) {
-            binding.learnedButton.text = "Unlearn"
-        } else {
-            binding.learnedButton.text = "Learn"
-        }
+        binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
     }
 }

@@ -39,9 +39,9 @@ class LearnedListFragment : Fragment() {
         binding.recyclerView.adapter = adapter
 
         // Observe data changes
-        viewModel.learnedWords.observe(viewLifecycleOwner, { words ->
+        viewModel.learnedWords.observe(viewLifecycleOwner) { words ->
             adapter.updateData(words)
-        })
+        }
 
         // Update data when fragment resumes
         viewModel.updateLearnedWords()
