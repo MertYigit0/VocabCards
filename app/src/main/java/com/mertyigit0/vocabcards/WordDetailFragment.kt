@@ -35,6 +35,10 @@ class WordDetailFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(WordDetailViewModel::class.java)
         word = args.word
 
+        // Show ProgressBar and hide content initially
+        binding.loadingContainer.visibility = View.VISIBLE
+        binding.contentContainer.visibility = View.GONE
+
         // Setup UI
         binding.tvDetailEnglishWord.text = word.english
         binding.tvDetailTurkishWord.text = word.turkish
@@ -53,6 +57,10 @@ class WordDetailFragment : Fragment() {
         // Observe word details from the API
         viewModel.wordDetail.observe(viewLifecycleOwner) { wordResponse ->
             wordResponse?.let {
+                // Hide ProgressBar and show content when data is loaded
+                binding.loadingContainer.visibility = View.GONE
+                binding.contentContainer.visibility = View.VISIBLE
+
                 binding.tvWord.text = it.word
                 binding.tvPhonetic.text = it.phonetic
                 binding.tvDefinitions.text = it.meanings.joinToString("\n") { meaning ->
@@ -88,9 +96,18 @@ class WordDetailFragment : Fragment() {
     private fun updateButton(isLearned: Boolean) {
         binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
     }
-
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer?.release() // Release media player when the fragment is destroyed
     }
 }
+
+
+
+
+
+
+
+
+
+
