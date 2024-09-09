@@ -6,17 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.airbnb.lottie.LottieAnimationView
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
 import java.io.IOException
 
 class WordDetailFragment : Fragment() {
 
+
     private lateinit var binding: FragmentWordDetailBinding
+
     private val args: WordDetailFragmentArgs by navArgs()
     private lateinit var word: Word
     private lateinit var viewModel: WordDetailViewModel
@@ -93,6 +97,18 @@ class WordDetailFragment : Fragment() {
                 WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
             }
             findNavController().navigate(action)
+        }
+
+
+
+        // ViewBinding veya findViewById ile Lottie ve Button'u bağlayın
+        val playButton: Button = binding.btnPlayAudio
+        val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
+
+
+        // Play button'a tıklandığında animasyonu başlat
+        playButton.setOnClickListener {
+            lottiePlayAnimation.playAnimation()
         }
     }
 

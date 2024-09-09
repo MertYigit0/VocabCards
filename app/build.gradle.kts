@@ -59,6 +59,6 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
 
-
+    implementation (libs.lottie)
 
 }
