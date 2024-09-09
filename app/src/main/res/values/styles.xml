@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Set status bar color -->
+        <item name="android:statusBarColor">@color/orange</item>
+        <!-- Set action bar color -->
+        <item name="colorPrimaryDark">@color/lightorange</item>
+    </style>
+</resources>
