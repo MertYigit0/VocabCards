@@ -2,6 +2,8 @@ package com.mertyigit0.vocabcards
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +27,9 @@ class WordDetailFragment : Fragment() {
     private lateinit var word: Word
     private lateinit var viewModel: WordDetailViewModel
     private var mediaPlayer: MediaPlayer? = null
+
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,7 +74,7 @@ class WordDetailFragment : Fragment() {
                 binding.loadingContainer.visibility = View.GONE
                 binding.contentContainer.visibility = View.VISIBLE
 
-                binding.tvWord.text = it.word
+                // Set up the TextViews
                 binding.tvPhonetic.text = it.phonetic
                 binding.tvDefinitions.text = it.meanings.joinToString("\n") { meaning ->
                     meaning.partOfSpeech + ": " + meaning.definitions.joinToString(", ") { def ->
@@ -78,16 +83,27 @@ class WordDetailFragment : Fragment() {
                 }
 
                 // Set up the button to play audio
-                val audioUrl = it.phonetics.firstOrNull()?.audio
-                if (audioUrl != null) {
-                    binding.btnPlayAudio.setOnClickListener {
-                        viewModel.playAudio(audioUrl)
-                    }
-                } else {
-                    binding.btnPlayAudio.visibility = View.GONE
+                val audioUrl = it.phonetics.firstOrNull()?.audio ?: "https://api.dictionaryapi.dev/media/pronunciations/en/dog-uk.mp3"
+                binding.btnPlayAudio.setOnClickListener {
+                    viewModel.playAudio(audioUrl)
+
+                    // ViewBinding veya findViewById ile Lottie ve Button'u bağlayın
+                    val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
+
+                    lottiePlayAnimation.playAnimation()
+
+                    // 1.5 saniye sonra animasyonu durdur
+                    Handler().postDelayed({
+                        lottiePlayAnimation.pauseAnimation() // veya lottiePlayAnimation.cancelAnimation()
+                    }, 1500) // 1500 ms = 1.5 saniye
                 }
+
+                // Eğer audioUrl null ise butonu göster ya da sakla
+                binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+                binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
             }
         }
+
 
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
@@ -102,16 +118,7 @@ class WordDetailFragment : Fragment() {
 
 
 
-        // ViewBinding veya findViewById ile Lottie ve Button'u bağlayın
-        val playButton: Button = binding.btnPlayAudio
-        val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
 
-
-        // Play button'a tıklandığında animasyonu başlat
-        playButton.setOnClickListener {
-            lottiePlayAnimation.playAnimation()
-
-        }
     }
 
     private fun updateButton(isLearned: Boolean) {
