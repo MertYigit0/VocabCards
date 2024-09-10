@@ -9,10 +9,12 @@
         android:id="@+id/learnedListFragment"
         android:name="com.mertyigit0.vocabcards.LearnedListFragment"
         android:label="fragment_learned_list"
-        tools:layout="@layout/fragment_learned_list" >
+        tools:layout="@layout/fragment_learned_list">
         <action
             android:id="@+id/action_learnedListFragment_to_wordDetailFragment"
-            app:destination="@id/wordDetailFragment" />
+            app:destination="@id/wordDetailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down" />
         <action
             android:id="@+id/action_learnedListFragment_to_wordDetailFragment2"
             app:destination="@id/wordDetailFragment" />
@@ -24,7 +26,9 @@
         android:label="Word List">
         <action
             android:id="@+id/action_wordListFragment_to_wordDetailFragment"
-            app:destination="@id/wordDetailFragment">
+            app:destination="@id/wordDetailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down">
             <argument
                 android:name="word"
                 app:argType="com.mertyigit0.vocabcards.Word"
@@ -42,10 +46,14 @@
             app:nullable="false" />
         <action
             android:id="@+id/action_wordDetailFragment_to_wordListFragment"
-            app:destination="@id/wordListFragment" />
+            app:destination="@id/wordListFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up" />
         <action
             android:id="@+id/action_wordDetailFragment_to_learnedListFragment"
-            app:destination="@id/learnedListFragment" />
+            app:destination="@id/learnedListFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up" />
     </fragment>
 
 </navigation>

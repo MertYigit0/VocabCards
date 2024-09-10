@@ -37,6 +37,7 @@ class WordDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         (activity as AppCompatActivity).supportActionBar?.title = "Word Details"
 
         viewModel = ViewModelProvider(this).get(WordDetailViewModel::class.java)
@@ -109,6 +110,7 @@ class WordDetailFragment : Fragment() {
         // Play button'a tıklandığında animasyonu başlat
         playButton.setOnClickListener {
             lottiePlayAnimation.playAnimation()
+
         }
     }
 
