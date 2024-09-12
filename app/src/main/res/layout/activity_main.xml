@@ -11,7 +11,19 @@
         android:layout_height="wrap_content"
         android:background="@color/lightorange"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- ImageView for the logo -->
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter"
+        android:layout_gravity="start|center" />
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <!-- NavHostFragment -->
     <androidx.fragment.app.FragmentContainerView
