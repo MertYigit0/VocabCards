@@ -12,6 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -23,13 +25,15 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <!-- Emoji instead of Turkish Word -->
         <TextView
-            android:id="@+id/tvTurkishWord"
+            android:id="@+id/tvEmoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/turkish_word"
-            android:textSize="16sp"
-            android:paddingTop="8dp"/>
+            android:text="😊"
+        android:textSize="24sp"
+        android:paddingTop="8dp"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
