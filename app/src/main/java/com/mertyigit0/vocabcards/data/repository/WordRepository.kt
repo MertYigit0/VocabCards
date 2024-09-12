@@ -1,6 +1,8 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.data.repository
 
 import android.content.Context
+import com.mertyigit0.vocabcards.data.local.PrefsHelper
+import com.mertyigit0.vocabcards.data.model.Word
 
 class WordRepository(private val context: Context) {
 

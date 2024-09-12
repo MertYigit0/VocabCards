@@ -1,10 +1,14 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.worddetail
 
 import android.app.Application
 import android.media.MediaPlayer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.mertyigit0.vocabcards.data.local.PrefsHelper
+import com.mertyigit0.vocabcards.data.network.RetrofitInstance
+import com.mertyigit0.vocabcards.data.model.Word
+import com.mertyigit0.vocabcards.data.model.WordResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,16 +23,16 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
     private var mediaPlayer: MediaPlayer? = null
 
     fun checkIfWordIsLearned(word: Word) {
-        val learnedWords = prefsHelper.getLearnedWords(getApplication())
+        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
         _isLearned.value = learnedWords.contains(word.english)
     }
 
     fun toggleWordLearningStatus(word: Word) {
-        val learnedWords = prefsHelper.getLearnedWords(getApplication())
+        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
         if (learnedWords.contains(word.english)) {
-            prefsHelper.removeLearnedWord(getApplication(), word)
+            PrefsHelper.removeLearnedWord(getApplication(), word)
         } else {
-            prefsHelper.addLearnedWord(getApplication(), word)
+            PrefsHelper.addLearnedWord(getApplication(), word)
         }
         checkIfWordIsLearned(word)
     }

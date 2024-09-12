@@ -1,4 +1,4 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.wordlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

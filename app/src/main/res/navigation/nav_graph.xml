@@ -5,24 +5,30 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/wordListFragment">
 
+    <!-- LearnedListFragment -->
     <fragment
         android:id="@+id/learnedListFragment"
-        android:name="com.mertyigit0.vocabcards.LearnedListFragment"
+        android:name="com.mertyigit0.vocabcards.ui.learnedlist.LearnedListFragment"
         android:label="fragment_learned_list"
         tools:layout="@layout/fragment_learned_list">
+        <!-- Tek bir action tanımlandı -->
         <action
             android:id="@+id/action_learnedListFragment_to_wordDetailFragment"
             app:destination="@id/wordDetailFragment"
             app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down" />
-        <action
-            android:id="@+id/action_learnedListFragment_to_wordDetailFragment2"
-            app:destination="@id/wordDetailFragment" />
+            app:exitAnim="@anim/slide_down">
+            <!-- Eğer argüman gerekiyorsa burada tanımlayın -->
+            <argument
+                android:name="word"
+                app:argType="com.mertyigit0.vocabcards.data.model.Word"
+                app:nullable="false" />
+        </action>
     </fragment>
 
+    <!-- WordListFragment -->
     <fragment
         android:id="@+id/wordListFragment"
-        android:name="com.mertyigit0.vocabcards.WordListFragment"
+        android:name="com.mertyigit0.vocabcards.ui.wordlist.WordListFragment"
         android:label="Word List">
         <action
             android:id="@+id/action_wordListFragment_to_wordDetailFragment"
@@ -31,18 +37,19 @@
             app:exitAnim="@anim/slide_down">
             <argument
                 android:name="word"
-                app:argType="com.mertyigit0.vocabcards.Word"
+                app:argType="com.mertyigit0.vocabcards.data.model.Word"
                 app:nullable="false" />
         </action>
     </fragment>
 
+    <!-- WordDetailFragment -->
     <fragment
         android:id="@+id/wordDetailFragment"
-        android:name="com.mertyigit0.vocabcards.WordDetailFragment"
+        android:name="com.mertyigit0.vocabcards.ui.worddetail.WordDetailFragment"
         android:label="Word Detail">
         <argument
             android:name="word"
-            app:argType="com.mertyigit0.vocabcards.Word"
+            app:argType="com.mertyigit0.vocabcards.data.model.Word"
             app:nullable="false" />
         <action
             android:id="@+id/action_wordDetailFragment_to_wordListFragment"

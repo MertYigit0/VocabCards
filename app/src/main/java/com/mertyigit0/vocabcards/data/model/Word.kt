@@ -1,4 +1,4 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,7 +1,8 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.data.local
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.mertyigit0.vocabcards.data.model.Word
 
 object PrefsHelper {
 

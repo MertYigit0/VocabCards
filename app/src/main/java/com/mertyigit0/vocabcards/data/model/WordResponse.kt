@@ -1,4 +1,4 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.data.model
 
 data class WordResponse(
     val word: String,

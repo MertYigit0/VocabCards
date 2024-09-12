@@ -1,8 +1,6 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.main
 
-import android.os.Build
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
@@ -10,6 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.databinding.ActivityMainBinding
 
 

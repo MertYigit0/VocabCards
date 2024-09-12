@@ -1,4 +1,4 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.data.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

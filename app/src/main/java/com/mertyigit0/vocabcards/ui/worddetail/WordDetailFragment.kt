@@ -1,22 +1,19 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.worddetail
 
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.airbnb.lottie.LottieAnimationView
+import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
-import java.io.IOException
 
 class WordDetailFragment : Fragment() {
 
@@ -109,9 +106,9 @@ class WordDetailFragment : Fragment() {
             viewModel.toggleWordLearningStatus(word)
             // Navigate based on updated status
             val action = if (viewModel.isLearned.value == true) {
-                WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
+              WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
             } else {
-                WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
+              WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
             }
             findNavController().navigate(action)
         }

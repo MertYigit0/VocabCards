@@ -1,11 +1,12 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.wordlist
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.mertyigit0.vocabcards.databinding.ItemWordBinding
+import com.mertyigit0.vocabcards.R
+import com.mertyigit0.vocabcards.data.model.Word
 
 class WordAdapter(
     private var wordList: List<Word>,

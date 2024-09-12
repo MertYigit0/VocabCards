@@ -1,4 +1,4 @@
-package com.mertyigit0.vocabcards
+package com.mertyigit0.vocabcards.ui.learnedlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.mertyigit0.vocabcards.ui.wordlist.WordAdapter
 import com.mertyigit0.vocabcards.databinding.FragmentLearnedListBinding
+import com.mertyigit0.vocabcards.ui.learnedlist.LearnedListFragmentDirections
 
 class LearnedListFragment : Fragment() {
 
