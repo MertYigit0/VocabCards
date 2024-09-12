@@ -62,6 +62,8 @@ class WordDetailFragment : Fragment() {
         binding.tvFrenchWord.text = word.french ?: "N/A"
 
 
+
+
         // Observe learned status
         viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
             updateButton(isLearned)

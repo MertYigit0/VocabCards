@@ -170,12 +170,12 @@
                 android:gravity="center_vertical"
                 android:layout_below="@id/tvEnglishPronunciation">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnPlayAudio"
                     android:layout_width="60dp"
                     android:layout_height="55dp"
                     android:background="@drawable/playcircle"
-                    android:text="" />
+                    />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/lottiePlayAnimation"
@@ -194,7 +194,7 @@
             android:layout_width="159dp"
             android:layout_height="52dp"
             android:layout_gravity="center"
-            android:backgroundTint="#fa6900"
+            android:backgroundTint="#ED7A27"
             android:text="Learned" />
     </LinearLayout>
 </LinearLayout>
