@@ -1,5 +1,6 @@
 package com.mertyigit0.vocabcards.ui.worddetail
 
+import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
@@ -8,10 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.airbnb.lottie.LottieAnimationView
+import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
 
@@ -129,6 +132,8 @@ class WordDetailFragment : Fragment() {
 
     private fun updateButton(isLearned: Boolean) {
         binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
+        // Renk kaynağını almak için context kullanın
+
     }
     override fun onDestroy() {
         super.onDestroy()
