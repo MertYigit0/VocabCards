@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
         lottieAnimationView.playAnimation()
 
         // Duration of the splash screen
-        val splashScreenDuration = 4000L // 4000 milliseconds = 4 seconds
+        val splashScreenDuration = 3000L // 4000 milliseconds = 4 seconds
 
         // Handler to transition to MainActivity after the splash screen duration
         Handler().postDelayed({
