@@ -102,8 +102,11 @@ class WordDetailFragment : Fragment() {
                 }
 
                 // Eğer audioUrl null ise butonu göster ya da sakla
-                binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
-                binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+              //  binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+               // binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+
+                // `pronunciationLayout`'ın görünürlüğünü ayarlayın
+                binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
             }
         }
 

@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:text="Turkish Word"
                     android:textSize="20sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="18dp"/>
 
                 <!-- German Word -->
                 <TextView
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:text="German Word"
                     android:textSize="18sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="18dp"/>
 
                 <!-- Italian Word -->
                 <TextView
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:text="Italian Word"
                     android:textSize="18sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="18dp"/>
 
                 <!-- Spanish Word -->
                 <TextView
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:text="Spanish Word"
                     android:textSize="18sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="18dp"/>
 
                 <!-- French Word -->
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:text="French Word"
                     android:textSize="18sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="18dp"/>
 
                 <!-- Definitions -->
                 <TextView
@@ -142,29 +142,53 @@
 
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pronunciationLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:padding="16dp">
 
-            <Button
-                android:id="@+id/btnPlayAudio"
-                android:layout_width="60dp"
-                android:height="40dp"
-                android:background="@drawable/baseline_play_circle_24"
+            <!-- English Pronunciation TextView -->
+            <TextView
+                android:id="@+id/tvEnglishPronunciation"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text="Listen English Pronunciation"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="-70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottiePlayAnimation"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_marginStart="50dp"
-                app:lottie_rawRes="@raw/audio"
-                app:lottie_autoPlay="false"
-                app:lottie_loop="true" />
-        </LinearLayout>
+            <!-- LinearLayout with Button and LottieAnimationView -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/tvEnglishPronunciation">
+
+                <Button
+                    android:id="@+id/btnPlayAudio"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/baseline_play_circle_24"
+                    android:text="" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiePlayAnimation"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="50dp"
+                    app:lottie_rawRes="@raw/audio"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true" />
+            </LinearLayout>
+        </RelativeLayout>
+
 
         <Button
             android:id="@+id/learnedButton"

@@ -7,7 +7,7 @@ import com.mertyigit0.vocabcards.data.model.Word
 class WordRepository(private val context: Context) {
 
     private val allWords = listOf(
-        Word("Apple", "Elma \uD83C\uDDF9\uD83C\uDDF7", "\uD83C\uDDF9\uD83C\uDDF7", "Apfel", "Mela", "Manzana", "Pomme"),
+        Word("Apple", "Elma \uD83C\uDDF9\uD83C\uDDF7", "\uD83C\uDF4E", "Apfel", "Mela", "Manzana", "Pomme"),
         Word("Book", "Kitap \uD83C\uDDF9\uD83C\uDDF7", "\uD83D\uDCD6", "Buch 🇩🇪", "Libro 🇪🇸", "Libro 🇲🇽", "Livre 🇫🇷"),
         Word("Car", "Araba \uD83C\uDDF9\uD83C\uDDF7", "\uD83D\uDE97", "Auto 🇩🇪", "Macchina 🇮🇹", "Coche 🇪🇸", "Voiture 🇫🇷"),
         Word("Glass", "Bardak \uD83C\uDDF9\uD83C\uDDF7", "\uD83C\uDF77", "Glas 🇩🇪", "Bicchiere 🇮🇹", "Vaso 🇪🇸", "Verre 🇫🇷"),
