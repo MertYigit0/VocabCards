@@ -36,11 +36,13 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:padding="16dp">
 
+                <!-- English Word -->
                 <TextView
                     android:id="@+id/tvDetailEnglishWord"
                     android:layout_width="wrap_content"
@@ -48,10 +50,19 @@
                     android:text="English Word"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/tvPhonetic"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    android:layout_gravity="center_vertical"/>
 
+                <!-- Emoji -->
+                <TextView
+                    android:id="@+id/tvEmoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emoji"
+                    android:textSize="24sp"
+                    android:paddingStart="8dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <!-- Phonetic -->
                 <TextView
                     android:id="@+id/tvPhonetic"
                     android:layout_width="wrap_content"
@@ -59,31 +70,76 @@
                     android:textSize="18sp"
                     android:paddingStart="8dp"
                     android:text="tvPhonetic"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    android:layout_gravity="center_vertical"/>
 
+            </LinearLayout>
+
+            <!-- Remaining content below -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="36dp">
+
+                <!-- Turkish Word -->
                 <TextView
                     android:id="@+id/tvDetailTurkishWord"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Turkish Word"
                     android:textSize="20sp"
-                    android:paddingTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvDetailEnglishWord"/>
+                    android:paddingTop="8dp"/>
 
+                <!-- German Word -->
+                <TextView
+                    android:id="@+id/tvGermanWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="German Word"
+                    android:textSize="18sp"
+                    android:paddingTop="8dp"/>
+
+                <!-- Italian Word -->
+                <TextView
+                    android:id="@+id/tvItalianWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Italian Word"
+                    android:textSize="18sp"
+                    android:paddingTop="8dp"/>
+
+                <!-- Spanish Word -->
+                <TextView
+                    android:id="@+id/tvSpanishWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spanish Word"
+                    android:textSize="18sp"
+                    android:paddingTop="8dp"/>
+
+                <!-- French Word -->
+                <TextView
+                    android:id="@+id/tvFrenchWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="French Word"
+                    android:textSize="18sp"
+                    android:paddingTop="8dp"/>
+
+                <!-- Definitions -->
                 <TextView
                     android:id="@+id/tvDefinitions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="16dp"
-                    android:text="tvDefinitions"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvDetailTurkishWord"/>
+                    android:text="Definitions"/>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+
 
 
         <LinearLayout

@@ -52,6 +52,12 @@ class WordDetailFragment : Fragment() {
         // Setup UI
         binding.tvDetailEnglishWord.text = word.english
         binding.tvDetailTurkishWord.text = word.turkish
+        binding.tvEmoji.text = word.emoji ?: "" // Set emoji if available
+        binding.tvGermanWord.text = word.german ?: "N/A"
+        binding.tvItalianWord.text = word.italian ?: "N/A"
+        binding.tvSpanishWord.text = word.spanish ?: "N/A"
+        binding.tvFrenchWord.text = word.french ?: "N/A"
+
 
         // Observe learned status
         viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
@@ -73,14 +79,14 @@ class WordDetailFragment : Fragment() {
 
                 // Set up the TextViews
                 binding.tvPhonetic.text = it.phonetic
-                binding.tvDefinitions.text = it.meanings.joinToString("\n") { meaning ->
-                    meaning.partOfSpeech + ": " + meaning.definitions.joinToString(", ") { def ->
-                        def.definition
-                    }
-                }
+                binding.tvDefinitions.text = ""
+
+
+
+
 
                 // Set up the button to play audio
-                val audioUrl = it.phonetics.firstOrNull()?.audio ?: "https://api.dictionaryapi.dev/media/pronunciations/en/dog-uk.mp3"
+                val audioUrl = it.phonetics.firstOrNull()?.audio ?: ""
                 binding.btnPlayAudio.setOnClickListener {
                     viewModel.playAudio(audioUrl)
 
@@ -106,9 +112,9 @@ class WordDetailFragment : Fragment() {
             viewModel.toggleWordLearningStatus(word)
             // Navigate based on updated status
             val action = if (viewModel.isLearned.value == true) {
-              WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
+               WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
             } else {
-              WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
+                WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
             }
             findNavController().navigate(action)
         }
