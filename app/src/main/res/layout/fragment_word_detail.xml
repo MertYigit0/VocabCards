@@ -6,195 +6,201 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- ProgressBar -->
-    <LinearLayout
-        android:id="@+id/loadingContainer"
+    <!-- ScrollView to make the content scrollable -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <!-- Other UI elements, initially hidden -->
-    <LinearLayout
-        android:id="@+id/contentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:orientation="vertical">
 
+            <!-- ProgressBar -->
             <LinearLayout
+                android:id="@+id/loadingContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <!-- English Word -->
-                <TextView
-                    android:id="@+id/tvDetailEnglishWord"
+                <ProgressBar
+                    android:id="@+id/progressBar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="English Word"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"/>
-
-                <!-- Emoji -->
-                <TextView
-                    android:id="@+id/tvEmoji"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Emoji"
-                    android:textSize="24sp"
-                    android:paddingStart="8dp"
-                    android:layout_gravity="center_vertical"/>
-
-                <!-- Phonetic -->
-                <TextView
-                    android:id="@+id/tvPhonetic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:paddingStart="8dp"
-                    android:text="tvPhonetic"
-                    android:layout_gravity="center_vertical"/>
-
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Remaining content below -->
+            <!-- Other UI elements, initially hidden -->
             <LinearLayout
+                android:id="@+id/contentContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginTop="36dp">
+                android:visibility="gone">
 
-                <!-- Turkish Word -->
-                <TextView
-                    android:id="@+id/tvDetailTurkishWord"
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Turkish Word"
-                    android:textSize="20sp"
-                    android:paddingTop="18dp"/>
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
 
-                <!-- German Word -->
-                <TextView
-                    android:id="@+id/tvGermanWord"
-                    android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- English Word -->
+                        <TextView
+                            android:id="@+id/tvDetailEnglishWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="English Word"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical" />
+
+                        <!-- Emoji -->
+                        <TextView
+                            android:id="@+id/tvEmoji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emoji"
+                            android:textSize="24sp"
+                            android:paddingStart="8dp"
+                            android:layout_gravity="center_vertical" />
+
+                        <!-- Phonetic -->
+                        <TextView
+                            android:id="@+id/tvPhonetic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:paddingStart="8dp"
+                            android:text="tvPhonetic"
+                            android:layout_gravity="center_vertical" />
+
+                    </LinearLayout>
+
+                    <!-- Remaining content below -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:layout_marginTop="36dp">
+
+                        <!-- Turkish Word -->
+                        <TextView
+                            android:id="@+id/tvDetailTurkishWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Turkish Word"
+                            android:textSize="20sp"
+                            android:paddingTop="18dp" />
+
+                        <!-- German Word -->
+                        <TextView
+                            android:id="@+id/tvGermanWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="German Word"
+                            android:textSize="18sp"
+                            android:paddingTop="18dp" />
+
+                        <!-- Italian Word -->
+                        <TextView
+                            android:id="@+id/tvItalianWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Italian Word"
+                            android:textSize="18sp"
+                            android:paddingTop="18dp" />
+
+                        <!-- Spanish Word -->
+                        <TextView
+                            android:id="@+id/tvSpanishWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spanish Word"
+                            android:textSize="18sp"
+                            android:paddingTop="18dp" />
+
+                        <!-- French Word -->
+                        <TextView
+                            android:id="@+id/tvFrenchWord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="French Word"
+                            android:textSize="18sp"
+                            android:paddingTop="18dp" />
+
+                        <!-- Definitions -->
+                        <TextView
+                            android:id="@+id/tvDefinitions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:text="Definitions" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/pronunciationLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="German Word"
-                    android:textSize="18sp"
-                    android:paddingTop="18dp"/>
+                    android:padding="16dp">
 
-                <!-- Italian Word -->
-                <TextView
-                    android:id="@+id/tvItalianWord"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Italian Word"
-                    android:textSize="18sp"
-                    android:paddingTop="18dp"/>
+                    <!-- English Pronunciation TextView -->
+                    <TextView
+                        android:id="@+id/tvEnglishPronunciation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Listen English Pronunciation"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="-70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
 
-                <!-- Spanish Word -->
-                <TextView
-                    android:id="@+id/tvSpanishWord"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Spanish Word"
-                    android:textSize="18sp"
-                    android:paddingTop="18dp"/>
+                    <!-- LinearLayout with Button and LottieAnimationView -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_below="@id/tvEnglishPronunciation">
 
-                <!-- French Word -->
-                <TextView
-                    android:id="@+id/tvFrenchWord"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="French Word"
-                    android:textSize="18sp"
-                    android:paddingTop="18dp"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPlayAudio"
+                            android:layout_width="60dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/playcircle" />
 
-                <!-- Definitions -->
-                <TextView
-                    android:id="@+id/tvDefinitions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="16dp"
-                    android:text="Definitions"/>
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottiePlayAnimation"
+                            android:layout_width="250dp"
+                            android:layout_height="230dp"
+                            android:layout_marginStart="50dp"
+                            app:lottie_rawRes="@raw/audio"
+                            app:lottie_autoPlay="false"
+                            app:lottie_loop="true" />
+                    </LinearLayout>
+                </RelativeLayout>
 
+                <Button
+                    android:id="@+id/learnedButton"
+                    android:layout_width="159dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-56dp"
+                    android:backgroundTint="#ED7A27"
+                    android:text="Learned" />
             </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-
-
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/pronunciationLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <!-- English Pronunciation TextView -->
-            <TextView
-                android:id="@+id/tvEnglishPronunciation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Listen English Pronunciation"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="-70dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true" />
-
-            <!-- LinearLayout with Button and LottieAnimationView -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_below="@id/tvEnglishPronunciation">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnPlayAudio"
-                    android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:background="@drawable/playcircle"
-                    />
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/lottiePlayAnimation"
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginStart="50dp"
-                    app:lottie_rawRes="@raw/audio"
-                    app:lottie_autoPlay="false"
-                    app:lottie_loop="true" />
-            </LinearLayout>
-        </RelativeLayout>
-
-
-        <Button
-            android:id="@+id/learnedButton"
-            android:layout_width="159dp"
-            android:layout_height="52dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#ED7A27"
-            android:text="Learned" />
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

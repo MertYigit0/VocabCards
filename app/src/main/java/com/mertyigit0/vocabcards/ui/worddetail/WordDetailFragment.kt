@@ -111,7 +111,7 @@ class WordDetailFragment : Fragment() {
                // binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
 
                 // `pronunciationLayout`'ın görünürlüğünü ayarlayın
-                binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+                binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.INVISIBLE
             }
         }
 
