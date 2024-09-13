@@ -18,6 +18,7 @@ class WordListFragment : Fragment() {
     private lateinit var adapter: WordAdapter
     private lateinit var binding: FragmentWordListBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
