@@ -11,8 +11,11 @@ The Vocabulary Cards application is an Android app designed to help users learn 
 
 # Features
 View Word Lists: Display and navigate through lists of vocabulary words.
+
 Word Details: View detailed information about each word, including pronunciation and translations.
+
 Audio Pronunciation: Listen to the pronunciation of words.
+
 Smooth Animations: Enjoy smooth transitions between fragments using custom animations.
 
 
