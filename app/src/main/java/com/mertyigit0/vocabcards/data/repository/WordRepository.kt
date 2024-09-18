@@ -69,4 +69,18 @@ class WordRepository(private val context: Context) {
             db.wordDao().updateWord(updatedWord)
         }
     }
+
+    // Bu kısımda db.wordDao() kullanarak arama işlemini gerçekleştiriyoruz
+    suspend fun searchWords(query: String): List<Word> {
+        return withContext(Dispatchers.IO) {
+            db.wordDao().searchWords("%$query%")  // Arama sorgusunu veritabanına gönder
+        }
+    }
+
+
+    suspend fun searchLearnedWords(query: String): List<Word> {
+        return withContext(Dispatchers.IO) {
+            db.wordDao().searchLearnedWords("%$query%")  // Arama sorgusunu veritabanına gönder
+        }
+    }
 }

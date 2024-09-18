@@ -25,4 +25,11 @@ class LearnedListViewModel(application: Application) : AndroidViewModel(applicat
             _learnedWords.value = learnedWords
         }
     }
+
+    // Arama sorgusu için yeni fonksiyon
+    fun searchLearnedWord(query: String) {
+        viewModelScope.launch {
+            _learnedWords.value = repository.searchLearnedWords(query)
+        }
+    }
 }
