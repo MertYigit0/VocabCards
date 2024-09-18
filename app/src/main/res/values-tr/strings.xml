@@ -21,6 +21,14 @@
     <string name="definitions">Tanımlar</string>
     <string name="listen_english_pronunciation">İngilizce Telaffuzu Dinle</string>
     <string name="language">Dil</string>
+
+
+    <string name="english_with_flag">İngilizce 🇺🇸</string>
+    <string name="spanish_with_flag">İspanyolca 🇪🇸</string>
+    <string name="french_with_flag">Fransızca 🇫🇷</string>
+    <string name="italian_with_flag">İtalyanca 🇮🇹</string>
+    <string name="turkish_with_flag">Türkçe 🇹🇷</string>
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

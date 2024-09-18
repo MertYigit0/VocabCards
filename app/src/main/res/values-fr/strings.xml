@@ -21,6 +21,14 @@
     <string name="definitions">Définitions</string>
     <string name="listen_english_pronunciation">Écouter Prononciation Anglaise</string>
     <string name="language">Langue</string>
+
+
+    <string name="english_with_flag">Anglais 🇺🇸</string>
+    <string name="spanish_with_flag">Espagnol 🇪🇸</string>
+    <string name="french_with_flag">Français 🇫🇷</string>
+    <string name="italian_with_flag">Italien 🇮🇹</string>
+    <string name="turkish_with_flag">Turc 🇹🇷</string>
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

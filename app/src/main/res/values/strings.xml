@@ -21,11 +21,12 @@
     <string name="definitions">Definitions</string>
     <string name="listen_english_pronunciation">Listen English Pronunciation</string>
     <string name="language">Language</string>
-    <string name="english">English</string>
-    <string name="spanish">Spanish</string>
-    <string name="french">French</string>
-    <string name="italian">Italian</string>
-    <string name="turkish">Turkish</string>
+    <string name="english_with_flag">English 🇺🇸</string>
+    <string name="spanish_with_flag">Spanish 🇪🇸</string>
+    <string name="french_with_flag">French 🇫🇷</string>
+    <string name="italian_with_flag">Italian 🇮🇹</string>
+    <string name="turkish_with_flag">Turkish 🇹🇷</string>
+
 
     <string-array name="language_array">
         <item>English</item>

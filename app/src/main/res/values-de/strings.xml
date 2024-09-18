@@ -22,6 +22,13 @@
     <string name="listen_english_pronunciation">Englische Aussprache anhören</string>
     <string name="language">Sprache</string>
 
+
+    <string name="english_with_flag">Englisch 🇺🇸</string>
+    <string name="spanish_with_flag">Spanisch 🇪🇸</string>
+    <string name="french_with_flag">Französisch 🇫🇷</string>
+    <string name="italian_with_flag">Italienisch 🇮🇹</string>
+    <string name="turkish_with_flag">Türkisch 🇹🇷</string>
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>
