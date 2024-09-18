@@ -21,7 +21,11 @@
     <string name="definitions">Definitions</string>
     <string name="listen_english_pronunciation">Listen English Pronunciation</string>
     <string name="language">Language</string>
-
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="italian">Italian</string>
+    <string name="turkish">Turkish</string>
 
     <string-array name="language_array">
         <item>English</item>
