@@ -26,6 +26,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
 
+
+
+        // Kaydedilen dili yükleme
+        val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val languageCode = sharedPreferences.getString("language_code", "en")
+        languageCode?.let { setLocale(it) }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -94,16 +101,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeLanguage(languageCode: String) {
+        // Kaydetme işlemi
+        val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putString("language_code", languageCode)
+            apply()
+        }
+
+
+
+        // Dil değişikliği işlemi
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = Configuration(resources.configuration)
         config.setLocale(locale)
-
-        // Update the configuration
         resources.updateConfiguration(config, resources.displayMetrics)
 
-        // Restart the activity to apply language change
+        // Aktiviteyi yeniden başlatma
         recreate()
     }
+
+    private fun setLocale(languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = Configuration(resources.configuration)
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+
 }
 
