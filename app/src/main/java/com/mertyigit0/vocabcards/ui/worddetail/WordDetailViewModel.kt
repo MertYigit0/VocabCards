@@ -5,38 +5,48 @@ import android.media.MediaPlayer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.mertyigit0.vocabcards.data.local.PrefsHelper
-import com.mertyigit0.vocabcards.data.network.RetrofitInstance
+import androidx.lifecycle.viewModelScope
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.model.WordResponse
+import com.mertyigit0.vocabcards.data.repository.WordRepository
+import com.mertyigit0.vocabcards.data.network.RetrofitInstance
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
 
 class WordDetailViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repository = WordRepository(application)
     private val _isLearned = MutableLiveData<Boolean>()
     val isLearned: LiveData<Boolean> get() = _isLearned
     val wordDetail = MutableLiveData<WordResponse?>()
 
-    private val prefsHelper = PrefsHelper
     private var mediaPlayer: MediaPlayer? = null
 
+    // Öğrenilen kelime durumunu kontrol et
     fun checkIfWordIsLearned(word: Word) {
-        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        _isLearned.value = learnedWords.contains(word.english)
-    }
-
-    fun toggleWordLearningStatus(word: Word) {
-        val learnedWords = PrefsHelper.getLearnedWords(getApplication())
-        if (learnedWords.contains(word.english)) {
-            PrefsHelper.removeLearnedWord(getApplication(), word)
-        } else {
-            PrefsHelper.addLearnedWord(getApplication(), word)
+        viewModelScope.launch {
+            val learnedWords = repository.getLearnedWords()
+            _isLearned.value = learnedWords.contains(word)
         }
-        checkIfWordIsLearned(word)
     }
 
+    // Öğrenilen kelime durumunu değiştir
+    fun toggleWordLearningStatus(word: Word) {
+        viewModelScope.launch {
+            val learnedWords = repository.getLearnedWords()
+            if (learnedWords.contains(word)) {
+                repository.removeLearnedWord(word)
+            } else {
+                repository.addLearnedWord(word)
+            }
+            checkIfWordIsLearned(word) // Durumu güncelle
+        }
+    }
+
+    // Kelime detaylarını API'dan çek
     fun fetchWordDetails(word: String) {
         RetrofitInstance.api.getWordDetails(word).enqueue(object : Callback<List<WordResponse>> {
             override fun onResponse(
@@ -54,8 +64,9 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
         })
     }
 
+    // Ses dosyasını çal
     fun playAudio(url: String) {
-        mediaPlayer?.release() // Önceki örneği serbest bırak
+        mediaPlayer?.release() // Önceki medya oynatıcıyı serbest bırak
         mediaPlayer = MediaPlayer().apply {
             try {
                 setDataSource(url) // URL'yi ayarla
@@ -69,6 +80,6 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
 
     override fun onCleared() {
         super.onCleared()
-        mediaPlayer?.release() // Fragment yok edilirken media player'ı serbest bırak
+        mediaPlayer?.release() // Fragment yok edilirken medya oynatıcıyı serbest bırak
     }
 }

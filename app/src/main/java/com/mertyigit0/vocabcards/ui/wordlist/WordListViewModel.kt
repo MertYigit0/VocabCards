@@ -4,9 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.repository.WordRepository
-
+import kotlinx.coroutines.launch
 
 class WordListViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -15,18 +16,29 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     val wordList: LiveData<List<Word>> get() = _wordList
 
     init {
+        loadWordsIfNeeded()
         updateWordList()
     }
 
-    fun shuffleWords() {
-        _wordList.value = repository.getRemainingWords().shuffled()
+    private fun loadWordsIfNeeded() {
+        viewModelScope.launch {
+            val words = repository.getAllWords()
+            if (words.isEmpty()) {
+                repository.loadWordsFromJson()
+                updateWordList()
+            }
+        }
     }
 
     fun updateWordList() {
-        _wordList.value = repository.getRemainingWords().shuffled()
+        viewModelScope.launch {
+            val allWords = repository.getAllWords()
+            // Öğrenilmemiş kelimeleri filtreleyin
+            _wordList.value = allWords.filter { !it.isLearned }
+        }
+    }
+
+    fun shuffleWords() {
+        _wordList.value = _wordList.value?.shuffled()
     }
 }
-
-
-
-

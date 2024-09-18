@@ -4,8 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.repository.WordRepository
+import kotlinx.coroutines.launch
 
 class LearnedListViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -18,6 +20,9 @@ class LearnedListViewModel(application: Application) : AndroidViewModel(applicat
     }
 
     fun updateLearnedWords() {
-        _learnedWords.value = repository.getLearnedWords()
+        viewModelScope.launch {
+            val learnedWords = repository.getLearnedWords()
+            _learnedWords.value = learnedWords
+        }
     }
 }

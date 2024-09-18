@@ -1,0 +1,512 @@
+{
+  "words": [
+    {
+      "word": "Apple",
+      "translations": {
+        "tr": "Elma 🇹🇷",
+        "emoji": "🍎",
+        "de": "Apfel",
+        "it": "Mela",
+        "es": "Manzana",
+        "fr": "Pomme"
+      }
+    },
+    {
+      "word": "Book",
+      "translations": {
+        "tr": "Kitap 🇹🇷",
+        "emoji": "📖",
+        "de": "Buch 🇩🇪",
+        "it": "Libro 🇮🇹",
+        "es": "Libro 🇲🇽",
+        "fr": "Livre 🇫🇷"
+      }
+    },
+    {
+      "word": "Car",
+      "translations": {
+        "tr": "Araba 🇹🇷",
+        "emoji": "🚗",
+        "de": "Auto 🇩🇪",
+        "it": "Macchina 🇮🇹",
+        "es": "Coche 🇪🇸",
+        "fr": "Voiture 🇫🇷"
+      }
+    },
+    {
+      "word": "Glass",
+      "translations": {
+        "tr": "Bardak 🇹🇷",
+        "emoji": "🍷",
+        "de": "Glas 🇩🇪",
+        "it": "Bicchiere 🇮🇹",
+        "es": "Vaso 🇪🇸",
+        "fr": "Verre 🇫🇷"
+      }
+    },
+    {
+      "word": "Window",
+      "translations": {
+        "tr": "Pencere 🇹🇷",
+        "emoji": "🪟",
+        "de": "Fenster 🇩🇪",
+        "it": "Finestra 🇮🇹",
+        "es": "Ventana 🇪🇸",
+        "fr": "Fenêtre 🇫🇷"
+      }
+    },
+    {
+      "word": "Door",
+      "translations": {
+        "tr": "Kapı 🇹🇷",
+        "emoji": "🚪",
+        "de": "Tür 🇩🇪",
+        "it": "Porta 🇮🇹",
+        "es": "Puerta 🇪🇸",
+        "fr": "Porte 🇫🇷"
+      }
+    },
+    {
+      "word": "Street",
+      "translations": {
+        "tr": "Sokak 🇹🇷",
+        "emoji": "🚶",
+        "de": "Straße 🇩🇪",
+        "it": "Strada 🇮🇹",
+        "es": "Calle 🇪🇸",
+        "fr": "Rue 🇫🇷"
+      }
+    },
+    {
+      "word": "City",
+      "translations": {
+        "tr": "Şehir 🇹🇷",
+        "emoji": "🏙️",
+        "de": "Stadt 🇩🇪",
+        "it": "Città 🇮🇹",
+        "es": "Ciudad 🇪🇸",
+        "fr": "Ville 🇫🇷"
+      }
+    },
+    {
+      "word": "Map",
+      "translations": {
+        "tr": "Harita 🇹🇷",
+        "emoji": "📍",
+        "de": "Karte 🇩🇪",
+        "it": "Mappa 🇮🇹",
+        "es": "Mapa 🇪🇸",
+        "fr": "Carte 🇫🇷"
+      }
+    },
+    {
+      "word": "Bag",
+      "translations": {
+        "tr": "Çanta 🇹🇷",
+        "emoji": "👜",
+        "de": "Tasche 🇩🇪",
+        "it": "Borsa 🇮🇹",
+        "es": "Bolsa 🇪🇸",
+        "fr": "Sac 🇫🇷"
+      }
+    },
+    {
+      "word": "Shoes",
+      "translations": {
+        "tr": "Ayakkabı 🇹🇷",
+        "emoji": "👟",
+        "de": "Schuhe 🇩🇪",
+        "it": "Scarpe 🇮🇹",
+        "es": "Zapatos 🇪🇸",
+        "fr": "Chaussures 🇫🇷"
+      }
+    },
+    {
+      "word": "Shirt",
+      "translations": {
+        "tr": "Gömlek 🇹🇷",
+        "emoji": "👕",
+        "de": "Hemd 🇩🇪",
+        "it": "Camicia 🇮🇹",
+        "es": "Camisa 🇪🇸",
+        "fr": "Chemise 🇫🇷"
+      }
+    },
+    {
+      "word": "Pants",
+      "translations": {
+        "tr": "Pantolon 🇹🇷",
+        "emoji": "👖",
+        "de": "Hose 🇩🇪",
+        "it": "Pantaloni 🇮🇹",
+        "es": "Pantalones 🇪🇸",
+        "fr": "Pantalon 🇫🇷"
+      }
+    },
+    {
+      "word": "Lamp",
+      "translations": {
+        "tr": "Lamba 🇹🇷",
+        "emoji": "💡",
+        "de": "Lampe 🇩🇪",
+        "it": "Lampada 🇮🇹",
+        "es": "Lámpara 🇪🇸",
+        "fr": "Lampe 🇫🇷"
+      }
+    },
+    {
+      "word": "Clock",
+      "translations": {
+        "tr": "Saat 🇹🇷",
+        "emoji": "🕒",
+        "de": "Uhr 🇩🇪",
+        "it": "Orologio 🇮🇹",
+        "es": "Reloj 🇪🇸",
+        "fr": "Horloge 🇫🇷"
+      }
+    },
+    {
+      "word": "Mirror",
+      "translations": {
+        "tr": "Ayna 🇹🇷",
+        "emoji": "🔍",
+        "de": "Spiegel 🇩🇪",
+        "it": "Specchio 🇮🇹",
+        "es": "Espejo 🇪🇸",
+        "fr": "Miroir 🇫🇷"
+      }
+    },
+    {
+      "word": "Fan",
+      "translations": {
+        "tr": "Vantilatör 🇹🇷",
+        "emoji": "💨",
+        "de": "Ventilator 🇩🇪",
+        "it": "Ventilatore 🇮🇹",
+        "es": "Ventilador 🇪🇸",
+        "fr": "Ventilateur 🇫🇷"
+      }
+    },
+    {
+      "word": "Refrigerator",
+      "translations": {
+        "tr": "Buzdolabı 🇹🇷",
+        "emoji": "🥶",
+        "de": "Kühlschrank 🇩🇪",
+        "it": "Frigorifero 🇮🇹",
+        "es": "Refrigerador 🇪🇸",
+        "fr": "Réfrigérateur 🇫🇷"
+      }
+    },
+    {
+      "word": "Sink",
+      "translations": {
+        "tr": "Lavabo 🇹🇷",
+        "emoji": "🚫",
+        "de": "Spüle 🇩🇪",
+        "it": "Lavello 🇮🇹",
+        "es": "Fregadero 🇪🇸",
+        "fr": "Évier 🇫🇷"
+      }
+    },
+    {
+      "word": "Toothbrush",
+      "translations": {
+        "tr": "Diş Fırçası 🇹🇷",
+        "emoji": "🦷",
+        "de": "Zahnbürste 🇩🇪",
+        "it": "Spazzolino 🇮🇹",
+        "es": "Cepillo de dientes 🇪🇸",
+        "fr": "Brosse à dents 🇫🇷"
+      }
+    },
+    {
+      "word": "Soap",
+      "translations": {
+        "tr": "Sabun 🇹🇷",
+        "emoji": "🧼",
+        "de": "Seife 🇩🇪",
+        "it": "Sapone 🇮🇹",
+        "es": "Jabón 🇪🇸",
+        "fr": "Savon 🇫🇷"
+      }
+    },
+    {
+      "word": "Towel",
+      "translations": {
+        "tr": "Havlu 🇹🇷",
+        "emoji": "🔊",
+        "de": "Handtuch 🇩🇪",
+        "it": "Asciugamano 🇮🇹",
+        "es": "Toalla 🇪🇸",
+        "fr": "Serviette 🇫🇷"
+      }
+    },
+    {
+      "word": "Conditioner",
+      "translations": {
+        "tr": "Saç Kremi 🇹🇷",
+        "emoji": "💇‍♀️",
+        "de": "Haarspülung 🇩🇪",
+        "it": "Balsamo 🇮🇹",
+        "es": "Acondicionador 🇪🇸",
+        "fr": "Après-shampooing 🇫🇷"
+      }
+    },
+    {
+      "word": "Cheese",
+      "translations": {
+        "tr": "Peynir 🇹🇷",
+        "emoji": "🧀",
+        "de": "Käse 🇩🇪",
+        "it": "Formaggio 🇮🇹",
+        "es": "Queso 🇪🇸",
+        "fr": "Fromage 🇫🇷"
+      }
+    },
+    {
+      "word": "Egg",
+      "translations": {
+        "tr": "Yumurta 🇹🇷",
+        "emoji": "🥚",
+        "de": "Ei 🇩🇪",
+        "it": "Uovo 🇮🇹",
+        "es": "Huevo 🇪🇸",
+        "fr": "Œuf 🇫🇷"
+      }
+    },
+    {
+      "word": "Chicken",
+      "translations": {
+        "tr": "Tavuk 🇹🇷",
+        "emoji": "🍗",
+        "de": "Hähnchen 🇩🇪",
+        "it": "Pollo 🇮🇹",
+        "es": "Pollo 🇪🇸",
+        "fr": "Poulet 🇫🇷"
+      }
+    },
+    {
+      "word": "Fish",
+      "translations": {
+        "tr": "Balık 🇹🇷",
+        "emoji": "🐟",
+        "de": "Fisch 🇩🇪",
+        "it": "Pesce 🇮🇹",
+        "es": "Pescado 🇪🇸",
+        "fr": "Poisson 🇫🇷"
+      }
+    },
+    {
+      "word": "Meat",
+      "translations": {
+        "tr": "Et 🇹🇷",
+        "emoji": "🍖",
+        "de": "Fleisch 🇩🇪",
+        "it": "Carne 🇮🇹",
+        "es": "Carne 🇪🇸",
+        "fr": "Viande 🇫🇷"
+      }
+    },
+    {
+      "word": "Rice",
+      "translations": {
+        "tr": "Pirinç 🇹🇷",
+        "emoji": "🍚",
+        "de": "Reis 🇩🇪",
+        "it": "Riso 🇮🇹",
+        "es": "Arroz 🇪🇸",
+        "fr": "Riz 🇫🇷"
+      }
+    },
+    {
+      "word": "Fruit",
+      "translations": {
+        "tr": "Meyve 🇹🇷",
+        "emoji": "🍇",
+        "de": "Frucht 🇩🇪",
+        "it": "Frutta 🇮🇹",
+        "es": "Fruta 🇪🇸",
+        "fr": "Fruit 🇫🇷"
+      }
+    },
+    {
+      "word": "Juice",
+      "translations": {
+        "tr": "Meyve Suyu 🇹🇷",
+        "emoji": "🧃",
+        "de": "Saft 🇩🇪",
+        "it": "Succo 🇮🇹",
+        "es": "Jugo 🇪🇸",
+        "fr": "Jus 🇫🇷"
+      }
+    },
+    {
+      "word": "Tea",
+      "translations": {
+        "tr": "Çay 🇹🇷",
+        "emoji": "🍵",
+        "de": "Tee 🇩🇪",
+        "it": "Tè 🇮🇹",
+        "es": "Té 🇪🇸",
+        "fr": "Thé 🇫🇷"
+      }
+    },
+    {
+      "word": "Money",
+      "translations": {
+        "tr": "Para 🇹🇷",
+        "emoji": "💰",
+        "de": "Geld 🇩🇪",
+        "it": "Soldi 🇮🇹",
+        "es": "Dinero 🇪🇸",
+        "fr": "Argent 🇫🇷"
+      }
+    },
+    {
+      "word": "One",
+      "translations": {
+        "tr": "Bir 🇹🇷",
+        "emoji": "1️⃣",
+        "de": "Eins 🇩🇪",
+        "it": "Uno 🇮🇹",
+        "es": "Uno 🇪🇸",
+        "fr": "Un 🇫🇷"
+      }
+    },
+    {
+      "word": "Two",
+      "translations": {
+        "tr": "İki 🇹🇷",
+        "emoji": "2️⃣",
+        "de": "Zwei 🇩🇪",
+        "it": "Due 🇮🇹",
+        "es": "Dos 🇪🇸",
+        "fr": "Deux 🇫🇷"
+      }
+    },
+    {
+      "word": "Cat",
+      "translations": {
+        "tr": "Kedi 🇹🇷",
+        "emoji": "🐱",
+        "de": "Katze 🇩🇪",
+        "it": "Gatto 🇮🇹",
+        "es": "Gato 🇪🇸",
+        "fr": "Chat 🇫🇷"
+      }
+    },
+    {
+      "word": "Cow",
+      "translations": {
+        "tr": "İnek 🇹🇷",
+        "emoji": "🐄",
+        "de": "Kuh 🇩🇪",
+        "it": "Mucca 🇮🇹",
+        "es": "Vaca 🇪🇸",
+        "fr": "Vache 🇫🇷"
+      }
+    },
+    {
+      "word": "Banana",
+      "translations": {
+        "tr": "Muz 🇹🇷",
+        "emoji": "🍌",
+        "de": "Banane 🇩🇪",
+        "it": "Banana 🇮🇹",
+        "es": "Plátano 🇪🇸",
+        "fr": "Banane 🇫🇷"
+      }
+    },
+    {
+      "word": "Strawberry",
+      "translations": {
+        "tr": "Çilek 🇹🇷",
+        "emoji": "🍓",
+        "de": "Erdbeere 🇩🇪",
+        "it": "Fragola 🇮🇹",
+        "es": "Fresa 🇪🇸",
+        "fr": "Fraise 🇫🇷"
+      }
+    },
+    {
+      "word": "Table",
+      "translations": {
+        "tr": "Masa 🇹🇷",
+        "emoji": "💻",
+        "de": "Tisch 🇩🇪",
+        "it": "Tavolo 🇮🇹",
+        "es": "Mesa 🇪🇸",
+        "fr": "Table 🇫🇷"
+      }
+    },
+    {
+      "word": "Pineapple",
+      "translations": {
+        "tr": "Ananas 🇹🇷",
+        "emoji": "🍍",
+        "de": "Ananas 🇩🇪",
+        "it": "Ananas 🇮🇹",
+        "es": "Piña 🇪🇸",
+        "fr": "Ananas 🇫🇷"
+      }
+    },
+    {
+      "word": "Watermelon",
+      "translations": {
+        "tr": "Karpuz 🇹🇷",
+        "emoji": "🍉",
+        "de": "Wassermelone 🇩🇪",
+        "it": "Anguria 🇮🇹",
+        "es": "Sandía 🇪🇸",
+        "fr": "Pastèque 🇫🇷"
+      }
+    },
+    {
+      "word": "Shark",
+      "translations": {
+        "tr": "Köpekbalığı 🇹🇷",
+        "emoji": "🦈",
+        "de": "Hai 🇩🇪",
+        "it": "Squalo 🇮🇹",
+        "es": "Tiburón 🇪🇸",
+        "fr": "Requin 🇫🇷"
+      }
+    },
+    {
+      "word": "Sun",
+      "translations": {
+        "tr": "Güneş 🇹🇷",
+        "emoji": "☀️",
+        "de": "Sonne 🇩🇪",
+        "it": "Sole 🇮🇹",
+        "es": "Sol 🇪🇸",
+        "fr": "Soleil 🇫🇷"
+      }
+    },
+    {
+      "word": "Moon",
+      "translations": {
+        "tr": "Ay 🇹🇷",
+        "emoji": "🌙",
+        "de": "Mond 🇩🇪",
+        "it": "Luna 🇮🇹",
+        "es": "Luna 🇪🇸",
+        "fr": "Lune 🇫🇷"
+      }
+    },
+    {
+      "word": "Star",
+      "translations": {
+        "tr": "Yıldız 🇹🇷",
+        "emoji": "⭐",
+        "de": "Stern 🇩🇪",
+        "it": "Stella 🇮🇹",
+        "es": "Estrella 🇪🇸",
+        "fr": "Étoile 🇫🇷"
+      }
+    }
+  ]
+}
+
+
