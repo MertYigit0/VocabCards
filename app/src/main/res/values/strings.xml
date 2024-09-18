@@ -7,4 +7,29 @@
     <string name="turkish_word">Turkish Word</string>
     <string name="english_word">English Word</string>
     <string name="search">Search</string>
+    <string name="learned_words">Learned Words</string>
+    <string name="word_details">Word Details</string>
+    <string name="word_list">Word List</string>
+    <string name="learn">Learn</string>
+    <string name="unlearn">Unlearn</string>
+    <string name="emoji">Emoji</string>
+    <string name="tvphonetic">tvPhonetic</string>
+    <string name="german_word">German Word</string>
+    <string name="italian_word">Italian Word</string>
+    <string name="spanish_word">Spanish Word</string>
+    <string name="french_word">French Word</string>
+    <string name="definitions">Definitions</string>
+    <string name="listen_english_pronunciation">Listen English Pronunciation</string>
+    <string name="language">Language</string>
+
+
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Türkçe</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+        <item>Español</item>
+        <item>Français</item>
+    </string-array>
+
 </resources>

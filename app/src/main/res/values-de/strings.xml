@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VocabCards</string>
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+    <string name="learned">Gelernt</string>
+    <string name="words">Wörter</string>
+    <string name="turkish_word">Türkisches Wort</string>
+    <string name="english_word">Englisches Wort</string>
+    <string name="search">Suche</string>
+    <string name="learned_words">Gelernten Wörter</string>
+    <string name="word_details">Wortdetails</string>
+    <string name="word_list">Wortliste</string>
+    <string name="learn">Lernen</string>
+    <string name="unlearn">Vergessen</string>
+    <string name="emoji">Emoji</string>
+    <string name="tvphonetic">Phonetik</string>
+    <string name="german_word">Deutsches Wort</string>
+    <string name="italian_word">Italienisches Wort</string>
+    <string name="spanish_word">Spanisches Wort</string>
+    <string name="french_word">Französisches Wort</string>
+    <string name="definitions">Definitionen</string>
+    <string name="listen_english_pronunciation">Englische Aussprache anhören</string>
+    <string name="language">Sprache</string>
+
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Türkçe</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+        <item>Español</item>
+        <item>Français</item>
+    </string-array>
+
+
+</resources>

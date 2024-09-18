@@ -43,7 +43,7 @@ class WordDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Word Details"
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_details)
 
         viewModel = ViewModelProvider(this).get(WordDetailViewModel::class.java)
         word = args.word
@@ -133,7 +133,12 @@ class WordDetailFragment : Fragment() {
     }
 
     private fun updateButton(isLearned: Boolean) {
-        binding.learnedButton.text = if (isLearned) "Unlearn" else "Learn"
+        binding.learnedButton.text = if (isLearned) {
+            getString(R.string.unlearn)
+        } else {
+            getString(R.string.learn)
+        }
+
         // Renk kaynağını almak için context kullanın
 
     }

@@ -33,7 +33,7 @@ class LearnedListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)  // Menü öğesini etkinleştir
-        (activity as AppCompatActivity).supportActionBar?.title = "Learned Words"
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.learned_words)
 
         // Initialize ViewModel
         viewModel = ViewModelProvider(this).get(LearnedListViewModel::class.java)

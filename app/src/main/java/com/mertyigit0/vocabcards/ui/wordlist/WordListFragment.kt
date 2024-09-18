@@ -33,7 +33,7 @@ class WordListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)  // Menü öğesini etkinleştir
-        (activity as AppCompatActivity).supportActionBar?.title = "Word List"
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_list)
 
         viewModel = ViewModelProvider(this).get(WordListViewModel::class.java)
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)

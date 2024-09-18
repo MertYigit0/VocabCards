@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VocabCards</string>
+    <string name="hello_blank_fragment">Merhaba boş fragment</string>
+    <string name="learned">Öğrenilmiş</string>
+    <string name="words">Kelimeler</string>
+    <string name="turkish_word">Türkçe Kelime</string>
+    <string name="english_word">İngilizce Kelime</string>
+    <string name="search">Ara</string>
+    <string name="learned_words">Öğrenilmiş Kelimeler</string>
+    <string name="word_details">Kelime Detayları</string>
+    <string name="word_list">Kelime Listesi</string>
+    <string name="learn">Öğren</string>
+    <string name="unlearn">Öğrenmeyi Bırak</string>
+    <string name="emoji">Emojiler</string>
+    <string name="tvphonetic">Fonetik</string>
+    <string name="german_word">Almanca Kelime</string>
+    <string name="italian_word">İtalyanca Kelime</string>
+    <string name="spanish_word">İspanyolca Kelime</string>
+    <string name="french_word">Fransızca Kelime</string>
+    <string name="definitions">Tanımlar</string>
+    <string name="listen_english_pronunciation">İngilizce Telaffuzu Dinle</string>
+    <string name="language">Dil</string>
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Türkçe</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+        <item>Español</item>
+        <item>Français</item>
+    </string-array>
+
+</resources>
