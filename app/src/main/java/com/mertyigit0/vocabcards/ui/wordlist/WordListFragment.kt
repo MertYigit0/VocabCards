@@ -1,6 +1,7 @@
 package com.mertyigit0.vocabcards.ui.wordlist
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -21,17 +22,23 @@ class WordListFragment : Fragment() {
     private lateinit var adapter: WordAdapter
     private lateinit var binding: FragmentWordListBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.d("FragmentLifecycle", "onCreate: MyFragment")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWordListBinding.inflate(inflater, container, false)
+        Log.d("FragmentLifecycle", "onCreateView: MyFragment")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("FragmentLifecycle", "onViewCreated: MyFragment")
         setHasOptionsMenu(true)  // Menü öğesini etkinleştir
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_list)
 
@@ -83,6 +90,16 @@ class WordListFragment : Fragment() {
             }
         })
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.d("FragmentLifecycle", "onDestroyView: MyFragment")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("FragmentLifecycle", "onDestroy: MyFragment")
     }
 
 }

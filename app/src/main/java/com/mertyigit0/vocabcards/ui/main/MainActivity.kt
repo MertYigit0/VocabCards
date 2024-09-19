@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         // Her zaman Light Mode'da çalışmasını sağla
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
@@ -39,6 +41,19 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        if (savedInstanceState == null) {
+            val navHostFragment = supportFragmentManager
+                .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+            val navController = navHostFragment.navController
+
+            val appBarConfiguration = AppBarConfiguration(navController.graph)
+            setSupportActionBar(findViewById(R.id.toolbar))
+            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+            binding.bottomNavigationView.setupWithNavController(navController)
+        }
+
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
