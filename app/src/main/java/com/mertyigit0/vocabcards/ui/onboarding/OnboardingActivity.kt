@@ -1,8 +1,14 @@
 package com.mertyigit0.vocabcards.ui.onboarding
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -13,15 +19,24 @@ class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
+    private val Int.dp: Int
+        get() = (this * resources.displayMetrics.density).toInt()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.d("OnboardingActivitya", "onCreate called")
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
 
         // Önceki onboarding tamamlandı mı kontrol et
         val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
         val isOnboardingCompleted = sharedPreferences.getBoolean("isOnboardingCompleted", false)
 
         if (isOnboardingCompleted) {
+            Log.d("OnboardingActivitya", "Onboarding already completed, navigating to MainActivity")
             // Onboarding tamamlandıysa MainActivity'ye geç
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -45,8 +60,5 @@ class OnboardingActivity : AppCompatActivity() {
         // TabLayout ile ViewPager2'yi bağla
         TabLayoutMediator(tabLayout, viewPager) { _, _ -> }.attach()
     }
-
-
-
 
 }

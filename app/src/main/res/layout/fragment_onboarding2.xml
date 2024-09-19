@@ -27,5 +27,8 @@
         android:text="@string/with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs"
         android:textSize="18sp"
         android:gravity="center"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"    />
+
 </LinearLayout>
