@@ -43,7 +43,6 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         _wordList.value = _wordList.value?.shuffled()
     }
 
-
     // Arama sorgusu için yeni fonksiyon
     fun searchWord(query: String) {
         viewModelScope.launch {

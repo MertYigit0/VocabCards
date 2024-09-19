@@ -21,9 +21,6 @@ data class Word(
     var isLearned: Boolean = false // Öğrenilip öğrenilmediğini tutan alan
 ) : Parcelable
 
-
-
-
 data class WordJsonResponse(
     @SerializedName("word") val word: String,
     @SerializedName("translations") val translations: Translations

@@ -20,16 +20,11 @@ import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
 
 class WordDetailFragment : Fragment() {
 
-
     private lateinit var binding: FragmentWordDetailBinding
-
     private val args: WordDetailFragmentArgs by navArgs()
     private lateinit var word: Word
     private lateinit var viewModel: WordDetailViewModel
     private var mediaPlayer: MediaPlayer? = null
-
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +36,6 @@ class WordDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_details)
 
@@ -60,9 +54,6 @@ class WordDetailFragment : Fragment() {
         binding.tvItalianWord.text = word.italian ?: "N/A"
         binding.tvSpanishWord.text = word.spanish ?: "N/A"
         binding.tvFrenchWord.text = word.french ?: "N/A"
-
-
-
 
         // Observe learned status
         viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
@@ -85,10 +76,6 @@ class WordDetailFragment : Fragment() {
                 // Set up the TextViews
                 binding.tvPhonetic.text = it.phonetic
                 binding.tvDefinitions.text = ""
-
-
-
-
 
                 // Set up the button to play audio
                 val audioUrl = it.phonetics.firstOrNull()?.audio ?: ""
@@ -115,7 +102,6 @@ class WordDetailFragment : Fragment() {
             }
         }
 
-
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
             // Navigate based on updated status
@@ -127,9 +113,6 @@ class WordDetailFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-
-
-
     }
 
     private fun updateButton(isLearned: Boolean) {
@@ -138,9 +121,6 @@ class WordDetailFragment : Fragment() {
         } else {
             getString(R.string.learn)
         }
-
-        // Renk kaynağını almak için context kullanın
-
     }
     override fun onDestroy() {
         super.onDestroy()

@@ -61,20 +61,14 @@ dependencies {
 
     implementation (libs.lottie)
 
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.rxjava2)
 
-    val room_version = "2.6.1"
 
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-
-    // To use Kotlin annotation processing tool (kapt)
-    kapt("androidx.room:room-compiler:$room_version")
-    // To use Kotlin Symbol Processing (KSP)
-
-    // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$room_version")
-
-    // optional - RxJava2 support for Room
-    implementation("androidx.room:room-rxjava2:$room_version")
+    implementation(libs.androidx.viewpager2)
+    implementation (libs.material.v180)
 
 }
