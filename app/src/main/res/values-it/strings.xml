@@ -29,6 +29,16 @@
     <string name="turkish_with_flag">Turco 🇹🇷</string>
 
 
+    <string name="start_learning">Inizia a Imparare</string>
+    <string name="welcome_to_vocabcards">Benvenuto su VocabCards!</string>
+    <string name="discover_a_fun_and_interactive_way_to_learn_new_words_and_expand_your_vocabulary_let_s_get_started_on_your_language_journey">Scopri un modo divertente e interattivo per imparare nuove parole e ampliare il tuo vocabolario. Iniziamo il tuo viaggio linguistico!</string>
+    <string name="with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">Con VocabCards, puoi creare flashcard personalizzate, tenere traccia dei tuoi progressi e rivedere facilmente le parole apprese. Rendi la tua esperienza di apprendimento unica e su misura per le tue esigenze!</string>
+    <string name="explore_features">Esplora le Caratteristiche</string>
+    <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Immergiamoci! Clicca qui sotto per iniziare la tua prima lezione di vocabolario e sbloccare il mondo delle parole. Il tuo viaggio verso la fluidità inizia ora!</string>
+    <string name="ready_to_begin">Pronto per Iniziare?</string>
+
+
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

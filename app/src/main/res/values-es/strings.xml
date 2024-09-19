@@ -29,6 +29,15 @@
     <string name="italian_with_flag">Italiano 🇮🇹</string>
     <string name="turkish_with_flag">Turco 🇹🇷</string>
 
+    <string name="start_learning">Comenzar a Aprender</string>
+    <string name="welcome_to_vocabcards">¡Bienvenido a VocabCards!</string>
+    <string name="discover_a_fun_and_interactive_way_to_learn_new_words_and_expand_your_vocabulary_let_s_get_started_on_your_language_journey">Descubre una forma divertida e interactiva de aprender nuevas palabras y expandir tu vocabulario. ¡Comencemos tu viaje lingüístico!</string>
+    <string name="with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">Con VocabCards, puedes crear tarjetas de memoria personalizadas, seguir tu progreso y repasar fácilmente las palabras aprendidas. ¡Haz que tu experiencia de aprendizaje sea única y adaptada a tus necesidades!</string>
+    <string name="explore_features">Explorar Características</string>
+    <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">¡Vamos a sumergirnos! Haz clic abajo para comenzar tu primera lección de vocabulario y desbloquear el mundo de las palabras. ¡Tu viaje hacia la fluidez comienza ahora!</string>
+    <string name="ready_to_begin">¿Listo para Comenzar?</string>
+
+
 
     <string-array name="language_array">
         <item>English</item>

@@ -6,15 +6,26 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:src="@drawable/onboardingimage2"
+        android:layout_marginBottom="50dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to App!"
+        android:text="@string/explore_features"
         android:textSize="24sp"
-        android:textColor="@android:color/black"/>
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/black"
+        />
 
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/onboardingimage2"/>
+        android:text="@string/with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"/>
 </LinearLayout>

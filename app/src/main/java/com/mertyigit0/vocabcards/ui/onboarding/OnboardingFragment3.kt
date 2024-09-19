@@ -43,7 +43,7 @@ class OnboardingFragment3 : Fragment() {
     private fun finishOnboarding() {
         // Onboarding tamamlandığında SharedPreferences güncelle
         val sharedPreferences = requireActivity().getSharedPreferences("prefs", AppCompatActivity.MODE_PRIVATE)
-        sharedPreferences.edit().putBoolean("isOnboardingCompleted", true).apply()
+        sharedPreferences.edit().putBoolean("isOnboardingCompleted", false).apply()
 
         // MainActivity'ye geç
         val intent = Intent(requireActivity(), MainActivity::class.java)

@@ -7,16 +7,29 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to App!"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"/>
 
     <ImageView
         android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:src="@drawable/onboardingimage1"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/onboardingimage1"/>
+        android:text="@string/welcome_to_vocabcards"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_a_fun_and_interactive_way_to_learn_new_words_and_expand_your_vocabulary_let_s_get_started_on_your_language_journey"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        />
+
 
 </LinearLayout>
