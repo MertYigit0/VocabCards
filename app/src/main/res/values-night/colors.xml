@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode için renkler -->
+    <color name="black">#FFFFFFFF</color> <!-- Beyaz metin koyu arka plan için -->
+    <color name="white">#FF121212</color> <!-- Koyu arka plan -->
+    <color name="colorPrimary">#80DEEA</color> <!-- Hafif daha koyu tonlar, göz yormayan pastel mavi -->
+    <color name="colorPrimaryLight">#4DD0E1</color> <!-- Biraz daha koyu mavi, light moddaki gibi parlak değil -->
+    <color name="colorAccent">#A8D5BA</color> <!-- Daha pastel, koyu yeşilimsi accent rengi -->
+    <color name="lightorange">#F57C00</color> <!-- Parlak portakal tonlarını hafif koyu tuttuk -->
+    <color name="orange">#FF8A00</color> <!-- Doygun, parlak turuncu -->
+    <color name="llorange">#FFAB40</color> <!-- Hafif daha yumuşak tonlar -->
+    <color name="lllorange">#FFE0B2</color> <!-- Yumuşak ve pastel turuncu alt ton -->
+</resources>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme -->
+    <!-- Light Mode Teması -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Light mode için diğer gerekli tanımlar -->
     </style>
 
     <!-- Splash screen theme -->
@@ -10,4 +12,3 @@
         <item name="android:windowBackground">@color/white</item>
     </style>
 </resources>
-
