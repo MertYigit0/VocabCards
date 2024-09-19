@@ -11,43 +11,52 @@ import com.airbnb.lottie.LottieAnimationView
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.databinding.ActivitySplashBinding
 import com.mertyigit0.vocabcards.ui.main.MainActivity
+import com.mertyigit0.vocabcards.ui.onboarding.OnboardingActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
-    // ViewBinding instance
     private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        // Initialize ViewBinding
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get LottieAnimationView from binding
         val lottieAnimationView = binding.lottieAnimationView
-
-        // Optionally set animation properties
-        lottieAnimationView.setAnimation(R.raw.splash) // Replace with your animation file
+        lottieAnimationView.setAnimation(R.raw.splash)
         lottieAnimationView.playAnimation()
 
-        // Duration of the splash screen
-        val splashScreenDuration = 3000L // 4000 milliseconds = 4 seconds
+        // Kullanıcı onboarding'i daha önce tamamladı mı kontrol et
+        val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        val isOnboardingCompleted = sharedPreferences.getBoolean("isOnboardingCompleted", false)
 
-        // Handler to transition to MainActivity after the splash screen duration
+        // Splash ekranı süresi
+        val splashScreenDuration = 3000L // 3 saniye
+
+        // Handler ile geçiş yap
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            val intent = if (isOnboardingCompleted) {
+                Intent(this@SplashActivity, MainActivity::class.java)
+            } else {
+                Intent(this@SplashActivity, OnboardingActivity::class.java)
+            }
+            startActivity(intent)
             finish()
         }, splashScreenDuration)
 
-        // If the animation duration is longer or you want to ensure the animation finishes before starting MainActivity
+        // Animasyon bitiminde geçiş yapmak isterseniz:
         lottieAnimationView.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator) {}
 
             override fun onAnimationEnd(animation: Animator) {
-                // Start MainActivity
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                val intent = if (isOnboardingCompleted) {
+                    Intent(this@SplashActivity, MainActivity::class.java)
+                } else {
+                    Intent(this@SplashActivity, OnboardingActivity::class.java)
+                }
+                startActivity(intent)
                 finish()
             }
 
