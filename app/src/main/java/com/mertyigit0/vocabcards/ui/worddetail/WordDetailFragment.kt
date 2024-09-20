@@ -4,7 +4,6 @@ package com.mertyigit0.vocabcards.ui.worddetail
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +16,10 @@ import com.airbnb.lottie.LottieAnimationView
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class WordDetailFragment : Fragment() {
 
@@ -83,15 +86,14 @@ class WordDetailFragment : Fragment() {
                 binding.btnPlayAudio.setOnClickListener {
                     viewModel.playAudio(audioUrl)
 
-
                     val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
-
                     lottiePlayAnimation.playAnimation()
 
 
-                    Handler().postDelayed({
+                    CoroutineScope(Dispatchers.Main).launch {
+                        delay(1500) // 1500 ms = 1.5 saniye
                         lottiePlayAnimation.pauseAnimation()
-                    }, 1500) // 1500 ms = 1.5 saniye
+                    }
                 }
 
 
