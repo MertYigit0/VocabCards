@@ -1,7 +1,6 @@
 package com.mertyigit0.vocabcards.ui.main
 
 import android.content.Context
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
@@ -26,15 +25,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        // Her zaman Light Mode'da çalışmasını sağla
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
 
-
-
-        // Kaydedilen dili yükleme
         val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         val languageCode = sharedPreferences.getString("language_code", "en")
         languageCode?.let { setLocale(it) }
@@ -120,23 +113,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeLanguage(languageCode: String) {
-        // Kaydetme işlemi
+
         val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         with(sharedPreferences.edit()) {
             putString("language_code", languageCode)
             apply()
         }
 
-
-
-        // Dil değişikliği işlemi
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = Configuration(resources.configuration)
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
 
-        // Aktiviteyi yeniden başlatma
         recreate()
     }
 

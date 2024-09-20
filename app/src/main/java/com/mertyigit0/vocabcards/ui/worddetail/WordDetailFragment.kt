@@ -1,6 +1,7 @@
 package com.mertyigit0.vocabcards.ui.worddetail
 
-import android.graphics.drawable.Drawable
+
+import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
@@ -9,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -34,12 +34,13 @@ class WordDetailFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_details)
 
-        viewModel = ViewModelProvider(this).get(WordDetailViewModel::class.java)
+        viewModel = ViewModelProvider(this)[WordDetailViewModel::class.java]
         word = args.word
 
         // Show ProgressBar and hide content initially
@@ -82,22 +83,21 @@ class WordDetailFragment : Fragment() {
                 binding.btnPlayAudio.setOnClickListener {
                     viewModel.playAudio(audioUrl)
 
-                    // ViewBinding veya findViewById ile Lottie ve Button'u bağlayın
+
                     val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
 
                     lottiePlayAnimation.playAnimation()
 
-                    // 1.5 saniye sonra animasyonu durdur
+
                     Handler().postDelayed({
-                        lottiePlayAnimation.pauseAnimation() // veya lottiePlayAnimation.cancelAnimation()
+                        lottiePlayAnimation.pauseAnimation()
                     }, 1500) // 1500 ms = 1.5 saniye
                 }
 
-                // Eğer audioUrl null ise butonu göster ya da sakla
+
               //  binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
                // binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
 
-                // `pronunciationLayout`'ın görünürlüğünü ayarlayın
                 binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.INVISIBLE
             }
         }

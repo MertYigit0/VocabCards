@@ -7,7 +7,6 @@ import com.google.gson.reflect.TypeToken
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.local.WordDatabase
 import com.mertyigit0.vocabcards.data.model.Word
-import com.mertyigit0.vocabcards.data.model.WordJsonResponse
 import com.mertyigit0.vocabcards.data.model.WordListResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -25,7 +24,6 @@ class WordRepository(private val context: Context) {
             val inputStream = context.resources.openRawResource(R.raw.words)
             val reader = InputStreamReader(inputStream)
 
-            // JSON dosyanızın yapısına göre uygun TypeToken kullanın
             val wordListType = object : TypeToken<WordListResponse>() {}.type
             val wordListResponse: WordListResponse = Gson().fromJson(reader, wordListType)
 
@@ -70,17 +68,15 @@ class WordRepository(private val context: Context) {
         }
     }
 
-    // Bu kısımda db.wordDao() kullanarak arama işlemini gerçekleştiriyoruz
     suspend fun searchWords(query: String): List<Word> {
         return withContext(Dispatchers.IO) {
-            db.wordDao().searchWords("%$query%")  // Arama sorgusunu veritabanına gönder
+            db.wordDao().searchWords("%$query%")
         }
     }
 
-
     suspend fun searchLearnedWords(query: String): List<Word> {
         return withContext(Dispatchers.IO) {
-            db.wordDao().searchLearnedWords("%$query%")  // Arama sorgusunu veritabanına gönder
+            db.wordDao().searchLearnedWords("%$query%")
         }
     }
 }

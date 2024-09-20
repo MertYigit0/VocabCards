@@ -39,10 +39,10 @@ class WordListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("FragmentLifecycle", "onViewCreated: MyFragment")
-        setHasOptionsMenu(true)  // Menü öğesini etkinleştir
+        setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_list)
 
-        viewModel = ViewModelProvider(this).get(WordListViewModel::class.java)
+        viewModel = ViewModelProvider(this)[WordListViewModel::class.java]
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = WordAdapter(viewModel.wordList.value ?: emptyList()) { word ->
             val action = WordListFragmentDirections.actionWordListFragmentToWordDetailFragment(word)
@@ -59,7 +59,7 @@ class WordListFragment : Fragment() {
             binding.swipeRefreshLayout.isRefreshing = false
         }
 
-        // Uygulama başladığında listeyi güncelle
+
         viewModel.updateWordList()
     }
 
@@ -71,20 +71,20 @@ class WordListFragment : Fragment() {
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = searchItem.actionView as androidx.appcompat.widget.SearchView
 
-        // Arama sorgusu dinleyici
+
         searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                // Arama yapılınca tetiklenir
+
                 query?.let {
-                    viewModel.searchWord(it)  // Kelimeleri filtrele
+                    viewModel.searchWord(it)
                 }
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Arama metni değiştikçe tetiklenir
+
                 newText?.let {
-                    viewModel.searchWord(it)  // Kelimeleri filtrele
+                    viewModel.searchWord(it)
                 }
                 return true
             }

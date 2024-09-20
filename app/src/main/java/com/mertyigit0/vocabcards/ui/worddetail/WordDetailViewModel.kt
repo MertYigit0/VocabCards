@@ -25,7 +25,7 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
 
     private var mediaPlayer: MediaPlayer? = null
 
-    // Öğrenilen kelime durumunu kontrol et
+
     fun checkIfWordIsLearned(word: Word) {
         viewModelScope.launch {
             val learnedWords = repository.getLearnedWords()
@@ -33,7 +33,7 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-    // Öğrenilen kelime durumunu değiştir
+
     fun toggleWordLearningStatus(word: Word) {
         viewModelScope.launch {
             val learnedWords = repository.getLearnedWords()
@@ -42,11 +42,11 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
             } else {
                 repository.addLearnedWord(word)
             }
-            checkIfWordIsLearned(word) // Durumu güncelle
+            checkIfWordIsLearned(word)
         }
     }
 
-    // Kelime detaylarını API'dan çek
+
     fun fetchWordDetails(word: String) {
         RetrofitInstance.api.getWordDetails(word).enqueue(object : Callback<List<WordResponse>> {
             override fun onResponse(
@@ -64,14 +64,14 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
         })
     }
 
-    // Ses dosyasını çal
+
     fun playAudio(url: String) {
-        mediaPlayer?.release() // Önceki medya oynatıcıyı serbest bırak
+        mediaPlayer?.release()
         mediaPlayer = MediaPlayer().apply {
             try {
-                setDataSource(url) // URL'yi ayarla
-                prepare() // Hazırla
-                start() // Başlat
+                setDataSource(url)
+                prepare()
+                start()
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -80,6 +80,6 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
 
     override fun onCleared() {
         super.onCleared()
-        mediaPlayer?.release() // Fragment yok edilirken medya oynatıcıyı serbest bırak
+        mediaPlayer?.release()
     }
 }

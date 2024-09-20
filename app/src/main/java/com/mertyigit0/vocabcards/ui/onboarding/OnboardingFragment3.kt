@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.databinding.FragmentOnboarding3Binding
 import com.mertyigit0.vocabcards.ui.main.MainActivity
 
@@ -25,8 +24,8 @@ class OnboardingFragment3 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
+
         _binding = FragmentOnboarding3Binding.inflate(inflater, container, false)
         return binding.root
     }
@@ -35,27 +34,23 @@ class OnboardingFragment3 : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFinish.setOnClickListener {
-            finishOnboarding() // Onboarding tamamlandığında çağır
+            finishOnboarding()
         }
     }
 
-
     private fun finishOnboarding() {
-        // Onboarding tamamlandığında SharedPreferences güncelle
+
         val sharedPreferences = requireActivity().getSharedPreferences("prefs", AppCompatActivity.MODE_PRIVATE)
         sharedPreferences.edit().putBoolean("isOnboardingCompleted", true).apply()
 
-        // MainActivity'ye geç
+
         val intent = Intent(requireActivity(), MainActivity::class.java)
         startActivity(intent)
-        requireActivity().finish() // Onboarding aktivitelerini kapat
+        requireActivity().finish()
     }
-
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Binding referansını temizleyin
+        _binding = null
     }
 }

@@ -4,7 +4,6 @@ import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import com.google.gson.reflect.TypeToken
 import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "word_table")
@@ -18,7 +17,7 @@ data class Word(
     val italian: String? = null,
     val spanish: String? = null,
     val french: String? = null,
-    var isLearned: Boolean = false // Öğrenilip öğrenilmediğini tutan alan
+    var isLearned: Boolean = false
 ) : Parcelable
 
 data class WordJsonResponse(
@@ -39,4 +38,4 @@ data class WordListResponse(
     val words: List<WordJsonResponse>
 )
 
-val wordListType = object : TypeToken<WordListResponse>() {}.type
+

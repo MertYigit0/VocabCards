@@ -1,5 +1,6 @@
 package com.mertyigit0.vocabcards.ui.wordlist
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,7 @@ class WordAdapter(
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(word: Word) {
             itemView.findViewById<TextView>(R.id.tvEnglishWord).text = word.english
-            itemView.findViewById<TextView>(R.id.tvEmoji).text = word.emoji // Güncellenmiş ID
+            itemView.findViewById<TextView>(R.id.tvEmoji).text = word.emoji
             itemView.setOnClickListener { onItemClick(word) }
         }
     }
@@ -32,6 +33,7 @@ class WordAdapter(
 
     override fun getItemCount(): Int = wordList.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(newWordList: List<Word>) {
         wordList = newWordList
         notifyDataSetChanged()

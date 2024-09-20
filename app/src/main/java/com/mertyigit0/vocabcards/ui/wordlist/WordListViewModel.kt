@@ -34,7 +34,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     fun updateWordList() {
         viewModelScope.launch {
             val allWords = repository.getAllWords().shuffled()
-            // Öğrenilmemiş kelimeleri filtreleyin
+
             _wordList.value = allWords.filter { !it.isLearned }
         }
     }
@@ -43,7 +43,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         _wordList.value = _wordList.value?.shuffled()
     }
 
-    // Arama sorgusu için yeni fonksiyon
+
     fun searchWord(query: String) {
         viewModelScope.launch {
             _wordList.value = repository.searchWords(query)
