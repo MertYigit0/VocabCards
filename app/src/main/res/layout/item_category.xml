@@ -25,7 +25,6 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- Emoji instead of Turkish Word -->
         <TextView
             android:id="@+id/tvCategoryEmoji"
             android:layout_width="wrap_content"
@@ -33,6 +32,26 @@
             android:text="😊"
             android:textSize="24sp"
             android:paddingTop="8dp"/>
+
+        <!-- Total words and learned words -->
+        <TextView
+            android:id="@+id/tvWordProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5/10"
+            android:textSize="16sp"
+            android:paddingTop="8dp"/>
+
+        <!-- Progress bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="10"
+            android:progress="5"
+            android:indeterminate="false" />
 
     </LinearLayout>
 

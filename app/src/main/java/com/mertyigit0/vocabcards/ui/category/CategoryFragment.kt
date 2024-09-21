@@ -45,10 +45,20 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
         categoryViewModel.categories.observe(viewLifecycleOwner) { categories ->
-            categoryAdapter = CategoryAdapter(categories, this) // Dinleyiciyi ekle
+            categoryAdapter = CategoryAdapter(categories, this)
             recyclerView.adapter = categoryAdapter
+
+            // Kelime sayılarını yükle
+            categoryViewModel.loadWordCounts()
+        }
+
+        categoryViewModel.wordCountMap.observe(viewLifecycleOwner) { wordCounts ->
+            categoryAdapter.updateWordCounts(wordCounts) // Kelime sayılarını güncelle
         }
     }
+
+
+
 
     override fun onCategoryClick(categoryId: Long) {
         sharedViewModel.categoryId = categoryId

@@ -116,4 +116,10 @@ class WordRepository(private val context: Context) {
             db.wordDao().getWordsByCategory(categoryId) // DAO'da bu fonksiyon tanımlanmalı
         }
     }
+
+    suspend fun getWordCountByCategory(categoryId: Long): Int {
+        return withContext(Dispatchers.IO) {
+            db.wordDao().getWordsByCategory(categoryId).size // Bu fonksiyonun DAO'da tanımlanması gerekir
+        }
+    }
 }
