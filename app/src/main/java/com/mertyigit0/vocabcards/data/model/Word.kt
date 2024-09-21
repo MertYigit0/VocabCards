@@ -17,12 +17,14 @@ data class Word(
     val italian: String? = null,
     val spanish: String? = null,
     val french: String? = null,
-    var isLearned: Boolean = false
+    var isLearned: Boolean = false,
+    val categoryId: Long
 ) : Parcelable
 
 data class WordJsonResponse(
     @SerializedName("word") val word: String,
-    @SerializedName("translations") val translations: Translations
+    @SerializedName("translations") val translations: Translations,
+    @SerializedName("categoryId") val categoryId: Long
 )
 
 data class Translations(

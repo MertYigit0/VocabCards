@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             binding.bottomNavigationView.setupWithNavController(navController)
         }
 
-
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
@@ -136,7 +135,6 @@ class MainActivity : AppCompatActivity() {
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
     }
-
 
 }
 

@@ -26,6 +26,12 @@ interface WordDao {
     @Query("SELECT * FROM word_table WHERE english LIKE '%' || :searchQuery || '%' AND isLearned = 1")
     suspend fun searchLearnedWords(searchQuery: String): List<Word>
 
+    @Insert
+    suspend fun insert(word: Word)
+
+    @Query("SELECT * FROM word_table WHERE categoryId = :categoryId")
+    suspend fun getWordsByCategory(categoryId: Long): List<Word>
+
 }
 
 

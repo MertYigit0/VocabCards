@@ -9,7 +9,8 @@
         "it": "Mela",
         "es": "Manzana",
         "fr": "Pomme"
-      }
+      },
+      "categoryId": 2
     },
     {
       "word": "Book",
@@ -20,7 +21,8 @@
         "it": "Libro 🇮🇹",
         "es": "Libro 🇲🇽",
         "fr": "Livre 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Car",
@@ -31,7 +33,8 @@
         "it": "Macchina 🇮🇹",
         "es": "Coche 🇪🇸",
         "fr": "Voiture 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Glass",
@@ -42,7 +45,8 @@
         "it": "Bicchiere 🇮🇹",
         "es": "Vaso 🇪🇸",
         "fr": "Verre 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Window",
@@ -53,7 +57,8 @@
         "it": "Finestra 🇮🇹",
         "es": "Ventana 🇪🇸",
         "fr": "Fenêtre 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Door",
@@ -64,7 +69,8 @@
         "it": "Porta 🇮🇹",
         "es": "Puerta 🇪🇸",
         "fr": "Porte 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Street",
@@ -75,7 +81,8 @@
         "it": "Strada 🇮🇹",
         "es": "Calle 🇪🇸",
         "fr": "Rue 🇫🇷"
-      }
+      },
+      "categoryId": 10
     },
     {
       "word": "City",
@@ -86,7 +93,8 @@
         "it": "Città 🇮🇹",
         "es": "Ciudad 🇪🇸",
         "fr": "Ville 🇫🇷"
-      }
+      },
+      "categoryId": 4
     },
     {
       "word": "Map",
@@ -97,7 +105,8 @@
         "it": "Mappa 🇮🇹",
         "es": "Mapa 🇪🇸",
         "fr": "Carte 🇫🇷"
-      }
+      },
+      "categoryId": 10
     },
     {
       "word": "Bag",
@@ -108,7 +117,8 @@
         "it": "Borsa 🇮🇹",
         "es": "Bolsa 🇪🇸",
         "fr": "Sac 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Shoes",
@@ -119,7 +129,8 @@
         "it": "Scarpe 🇮🇹",
         "es": "Zapatos 🇪🇸",
         "fr": "Chaussures 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Shirt",
@@ -130,7 +141,8 @@
         "it": "Camicia 🇮🇹",
         "es": "Camisa 🇪🇸",
         "fr": "Chemise 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Pants",
@@ -141,7 +153,8 @@
         "it": "Pantaloni 🇮🇹",
         "es": "Pantalones 🇪🇸",
         "fr": "Pantalon 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Lamp",
@@ -152,7 +165,8 @@
         "it": "Lampada 🇮🇹",
         "es": "Lámpara 🇪🇸",
         "fr": "Lampe 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Clock",
@@ -163,7 +177,8 @@
         "it": "Orologio 🇮🇹",
         "es": "Reloj 🇪🇸",
         "fr": "Horloge 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Mirror",
@@ -174,7 +189,8 @@
         "it": "Specchio 🇮🇹",
         "es": "Espejo 🇪🇸",
         "fr": "Miroir 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Fan",
@@ -185,7 +201,8 @@
         "it": "Ventilatore 🇮🇹",
         "es": "Ventilador 🇪🇸",
         "fr": "Ventilateur 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Refrigerator",
@@ -196,7 +213,8 @@
         "it": "Frigorifero 🇮🇹",
         "es": "Refrigerador 🇪🇸",
         "fr": "Réfrigérateur 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Sink",
@@ -207,7 +225,8 @@
         "it": "Lavello 🇮🇹",
         "es": "Fregadero 🇪🇸",
         "fr": "Évier 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
       "word": "Toothbrush",
@@ -218,62 +237,56 @@
         "it": "Spazzolino 🇮🇹",
         "es": "Cepillo de dientes 🇪🇸",
         "fr": "Brosse à dents 🇫🇷"
-      }
+      },
+      "categoryId": 8
     },
     {
-      "word": "Soap",
+      "word": "Toothpaste",
       "translations": {
-        "tr": "Sabun 🇹🇷",
-        "emoji": "🧼",
-        "de": "Seife 🇩🇪",
-        "it": "Sapone 🇮🇹",
-        "es": "Jabón 🇪🇸",
-        "fr": "Savon 🇫🇷"
-      }
+        "tr": "Diş Macunu 🇹🇷",
+        "emoji": "🪥",
+        "de": "Zahnpasta 🇩🇪",
+        "it": "Dentifricio 🇮🇹",
+        "es": "Pasta de dientes 🇪🇸",
+        "fr": "Dentifrice 🇫🇷"
+      },
+      "categoryId": 8
     },
     {
-      "word": "Towel",
+      "word": "Spoon",
       "translations": {
-        "tr": "Havlu 🇹🇷",
-        "emoji": "🔊",
-        "de": "Handtuch 🇩🇪",
-        "it": "Asciugamano 🇮🇹",
-        "es": "Toalla 🇪🇸",
-        "fr": "Serviette 🇫🇷"
-      }
+        "tr": "Kaşık 🇹🇷",
+        "emoji": "🥄",
+        "de": "Löffel 🇩🇪",
+        "it": "Cucchiaio 🇮🇹",
+        "es": "Cuchara 🇪🇸",
+        "fr": "Cuillère 🇫🇷"
+      },
+      "categoryId": 8
     },
     {
-      "word": "Conditioner",
+      "word": "Fork",
       "translations": {
-        "tr": "Saç Kremi 🇹🇷",
-        "emoji": "💇‍♀️",
-        "de": "Haarspülung 🇩🇪",
-        "it": "Balsamo 🇮🇹",
-        "es": "Acondicionador 🇪🇸",
-        "fr": "Après-shampooing 🇫🇷"
-      }
+        "tr": "Çatal 🇹🇷",
+        "emoji": "🍴",
+        "de": "Gabel 🇩🇪",
+        "it": "Forchetta 🇮🇹",
+        "es": "Tenedor 🇪🇸",
+        "fr": "Fourchette 🇫🇷"
+      },
+      "categoryId": 8
     },
     {
-      "word": "Cheese",
+      "word": "Knife",
       "translations": {
-        "tr": "Peynir 🇹🇷",
-        "emoji": "🧀",
-        "de": "Käse 🇩🇪",
-        "it": "Formaggio 🇮🇹",
-        "es": "Queso 🇪🇸",
-        "fr": "Fromage 🇫🇷"
-      }
-    },
-    {
-      "word": "Egg",
-      "translations": {
-        "tr": "Yumurta 🇹🇷",
-        "emoji": "🥚",
-        "de": "Ei 🇩🇪",
-        "it": "Uovo 🇮🇹",
-        "es": "Huevo 🇪🇸",
-        "fr": "Œuf 🇫🇷"
-      }
+        "tr": "Bıçak 🇹🇷",
+        "emoji": "🔪",
+        "de": "Messer 🇩🇪",
+        "it": "Coltello 🇮🇹",
+        "es": "Cuchillo 🇪🇸",
+        "fr": "Couteau 🇫🇷"
+      },
+      "categoryId": 8
     },
     {
       "word": "Chicken",
@@ -284,7 +297,8 @@
         "it": "Pollo 🇮🇹",
         "es": "Pollo 🇪🇸",
         "fr": "Poulet 🇫🇷"
-      }
+      },
+      "categoryId": 9
     },
     {
       "word": "Fish",
@@ -295,117 +309,44 @@
         "it": "Pesce 🇮🇹",
         "es": "Pescado 🇪🇸",
         "fr": "Poisson 🇫🇷"
-      }
+      },
+      "categoryId": 9
     },
     {
-      "word": "Meat",
+      "word": "Cheese",
       "translations": {
-        "tr": "Et 🇹🇷",
-        "emoji": "🍖",
-        "de": "Fleisch 🇩🇪",
-        "it": "Carne 🇮🇹",
-        "es": "Carne 🇪🇸",
-        "fr": "Viande 🇫🇷"
-      }
+        "tr": "Peynir 🇹🇷",
+        "emoji": "🧀",
+        "de": "Käse 🇩🇪",
+        "it": "Formaggio 🇮🇹",
+        "es": "Queso 🇪🇸",
+        "fr": "Fromage 🇫🇷"
+      },
+      "categoryId": 9
     },
     {
-      "word": "Rice",
+      "word": "Water",
       "translations": {
-        "tr": "Pirinç 🇹🇷",
-        "emoji": "🍚",
-        "de": "Reis 🇩🇪",
-        "it": "Riso 🇮🇹",
-        "es": "Arroz 🇪🇸",
-        "fr": "Riz 🇫🇷"
-      }
+        "tr": "Su 🇹🇷",
+        "emoji": "💧",
+        "de": "Wasser 🇩🇪",
+        "it": "Acqua 🇮🇹",
+        "es": "Agua 🇪🇸",
+        "fr": "Eau 🇫🇷"
+      },
+      "categoryId": 9
     },
     {
-      "word": "Fruit",
+      "word": "Orange",
       "translations": {
-        "tr": "Meyve 🇹🇷",
-        "emoji": "🍇",
-        "de": "Frucht 🇩🇪",
-        "it": "Frutta 🇮🇹",
-        "es": "Fruta 🇪🇸",
-        "fr": "Fruit 🇫🇷"
-      }
-    },
-    {
-      "word": "Juice",
-      "translations": {
-        "tr": "Meyve Suyu 🇹🇷",
-        "emoji": "🧃",
-        "de": "Saft 🇩🇪",
-        "it": "Succo 🇮🇹",
-        "es": "Jugo 🇪🇸",
-        "fr": "Jus 🇫🇷"
-      }
-    },
-    {
-      "word": "Tea",
-      "translations": {
-        "tr": "Çay 🇹🇷",
-        "emoji": "🍵",
-        "de": "Tee 🇩🇪",
-        "it": "Tè 🇮🇹",
-        "es": "Té 🇪🇸",
-        "fr": "Thé 🇫🇷"
-      }
-    },
-    {
-      "word": "Money",
-      "translations": {
-        "tr": "Para 🇹🇷",
-        "emoji": "💰",
-        "de": "Geld 🇩🇪",
-        "it": "Soldi 🇮🇹",
-        "es": "Dinero 🇪🇸",
-        "fr": "Argent 🇫🇷"
-      }
-    },
-    {
-      "word": "One",
-      "translations": {
-        "tr": "Bir 🇹🇷",
-        "emoji": "1️⃣",
-        "de": "Eins 🇩🇪",
-        "it": "Uno 🇮🇹",
-        "es": "Uno 🇪🇸",
-        "fr": "Un 🇫🇷"
-      }
-    },
-    {
-      "word": "Two",
-      "translations": {
-        "tr": "İki 🇹🇷",
-        "emoji": "2️⃣",
-        "de": "Zwei 🇩🇪",
-        "it": "Due 🇮🇹",
-        "es": "Dos 🇪🇸",
-        "fr": "Deux 🇫🇷"
-      }
-    },
-    {
-      "word": "Cat",
-      "translations": {
-        "tr": "Kedi 🇹🇷",
-        "emoji": "🐱",
-        "de": "Katze 🇩🇪",
-        "it": "Gatto 🇮🇹",
-        "es": "Gato 🇪🇸",
-        "fr": "Chat 🇫🇷"
-      }
-    },
-    {
-      "word": "Cow",
-      "translations": {
-        "tr": "İnek 🇹🇷",
-        "emoji": "🐄",
-        "de": "Kuh 🇩🇪",
-        "it": "Mucca 🇮🇹",
-        "es": "Vaca 🇪🇸",
-        "fr": "Vache 🇫🇷"
-      }
+        "tr": "Portakal 🇹🇷",
+        "emoji": "🍊",
+        "de": "Orange 🇩🇪",
+        "it": "Arancia 🇮🇹",
+        "es": "Naranja 🇪🇸",
+        "fr": "Orange 🇫🇷"
+      },
+      "categoryId": 2
     },
     {
       "word": "Banana",
@@ -416,7 +357,8 @@
         "it": "Banana 🇮🇹",
         "es": "Plátano 🇪🇸",
         "fr": "Banane 🇫🇷"
-      }
+      },
+      "categoryId": 2
     },
     {
       "word": "Strawberry",
@@ -427,40 +369,68 @@
         "it": "Fragola 🇮🇹",
         "es": "Fresa 🇪🇸",
         "fr": "Fraise 🇫🇷"
-      }
+      },
+      "categoryId": 2
     },
     {
-      "word": "Table",
+      "word": "Cat",
       "translations": {
-        "tr": "Masa 🇹🇷",
-        "emoji": "💻",
-        "de": "Tisch 🇩🇪",
-        "it": "Tavolo 🇮🇹",
-        "es": "Mesa 🇪🇸",
-        "fr": "Table 🇫🇷"
-      }
+        "tr": "Kedi 🇹🇷",
+        "emoji": "🐱",
+        "de": "Katze 🇩🇪",
+        "it": "Gatto 🇮🇹",
+        "es": "Gato 🇪🇸",
+        "fr": "Chat 🇫🇷"
+      },
+      "categoryId": 1
     },
     {
-      "word": "Pineapple",
+      "word": "Dog",
       "translations": {
-        "tr": "Ananas 🇹🇷",
-        "emoji": "🍍",
-        "de": "Ananas 🇩🇪",
-        "it": "Ananas 🇮🇹",
-        "es": "Piña 🇪🇸",
-        "fr": "Ananas 🇫🇷"
-      }
+        "tr": "Köpek 🇹🇷",
+        "emoji": "🐶",
+        "de": "Hund 🇩🇪",
+        "it": "Cane 🇮🇹",
+        "es": "Perro 🇪🇸",
+        "fr": "Chien 🇫🇷"
+      },
+      "categoryId": 1
     },
     {
-      "word": "Watermelon",
+      "word": "Horse",
       "translations": {
-        "tr": "Karpuz 🇹🇷",
-        "emoji": "🍉",
-        "de": "Wassermelone 🇩🇪",
-        "it": "Anguria 🇮🇹",
-        "es": "Sandía 🇪🇸",
-        "fr": "Pastèque 🇫🇷"
-      }
+        "tr": "At 🇹🇷",
+        "emoji": "🐴",
+        "de": "Pferd 🇩🇪",
+        "it": "Cavallo 🇮🇹",
+        "es": "Caballo 🇪🇸",
+        "fr": "Cheval 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Elephant",
+      "translations": {
+        "tr": "Fil 🇹🇷",
+        "emoji": "🐘",
+        "de": "Elefant 🇩🇪",
+        "it": "Elefante 🇮🇹",
+        "es": "Elefante 🇪🇸",
+        "fr": "Éléphant 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Tiger",
+      "translations": {
+        "tr": "Kaplan 🇹🇷",
+        "emoji": "🐅",
+        "de": "Tiger 🇩🇪",
+        "it": "Tigre 🇮🇹",
+        "es": "Tigre 🇪🇸",
+        "fr": "Tigre 🇫🇷"
+      },
+      "categoryId": 1
     },
     {
       "word": "Shark",
@@ -471,42 +441,20 @@
         "it": "Squalo 🇮🇹",
         "es": "Tiburón 🇪🇸",
         "fr": "Requin 🇫🇷"
-      }
+      },
+      "categoryId": 1
     },
     {
-      "word": "Sun",
+      "word": "Penguin",
       "translations": {
-        "tr": "Güneş 🇹🇷",
-        "emoji": "☀️",
-        "de": "Sonne 🇩🇪",
-        "it": "Sole 🇮🇹",
-        "es": "Sol 🇪🇸",
-        "fr": "Soleil 🇫🇷"
-      }
-    },
-    {
-      "word": "Moon",
-      "translations": {
-        "tr": "Ay 🇹🇷",
-        "emoji": "🌙",
-        "de": "Mond 🇩🇪",
-        "it": "Luna 🇮🇹",
-        "es": "Luna 🇪🇸",
-        "fr": "Lune 🇫🇷"
-      }
-    },
-    {
-      "word": "Star",
-      "translations": {
-        "tr": "Yıldız 🇹🇷",
-        "emoji": "⭐",
-        "de": "Stern 🇩🇪",
-        "it": "Stella 🇮🇹",
-        "es": "Estrella 🇪🇸",
-        "fr": "Étoile 🇫🇷"
-      }
+        "tr": "Penguen 🇹🇷",
+        "emoji": "🐧",
+        "de": "Pinguin 🇩🇪",
+        "it": "Pinguino 🇮🇹",
+        "es": "Pingüino 🇪🇸",
+        "fr": "Pingouin 🇫🇷"
+      },
+      "categoryId": 1
     }
   ]
 }
-
-

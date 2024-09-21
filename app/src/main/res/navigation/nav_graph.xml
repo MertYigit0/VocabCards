@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/wordListFragment">
+    app:startDestination="@id/categoryFragment">
 
     <!-- LearnedListFragment -->
     <fragment
@@ -40,6 +40,9 @@
                 app:argType="com.mertyigit0.vocabcards.data.model.Word"
                 app:nullable="false" />
         </action>
+        <action
+            android:id="@+id/action_wordListFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
     </fragment>
 
     <!-- WordDetailFragment -->
@@ -61,6 +64,20 @@
             app:destination="@id/learnedListFragment"
             app:enterAnim="@anim/slide_down"
             app:exitAnim="@anim/slide_up" />
+    </fragment>
+
+    <!-- CategoryFragment -->
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mertyigit0.vocabcards.ui.category.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment">
+            <argument
+                android:name="CATEGORY_ID"
+                app:argType="long" />
+        </action>
     </fragment>
 
 </navigation>

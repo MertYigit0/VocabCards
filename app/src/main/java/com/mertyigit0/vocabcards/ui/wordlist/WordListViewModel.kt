@@ -1,6 +1,7 @@
 package com.mertyigit0.vocabcards.ui.wordlist
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,15 +16,23 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     private val _wordList = MutableLiveData<List<Word>>()
     val wordList: LiveData<List<Word>> get() = _wordList
 
-    init {
+    // Kategori ID'sini saklayacak bir değişken
+    private var categoryId: Long? = null
 
-        loadWordsIfNeeded()
+    // Kategori ID'sini ayarlamak için bir yöntem
+    fun setCategoryId(id: Long) {
+        categoryId = id
         updateWordList()
+    }
+
+    init {
+        loadWordsIfNeeded()
     }
 
     private fun loadWordsIfNeeded() {
         viewModelScope.launch {
             val words = repository.getAllWords()
+            Log.d("WordListViewModela", "All words from database: $words")
             if (words.isEmpty()) {
                 repository.loadWordsFromJson()
                 updateWordList()
@@ -33,21 +42,20 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
 
     fun updateWordList() {
         viewModelScope.launch {
-            val allWords = repository.getAllWords().shuffled()
-
+            val allWords = categoryId?.let { repository.getWordsByCategory(it) }?.shuffled() ?: emptyList()
+            Log.d("WordListViewModela", "All words from category: $allWords")
             _wordList.value = allWords.filter { !it.isLearned }
         }
     }
 
+
     fun shuffleWords() {
         _wordList.value = _wordList.value?.shuffled()
     }
-
 
     fun searchWord(query: String) {
         viewModelScope.launch {
             _wordList.value = repository.searchWords(query)
         }
     }
-
 }

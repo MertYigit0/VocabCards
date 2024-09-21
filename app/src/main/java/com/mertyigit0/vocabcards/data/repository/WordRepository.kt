@@ -6,6 +6,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.local.WordDatabase
+import com.mertyigit0.vocabcards.data.model.Category
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.model.WordListResponse
 import kotlinx.coroutines.Dispatchers
@@ -35,7 +36,9 @@ class WordRepository(private val context: Context) {
                     german = response.translations.german,
                     italian = response.translations.italian,
                     spanish = response.translations.spanish,
-                    french = response.translations.french
+                    french = response.translations.french,
+                    categoryId =response.categoryId
+
                 )
             }
             db.wordDao().insertAll(words)
@@ -77,6 +80,40 @@ class WordRepository(private val context: Context) {
     suspend fun searchLearnedWords(query: String): List<Word> {
         return withContext(Dispatchers.IO) {
             db.wordDao().searchLearnedWords("%$query%")
+        }
+    }
+
+
+    suspend fun insertCategory(category: Category) {
+        withContext(Dispatchers.IO) {
+            db.categoryDao().insert(category)
+        }
+    }
+
+    // Tüm kategorileri almak için
+    suspend fun getAllCategories(): List<Category> {
+        return withContext(Dispatchers.IO) {
+            db.categoryDao().getAllCategories()
+        }
+    }
+
+    suspend fun loadCategoriesFromJson() {
+        withContext(Dispatchers.IO) {
+            val inputStream = context.resources.openRawResource(R.raw.category)
+            val reader = InputStreamReader(inputStream)
+
+            val categoryListType = object : TypeToken<List<Category>>() {}.type
+            val categoryList: List<Category> = Gson().fromJson(reader, categoryListType)
+
+            db.categoryDao().insertAll(categoryList) // Tüm kategorileri ekle
+        }
+    }
+
+
+    // Kategoriye göre kelimeleri almak için
+    suspend fun getWordsByCategory(categoryId: Long): List<Word> {
+        return withContext(Dispatchers.IO) {
+            db.wordDao().getWordsByCategory(categoryId) // DAO'da bu fonksiyon tanımlanmalı
         }
     }
 }

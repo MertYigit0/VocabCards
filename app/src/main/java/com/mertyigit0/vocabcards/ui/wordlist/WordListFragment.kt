@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.databinding.FragmentWordListBinding
+import com.mertyigit0.vocabcards.ui.category.SharedViewModel
 
 
 class WordListFragment : Fragment() {
@@ -21,6 +22,7 @@ class WordListFragment : Fragment() {
     private lateinit var viewModel: WordListViewModel
     private lateinit var adapter: WordAdapter
     private lateinit var binding: FragmentWordListBinding
+    private lateinit var sharedViewModel: SharedViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +43,7 @@ class WordListFragment : Fragment() {
         Log.d("FragmentLifecycle", "onViewCreated: MyFragment")
         setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_list)
-
+        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         viewModel = ViewModelProvider(this)[WordListViewModel::class.java]
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = WordAdapter(viewModel.wordList.value ?: emptyList()) { word ->
@@ -59,10 +61,17 @@ class WordListFragment : Fragment() {
             binding.swipeRefreshLayout.isRefreshing = false
         }
 
+        val categoryId = sharedViewModel.categoryId
+        if (categoryId != null) {
+            Log.d("WordListFragmenta", "Category ID: $categoryId")
+            viewModel.setCategoryId(categoryId)
+        } else {
+            Log.d("WordListFragmenta", "Category ID is null")
+        }
 
-        viewModel.updateWordList()
+
+
     }
-
 
 
     @Deprecated("Deprecated in Java")
@@ -92,15 +101,6 @@ class WordListFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Log.d("FragmentLifecycle", "onDestroyView: MyFragment")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("FragmentLifecycle", "onDestroy: MyFragment")
-    }
 
 }
 
