@@ -31,10 +31,29 @@ class CategoryAdapter(
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
         holder.bind(category, wordCounts[category.id])
-        holder.itemView.setOnClickListener {
-            listener.onCategoryClick(category.id)
+
+        val wordCount = wordCounts[category.id]
+        if (wordCount != null) {
+            val (learned, total) = wordCount
+
+            // Eğer tüm kelimeler öğrenildiyse CardView tıklanamaz olsun
+            if (learned == total && total > 0) {
+                holder.itemView.setOnClickListener(null) // Tıklamayı kaldır
+                holder.itemView.isClickable = false // Tıklanamaz yap
+            } else {
+                holder.itemView.setOnClickListener {
+                    listener.onCategoryClick(category.id) // Tıklanabilir yap
+                }
+                holder.itemView.isClickable = true // Tıklanabilir yap
+            }
+        } else {
+            holder.itemView.setOnClickListener {
+                listener.onCategoryClick(category.id) // Default olarak tıklanabilir yap
+            }
+            holder.itemView.isClickable = true
         }
     }
+
 
     override fun getItemCount() = categories.size
 
