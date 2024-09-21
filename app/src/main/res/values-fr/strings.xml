@@ -37,7 +37,7 @@
     <string name="explore_features">Explorer les Caractéristiques</string>
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Plongeons-nous! Cliquez ci-dessous pour commencer votre première leçon de vocabulaire et déverrouiller le monde des mots. Votre voyage vers la maîtrise commence maintenant!</string>
     <string name="ready_to_begin">Prêt à Commencer?</string>
-
+    <string name="categories">Catégories</string>
 
     <string-array name="language_array">
         <item>English</item>

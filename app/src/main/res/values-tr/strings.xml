@@ -37,7 +37,7 @@
     <string name="explore_features">Özellikleri Keşfet</string>
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Hadi dalalım! Aşağıya tıklayarak ilk kelime dersinize başlayın ve kelimeler dünyasını keşfedin. Akıcılık yolculuğunuz şimdi başlıyor!</string>
     <string name="ready_to_begin">Başlamaya Hazır mısınız?</string>
-
+    <string name="categories">Kategoriler</string>
 
     <string-array name="language_array">
         <item>English</item>
