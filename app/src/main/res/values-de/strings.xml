@@ -38,6 +38,7 @@
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Lassen Sie uns eintauchen! Klicken Sie unten, um Ihre erste Vokabelstunde zu beginnen und die Welt der Wörter zu entdecken. Ihre Reise zur Sprachbeherrschung beginnt jetzt!</string>
     <string name="ready_to_begin">Bereit zu Beginnen?</string>
     <string name="categories">Kategorien</string>
+    <string name="all_words_learned">Herzlichen Glückwunsch, Sie haben alle Wörter gelernt! %1$s </string>
 
     <string-array name="language_array">
         <item>English</item>

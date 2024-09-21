@@ -5,6 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.model.Category
@@ -43,25 +45,44 @@ class CategoryAdapter(
 
     class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(category: Category, wordCount: Pair<Int, Int>?) {
-            itemView.findViewById<TextView>(R.id.tvCategoryName).text = category.name
-            itemView.findViewById<TextView>(R.id.tvCategoryEmoji).text = category.emoji
-
-            val progressBar = itemView.findViewById<ProgressBar>(R.id.progressBar)
+            val tvCategoryName = itemView.findViewById<TextView>(R.id.tvCategoryName)
+            val tvCategoryEmoji = itemView.findViewById<TextView>(R.id.tvCategoryEmoji)
             val tvWordProgress = itemView.findViewById<TextView>(R.id.tvWordProgress)
+            val progressBar = itemView.findViewById<ProgressBar>(R.id.progressBar)
+            val cardView = itemView.findViewById<CardView>(R.id.cardview)
+
+            tvCategoryName.text = category.name
+            tvCategoryEmoji.text = category.emoji
 
             if (wordCount != null) {
                 val (learned, total) = wordCount
                 tvWordProgress.text = "$learned/$total"
                 progressBar.max = total
                 progressBar.progress = learned
-                progressBar.visibility = View.VISIBLE // Görünür hale getir
+
+                // Eğer tüm kelimeler öğrenildiyse
+                if (learned == total && total > 0) {
+                    // CardView rengini pasif bir renge çevir
+                    cardView.setCardBackgroundColor(ContextCompat.getColor(itemView.context, R.color.colorAccent))
+                    val congratsMessage = String.format(
+                        itemView.context.getString(R.string.all_words_learned), "🎉"
+                    )
+                    tvWordProgress.text = congratsMessage // Mesajı ayarla
+                    progressBar.visibility = View.GONE // İsteğe bağlı, progress barı gizleyebilirsin
+                } else {
+                    // Normal görünüm için eski rengi ayarla
+                    cardView.setCardBackgroundColor(ContextCompat.getColor(itemView.context, R.color.lllorange))
+                    progressBar.visibility = View.VISIBLE
+                }
             } else {
+                // Eğer kelime sayısı null ise default değerler
                 tvWordProgress.text = "0/0"
                 progressBar.progress = 0
-                progressBar.visibility = View.GONE // Gizle
+                progressBar.visibility = View.GONE
             }
         }
     }
+
 
 }
 

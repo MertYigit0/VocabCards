@@ -37,6 +37,7 @@
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">¡Vamos a sumergirnos! Haz clic abajo para comenzar tu primera lección de vocabulario y desbloquear el mundo de las palabras. ¡Tu viaje hacia la fluidez comienza ahora!</string>
     <string name="ready_to_begin">¿Listo para Comenzar?</string>
     <string name="categories">Categorías</string>
+    <string name="all_words_learned">¡Felicidades, has aprendido todas las palabras! %1$s </string>
 
 
     <string-array name="language_array">
