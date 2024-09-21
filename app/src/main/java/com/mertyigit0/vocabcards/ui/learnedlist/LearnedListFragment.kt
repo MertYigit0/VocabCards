@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -50,6 +51,16 @@ class LearnedListFragment : Fragment() {
         viewModel.learnedWords.observe(viewLifecycleOwner) { words ->
             adapter.updateData(words)
         }
+        viewModel.noWordsMessage.observe(viewLifecycleOwner) { message ->
+            val tvNoWords = view.findViewById<TextView>(R.id.tvNoWords)
+            if (message != null) {
+                tvNoWords.text = message
+                tvNoWords.visibility = View.VISIBLE
+            } else {
+                tvNoWords.visibility = View.GONE
+            }
+        }
+
 
         // Update data when fragment resumes
         viewModel.updateLearnedWords()

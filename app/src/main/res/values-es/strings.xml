@@ -38,7 +38,7 @@
     <string name="ready_to_begin">¿Listo para Comenzar?</string>
     <string name="categories">Categorías</string>
     <string name="all_words_learned">¡Felicidades, has aprendido todas las palabras! %1$s </string>
-
+    <string name="no_words_learned">¡No se han aprendido palabras todavía! 📚</string>
 
     <string-array name="language_array">
         <item>English</item>

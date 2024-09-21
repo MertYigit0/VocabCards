@@ -55,6 +55,9 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
         categoryViewModel.wordCountMap.observe(viewLifecycleOwner) { wordCounts ->
             categoryAdapter.updateWordCounts(wordCounts) // Kelime sayılarını güncelle
         }
+
+
+
     }
 
 

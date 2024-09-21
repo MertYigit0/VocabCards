@@ -39,7 +39,7 @@
     <string name="ready_to_begin">Başlamaya Hazır mısınız?</string>
     <string name="categories">Kategoriler</string>
     <string name="all_words_learned">Tebrikler, tüm kelimeleri öğrendiniz! %1$s </string>
-
+    <string name="no_words_learned">Henüz kelime öğrenilmedi! 📚</string>
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>
