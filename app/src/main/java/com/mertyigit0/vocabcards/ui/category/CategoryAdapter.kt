@@ -34,6 +34,7 @@ class CategoryAdapter(private val categories: List<Category>, private val listen
     class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(category: Category) {
             itemView.findViewById<TextView>(R.id.tvCategoryName).text = category.name
+            itemView.findViewById<TextView>(R.id.tvCategoryEmoji).text = category.emoji
         }
     }
 }

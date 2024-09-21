@@ -1,12 +1,12 @@
 [
-  { "id": 1, "name": "Animals" },
-  { "id": 2, "name": "Fruits" },
-  { "id": 3, "name": "Vegetables" },
-  { "id": 4, "name": "Vehicles" },
-  { "id": 5, "name": "Colors" },
-  { "id": 6, "name": "Sports" },
-  { "id": 7, "name": "Music" },
-  { "id": 8, "name": "Technology" },
-  { "id": 9, "name": "Food" },
-  { "id": 10, "name": "Travel" }
+  { "id": 1, "name": "Animals", "emoji": "🐾" },
+  { "id": 2, "name": "Fruits", "emoji": "🍎" },
+  { "id": 3, "name": "Vegetables", "emoji": "🥕" },
+  { "id": 4, "name": "Vehicles", "emoji": "🚗" },
+  { "id": 5, "name": "Colors", "emoji": "🌈" },
+  { "id": 6, "name": "Sports", "emoji": "⚽" },
+  { "id": 7, "name": "Music", "emoji": "🎵" },
+  { "id": 8, "name": "Technology", "emoji": "💻" },
+  { "id": 9, "name": "Food", "emoji": "🍔" },
+  { "id": 10, "name": "Travel", "emoji": "✈️" }
 ]
