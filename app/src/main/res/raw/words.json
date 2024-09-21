@@ -373,6 +373,186 @@
       "categoryId": 2
     },
     {
+      "word": "Pineapple",
+      "translations": {
+        "tr": "Ananas 🇹🇷",
+        "emoji": "🍍",
+        "de": "Ananas 🇩🇪",
+        "it": "Ananas 🇮🇹",
+        "es": "Piña 🇪🇸",
+        "fr": "Ananas 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Grape",
+      "translations": {
+        "tr": "Üzüm 🇹🇷",
+        "emoji": "🍇",
+        "de": "Traube 🇩🇪",
+        "it": "Uva 🇮🇹",
+        "es": "Uva 🇪🇸",
+        "fr": "Raisin 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Watermelon",
+      "translations": {
+        "tr": "Karpuz 🇹🇷",
+        "emoji": "🍉",
+        "de": "Wassermelone 🇩🇪",
+        "it": "Anguria 🇮🇹",
+        "es": "Sandía 🇪🇸",
+        "fr": "Pastèque 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Peach",
+      "translations": {
+        "tr": "Şeftali 🇹🇷",
+        "emoji": "🍑",
+        "de": "Pfirsich 🇩🇪",
+        "it": "Pesca 🇮🇹",
+        "es": "Melocotón 🇪🇸",
+        "fr": "Pêche 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Cherry",
+      "translations": {
+        "tr": "Kiraz 🇹🇷",
+        "emoji": "🍒",
+        "de": "Kirsche 🇩🇪",
+        "it": "Ciliegia 🇮🇹",
+        "es": "Cereza 🇪🇸",
+        "fr": "Cerise 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Pear",
+      "translations": {
+        "tr": "Armut 🇹🇷",
+        "emoji": "🍐",
+        "de": "Birne 🇩🇪",
+        "it": "Pera 🇮🇹",
+        "es": "Pera 🇪🇸",
+        "fr": "Poire 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Mango",
+      "translations": {
+        "tr": "Mango 🇹🇷",
+        "emoji": "🥭",
+        "de": "Mango 🇩🇪",
+        "it": "Mango 🇮🇹",
+        "es": "Mango 🇪🇸",
+        "fr": "Mangue 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Blueberry",
+      "translations": {
+        "tr": "Yaban Mersini 🇹🇷",
+        "emoji": "🫐",
+        "de": "Heidelbeere 🇩🇪",
+        "it": "Mirtillo 🇮🇹",
+        "es": "Arándano 🇪🇸",
+        "fr": "Myrtille 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Plum",
+      "translations": {
+        "tr": "Erik 🇹🇷",
+        "emoji": "🍑",
+        "de": "Pflaume 🇩🇪",
+        "it": "Prugna 🇮🇹",
+        "es": "Ciruela 🇪🇸",
+        "fr": "Prune 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Kiwi",
+      "translations": {
+        "tr": "Kivi 🇹🇷",
+        "emoji": "🥝",
+        "de": "Kiwi 🇩🇪",
+        "it": "Kiwi 🇮🇹",
+        "es": "Kiwi 🇪🇸",
+        "fr": "Kiwi 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Fig",
+      "translations": {
+        "tr": "İncir 🇹🇷",
+        "emoji": "🍈",
+        "de": "Feige 🇩🇪",
+        "it": "Fico 🇮🇹",
+        "es": "Higo 🇪🇸",
+        "fr": "Figue 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Avocado",
+      "translations": {
+        "tr": "Avokado 🇹🇷",
+        "emoji": "🥑",
+        "de": "Avocado 🇩🇪",
+        "it": "Avocado 🇮🇹",
+        "es": "Aguacate 🇪🇸",
+        "fr": "Avocat 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Apricot",
+      "translations": {
+        "tr": "Kayısı 🇹🇷",
+        "emoji": "🍑",
+        "de": "Aprikose 🇩🇪",
+        "it": "Albicocca 🇮🇹",
+        "es": "Albaricoque 🇪🇸",
+        "fr": "Abricot 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Coconut",
+      "translations": {
+        "tr": "Hindistan Cevizi 🇹🇷",
+        "emoji": "🥥",
+        "de": "Kokosnuss 🇩🇪",
+        "it": "Cocco 🇮🇹",
+        "es": "Coco 🇪🇸",
+        "fr": "Noix de coco 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
+      "word": "Lychee",
+      "translations": {
+        "tr": "Liçi 🇹🇷",
+        "emoji": "🍒",
+        "de": "Litschi 🇩🇪",
+        "it": "Litchi 🇮🇹",
+        "es": "Lichi 🇪🇸",
+        "fr": "Litchi 🇫🇷"
+      },
+      "categoryId": 2
+    },
+    {
       "word": "Cat",
       "translations": {
         "tr": "Kedi 🇹🇷",
@@ -455,6 +635,1175 @@
         "fr": "Pingouin 🇫🇷"
       },
       "categoryId": 1
+    },
+    {
+      "word": "Lion",
+      "translations": {
+        "tr": "Aslan 🇹🇷",
+        "emoji": "🦁",
+        "de": "Löwe 🇩🇪",
+        "it": "Leone 🇮🇹",
+        "es": "León 🇪🇸",
+        "fr": "Lion 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Zebra",
+      "translations": {
+        "tr": "Zebra 🇹🇷",
+        "emoji": "🦓",
+        "de": "Zebra 🇩🇪",
+        "it": "Zebra 🇮🇹",
+        "es": "Cebra 🇪🇸",
+        "fr": "Zèbre 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Giraffe",
+      "translations": {
+        "tr": "Zürafa 🇹🇷",
+        "emoji": "🦒",
+        "de": "Giraffe 🇩🇪",
+        "it": "Giraffa 🇮🇹",
+        "es": "Jirafa 🇪🇸",
+        "fr": "Girafe 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Bear",
+      "translations": {
+        "tr": "Ayı 🇹🇷",
+        "emoji": "🐻",
+        "de": "Bär 🇩🇪",
+        "it": "Orso 🇮🇹",
+        "es": "Oso 🇪🇸",
+        "fr": "Ours 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Elephant",
+      "translations": {
+        "tr": "Fil 🇹🇷",
+        "emoji": "🐘",
+        "de": "Elefant 🇩🇪",
+        "it": "Elefante 🇮🇹",
+        "es": "Elefante 🇪🇸",
+        "fr": "Éléphant 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Wolf",
+      "translations": {
+        "tr": "Kurt 🇹🇷",
+        "emoji": "🐺",
+        "de": "Wolf 🇩🇪",
+        "it": "Lupo 🇮🇹",
+        "es": "Lobo 🇪🇸",
+        "fr": "Loup 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Fox",
+      "translations": {
+        "tr": "Tilki 🇹🇷",
+        "emoji": "🦊",
+        "de": "Fuchs 🇩🇪",
+        "it": "Volpe 🇮🇹",
+        "es": "Zorro 🇪🇸",
+        "fr": "Renard 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Rabbit",
+      "translations": {
+        "tr": "Tavşan 🇹🇷",
+        "emoji": "🐇",
+        "de": "Hase 🇩🇪",
+        "it": "Coniglio 🇮🇹",
+        "es": "Conejo 🇪🇸",
+        "fr": "Lapin 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Tiger",
+      "translations": {
+        "tr": "Kaplan 🇹🇷",
+        "emoji": "🐅",
+        "de": "Tiger 🇩🇪",
+        "it": "Tigre 🇮🇹",
+        "es": "Tigre 🇪🇸",
+        "fr": "Tigre 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Deer",
+      "translations": {
+        "tr": "Geyik 🇹🇷",
+        "emoji": "🦌",
+        "de": "Hirsch 🇩🇪",
+        "it": "Cervo 🇮🇹",
+        "es": "Ciervo 🇪🇸",
+        "fr": "Cerf 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Horse",
+      "translations": {
+        "tr": "At 🇹🇷",
+        "emoji": "🐴",
+        "de": "Pferd 🇩🇪",
+        "it": "Cavallo 🇮🇹",
+        "es": "Caballo 🇪🇸",
+        "fr": "Cheval 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Panda",
+      "translations": {
+        "tr": "Panda 🇹🇷",
+        "emoji": "🐼",
+        "de": "Panda 🇩🇪",
+        "it": "Panda 🇮🇹",
+        "es": "Panda 🇪🇸",
+        "fr": "Panda 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Kangaroo",
+      "translations": {
+        "tr": "Kanguru 🇹🇷",
+        "emoji": "🦘",
+        "de": "Känguru 🇩🇪",
+        "it": "Canguro 🇮🇹",
+        "es": "Canguro 🇪🇸",
+        "fr": "Kangourou 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Camel",
+      "translations": {
+        "tr": "Deve 🇹🇷",
+        "emoji": "🐫",
+        "de": "Kamel 🇩🇪",
+        "it": "Cammello 🇮🇹",
+        "es": "Camello 🇪🇸",
+        "fr": "Chameau 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Hippopotamus",
+      "translations": {
+        "tr": "Su Aygırı 🇹🇷",
+        "emoji": "🦛",
+        "de": "Nilpferd 🇩🇪",
+        "it": "Ippopotamo 🇮🇹",
+        "es": "Hipopótamo 🇪🇸",
+        "fr": "Hippopotame 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Rhinoceros",
+      "translations": {
+        "tr": "Gergedan 🇹🇷",
+        "emoji": "🦏",
+        "de": "Nashorn 🇩🇪",
+        "it": "Rinoceronte 🇮🇹",
+        "es": "Rinoceronte 🇪🇸",
+        "fr": "Rhinocéros 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Bat",
+      "translations": {
+        "tr": "Yarasa 🇹🇷",
+        "emoji": "🦇",
+        "de": "Fledermaus 🇩🇪",
+        "it": "Pipistrello 🇮🇹",
+        "es": "Murciélago 🇪🇸",
+        "fr": "Chauve-souris 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Owl",
+      "translations": {
+        "tr": "Baykuş 🇹🇷",
+        "emoji": "🦉",
+        "de": "Eule 🇩🇪",
+        "it": "Gufo 🇮🇹",
+        "es": "Búho 🇪🇸",
+        "fr": "Hibou 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Monkey",
+      "translations": {
+        "tr": "Maymun 🇹🇷",
+        "emoji": "🐒",
+        "de": "Affe 🇩🇪",
+        "it": "Scimmia 🇮🇹",
+        "es": "Mono 🇪🇸",
+        "fr": "Singe 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Eagle",
+      "translations": {
+        "tr": "Kartal 🇹🇷",
+        "emoji": "🦅",
+        "de": "Adler 🇩🇪",
+        "it": "Aquila 🇮🇹",
+        "es": "Águila 🇪🇸",
+        "fr": "Aigle 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Crocodile",
+      "translations": {
+        "tr": "Timsah 🇹🇷",
+        "emoji": "🐊",
+        "de": "Krokodil 🇩🇪",
+        "it": "Coccodrillo 🇮🇹",
+        "es": "Cocodrilo 🇪🇸",
+        "fr": "Crocodile 🇫🇷"
+      },
+      "categoryId": 1
+    },
+    {
+      "word": "Red",
+      "translations": {
+        "tr": "Kırmızı 🇹🇷",
+        "emoji": "🟥",
+        "de": "Rot 🇩🇪",
+        "it": "Rosso 🇮🇹",
+        "es": "Rojo 🇪🇸",
+        "fr": "Rouge 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Blue",
+      "translations": {
+        "tr": "Mavi 🇹🇷",
+        "emoji": "🟦",
+        "de": "Blau 🇩🇪",
+        "it": "Blu 🇮🇹",
+        "es": "Azul 🇪🇸",
+        "fr": "Bleu 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Green",
+      "translations": {
+        "tr": "Yeşil 🇹🇷",
+        "emoji": "🟩",
+        "de": "Grün 🇩🇪",
+        "it": "Verde 🇮🇹",
+        "es": "Verde 🇪🇸",
+        "fr": "Vert 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Yellow",
+      "translations": {
+        "tr": "Sarı 🇹🇷",
+        "emoji": "🟨",
+        "de": "Gelb 🇩🇪",
+        "it": "Giallo 🇮🇹",
+        "es": "Amarillo 🇪🇸",
+        "fr": "Jaune 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Purple",
+      "translations": {
+        "tr": "Mor 🇹🇷",
+        "emoji": "🟪",
+        "de": "Lila 🇩🇪",
+        "it": "Viola 🇮🇹",
+        "es": "Púrpura 🇪🇸",
+        "fr": "Violet 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Orange",
+      "translations": {
+        "tr": "Turuncu 🇹🇷",
+        "emoji": "🟧",
+        "de": "Orange 🇩🇪",
+        "it": "Arancione 🇮🇹",
+        "es": "Naranja 🇪🇸",
+        "fr": "Orange 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Pink",
+      "translations": {
+        "tr": "Pembe 🇹🇷",
+        "emoji": "🌸",
+        "de": "Rosa 🇩🇪",
+        "it": "Rosa 🇮🇹",
+        "es": "Rosa 🇪🇸",
+        "fr": "Rose 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Brown",
+      "translations": {
+        "tr": "Kahverengi 🇹🇷",
+        "emoji": "🟫",
+        "de": "Braun 🇩🇪",
+        "it": "Marrone 🇮🇹",
+        "es": "Marrón 🇪🇸",
+        "fr": "Marron 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Black",
+      "translations": {
+        "tr": "Siyah 🇹🇷",
+        "emoji": "⬛",
+        "de": "Schwarz 🇩🇪",
+        "it": "Nero 🇮🇹",
+        "es": "Negro 🇪🇸",
+        "fr": "Noir 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "White",
+      "translations": {
+        "tr": "Beyaz 🇹🇷",
+        "emoji": "⬜",
+        "de": "Weiß 🇩🇪",
+        "it": "Bianco 🇮🇹",
+        "es": "Blanco 🇪🇸",
+        "fr": "Blanc 🇫🇷"
+      },
+      "categoryId": 5
+    },
+    {
+      "word": "Carrot",
+      "translations": {
+        "tr": "Havuç 🇹🇷",
+        "emoji": "🥕",
+        "de": "Karotte 🇩🇪",
+        "it": "Carota 🇮🇹",
+        "es": "Zanahoria 🇪🇸",
+        "fr": "Carotte 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Broccoli",
+      "translations": {
+        "tr": "Brokoli 🇹🇷",
+        "emoji": "🥦",
+        "de": "Brokkoli 🇩🇪",
+        "it": "Broccoli 🇮🇹",
+        "es": "Brócoli 🇪🇸",
+        "fr": "Brocoli 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Cabbage",
+      "translations": {
+        "tr": "Lahana 🇹🇷",
+        "emoji": "🥬",
+        "de": "Kohl 🇩🇪",
+        "it": "Cavolo 🇮🇹",
+        "es": "Repollo 🇪🇸",
+        "fr": "Chou 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Spinach",
+      "translations": {
+        "tr": "Ispanak 🇹🇷",
+        "emoji": "🌿",
+        "de": "Spinat 🇩🇪",
+        "it": "Spinaci 🇮🇹",
+        "es": "Espinaca 🇪🇸",
+        "fr": "Épinard 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Lettuce",
+      "translations": {
+        "tr": "Marul 🇹🇷",
+        "emoji": "🥗",
+        "de": "Salat 🇩🇪",
+        "it": "Lattuga 🇮🇹",
+        "es": "Lechuga 🇪🇸",
+        "fr": "Laitue 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Onion",
+      "translations": {
+        "tr": "Soğan 🇹🇷",
+        "emoji": "🧅",
+        "de": "Zwiebel 🇩🇪",
+        "it": "Cipolla 🇮🇹",
+        "es": "Cebolla 🇪🇸",
+        "fr": "Oignon 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Garlic",
+      "translations": {
+        "tr": "Sarımsak 🇹🇷",
+        "emoji": "🧄",
+        "de": "Knoblauch 🇩🇪",
+        "it": "Aglio 🇮🇹",
+        "es": "Ajo 🇪🇸",
+        "fr": "Ail 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Tomato",
+      "translations": {
+        "tr": "Domates 🇹🇷",
+        "emoji": "🍅",
+        "de": "Tomate 🇩🇪",
+        "it": "Pomodoro 🇮🇹",
+        "es": "Tomate 🇪🇸",
+        "fr": "Tomate 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Cucumber",
+      "translations": {
+        "tr": "Salatalık 🇹🇷",
+        "emoji": "🥒",
+        "de": "Gurke 🇩🇪",
+        "it": "Cetriolo 🇮🇹",
+        "es": "Pepino 🇪🇸",
+        "fr": "Concombre 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Pepper",
+      "translations": {
+        "tr": "Biber 🇹🇷",
+        "emoji": "🌶️",
+        "de": "Paprika 🇩🇪",
+        "it": "Peperone 🇮🇹",
+        "es": "Pimiento 🇪🇸",
+        "fr": "Poivron 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Eggplant",
+      "translations": {
+        "tr": "Patlıcan 🇹🇷",
+        "emoji": "🍆",
+        "de": "Aubergine 🇩🇪",
+        "it": "Melanzana 🇮🇹",
+        "es": "Berenjena 🇪🇸",
+        "fr": "Aubergine 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Pumpkin",
+      "translations": {
+        "tr": "Balkabağı 🇹🇷",
+        "emoji": "🎃",
+        "de": "Kürbis 🇩🇪",
+        "it": "Zucca 🇮🇹",
+        "es": "Calabaza 🇪🇸",
+        "fr": "Citrouille 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Radish",
+      "translations": {
+        "tr": "Turp 🇹🇷",
+        "emoji": "🌿",
+        "de": "Radieschen 🇩🇪",
+        "it": "Ravanello 🇮🇹",
+        "es": "Rábano 🇪🇸",
+        "fr": "Radis 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Celery",
+      "translations": {
+        "tr": "Kereviz 🇹🇷",
+        "emoji": "🌱",
+        "de": "Sellerie 🇩🇪",
+        "it": "Sedano 🇮🇹",
+        "es": "Apio 🇪🇸",
+        "fr": "Céleri 🇫🇷"
+      },
+      "categoryId": 3
+    },
+    {
+      "word": "Guitar",
+      "translations": {
+        "tr": "Gitar 🇹🇷",
+        "emoji": "🎸",
+        "de": "Gitarre 🇩🇪",
+        "it": "Chitarra 🇮🇹",
+        "es": "Guitarra 🇪🇸",
+        "fr": "Guitare 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Piano",
+      "translations": {
+        "tr": "Piyano 🇹🇷",
+        "emoji": "🎹",
+        "de": "Klavier 🇩🇪",
+        "it": "Pianoforte 🇮🇹",
+        "es": "Piano 🇪🇸",
+        "fr": "Piano 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Violin",
+      "translations": {
+        "tr": "Keman 🇹🇷",
+        "emoji": "🎻",
+        "de": "Geige 🇩🇪",
+        "it": "Violino 🇮🇹",
+        "es": "Violín 🇪🇸",
+        "fr": "Violon 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Drums",
+      "translations": {
+        "tr": "Davul 🇹🇷",
+        "emoji": "🥁",
+        "de": "Schlagzeug 🇩🇪",
+        "it": "Batteria 🇮🇹",
+        "es": "Tambores 🇪🇸",
+        "fr": "Batterie 🇫🇷"
+      },
+      "categoryId": 7
+    },
+
+    {
+      "word": "Saxophone",
+      "translations": {
+        "tr": "Saksafon 🇹🇷",
+        "emoji": "🎷",
+        "de": "Saxophon 🇩🇪",
+        "it": "Sassofono 🇮🇹",
+        "es": "Saxofón 🇪🇸",
+        "fr": "Saxophone 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Trumpet",
+      "translations": {
+        "tr": "Trompet 🇹🇷",
+        "emoji": "🎺",
+        "de": "Trompete 🇩🇪",
+        "it": "Tromba 🇮🇹",
+        "es": "Trompeta 🇪🇸",
+        "fr": "Trompette 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Bass",
+      "translations": {
+        "tr": "Bas Gitar 🇹🇷",
+        "emoji": "🎸",
+        "de": "Bass 🇩🇪",
+        "it": "Basso 🇮🇹",
+        "es": "Bajo 🇪🇸",
+        "fr": "Basse 🇫🇷"
+      },
+      "categoryId": 7
+    },
+    {
+      "word": "Car",
+      "translations": {
+        "tr": "Araba 🇹🇷",
+        "emoji": "🚗",
+        "de": "Auto 🇩🇪",
+        "it": "Auto 🇮🇹",
+        "es": "Coche 🇪🇸",
+        "fr": "Voiture 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Bus",
+      "translations": {
+        "tr": "Otobüs 🇹🇷",
+        "emoji": "🚌",
+        "de": "Bus 🇩🇪",
+        "it": "Autobus 🇮🇹",
+        "es": "Autobús 🇪🇸",
+        "fr": "Bus 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Motorcycle",
+      "translations": {
+        "tr": "Motosiklet 🇹🇷",
+        "emoji": "🏍️",
+        "de": "Motorrad 🇩🇪",
+        "it": "Motocicletta 🇮🇹",
+        "es": "Motocicleta 🇪🇸",
+        "fr": "Moto 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Bicycle",
+      "translations": {
+        "tr": "Bisiklet 🇹🇷",
+        "emoji": "🚲",
+        "de": "Fahrrad 🇩🇪",
+        "it": "Bicicletta 🇮🇹",
+        "es": "Bicicleta 🇪🇸",
+        "fr": "Vélo 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Truck",
+      "translations": {
+        "tr": "Kamyon 🇹🇷",
+        "emoji": "🚚",
+        "de": "Lastwagen 🇩🇪",
+        "it": "Camion 🇮🇹",
+        "es": "Camión 🇪🇸",
+        "fr": "Camion 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Train",
+      "translations": {
+        "tr": "Tren 🇹🇷",
+        "emoji": "🚆",
+        "de": "Zug 🇩🇪",
+        "it": "Treno 🇮🇹",
+        "es": "Tren 🇪🇸",
+        "fr": "Train 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Tram",
+      "translations": {
+        "tr": "Tramvay 🇹🇷",
+        "emoji": "🚋",
+        "de": "Straßenbahn 🇩🇪",
+        "it": "Tram 🇮🇹",
+        "es": "Tranvía 🇪🇸",
+        "fr": "Tram 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Airplane",
+      "translations": {
+        "tr": "Uçak 🇹🇷",
+        "emoji": "✈️",
+        "de": "Flugzeug 🇩🇪",
+        "it": "Aereo 🇮🇹",
+        "es": "Avión 🇪🇸",
+        "fr": "Avion 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Helicopter",
+      "translations": {
+        "tr": "Helikopter 🇹🇷",
+        "emoji": "🚁",
+        "de": "Hubschrauber 🇩🇪",
+        "it": "Elicottero 🇮🇹",
+        "es": "Helicóptero 🇪🇸",
+        "fr": "Hélicoptère 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Boat",
+      "translations": {
+        "tr": "Tekne 🇹🇷",
+        "emoji": "⛵",
+        "de": "Boot 🇩🇪",
+        "it": "Barca 🇮🇹",
+        "es": "Barco 🇪🇸",
+        "fr": "Bateau 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Subway",
+      "translations": {
+        "tr": "Metro 🇹🇷",
+        "emoji": "🚇",
+        "de": "U-Bahn 🇩🇪",
+        "it": "Metropolitana 🇮🇹",
+        "es": "Metro 🇪🇸",
+        "fr": "Métro 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Scooter",
+      "translations": {
+        "tr": "Scooter 🇹🇷",
+        "emoji": "🛴",
+        "de": "Roller 🇩🇪",
+        "it": "Scooter 🇮🇹",
+        "es": "Scooter 🇪🇸",
+        "fr": "Trottinette 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Taxi",
+      "translations": {
+        "tr": "Taksi 🇹🇷",
+        "emoji": "🚕",
+        "de": "Taxi 🇩🇪",
+        "it": "Taxi 🇮🇹",
+        "es": "Taxi 🇪🇸",
+        "fr": "Taxi 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Ferry",
+      "translations": {
+        "tr": "Feribot 🇹🇷",
+        "emoji": "⛴️",
+        "de": "Fähre 🇩🇪",
+        "it": "Traghetto 🇮🇹",
+        "es": "Ferry 🇪🇸",
+        "fr": "Ferry 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Spaceship",
+      "translations": {
+        "tr": "Uzay Gemisi 🇹🇷",
+        "emoji": "🚀",
+        "de": "Raumschiff 🇩🇪",
+        "it": "Astronave 🇮🇹",
+        "es": "Nave Espacial 🇪🇸",
+        "fr": "Vaisseau Spatial 🇫🇷"
+      },
+      "categoryId": 4
+    },
+    {
+      "word": "Football",
+      "translations": {
+        "tr": "Futbol 🇹🇷",
+        "emoji": "⚽",
+        "de": "Fußball 🇩🇪",
+        "it": "Calcio 🇮🇹",
+        "es": "Fútbol 🇪🇸",
+        "fr": "Football 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Basketball",
+      "translations": {
+        "tr": "Basketbol 🇹🇷",
+        "emoji": "🏀",
+        "de": "Basketball 🇩🇪",
+        "it": "Pallacanestro 🇮🇹",
+        "es": "Baloncesto 🇪🇸",
+        "fr": "Basketball 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Tennis",
+      "translations": {
+        "tr": "Tenis 🇹🇷",
+        "emoji": "🎾",
+        "de": "Tennis 🇩🇪",
+        "it": "Tennis 🇮🇹",
+        "es": "Tenis 🇪🇸",
+        "fr": "Tennis 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Volleyball",
+      "translations": {
+        "tr": "Voleybol 🇹🇷",
+        "emoji": "🏐",
+        "de": "Volleyball 🇩🇪",
+        "it": "Pallavolo 🇮🇹",
+        "es": "Voleibol 🇪🇸",
+        "fr": "Volleyball 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Baseball",
+      "translations": {
+        "tr": "Beyzbol 🇹🇷",
+        "emoji": "⚾",
+        "de": "Baseball 🇩🇪",
+        "it": "Baseball 🇮🇹",
+        "es": "Béisbol 🇪🇸",
+        "fr": "Baseball 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Golf",
+      "translations": {
+        "tr": "Golf 🇹🇷",
+        "emoji": "🏌️",
+        "de": "Golf 🇩🇪",
+        "it": "Golf 🇮🇹",
+        "es": "Golf 🇪🇸",
+        "fr": "Golf 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Hockey",
+      "translations": {
+        "tr": "Hokey 🇹🇷",
+        "emoji": "🏒",
+        "de": "Hockey 🇩🇪",
+        "it": "Hockey 🇮🇹",
+        "es": "Hockey 🇪🇸",
+        "fr": "Hockey 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Swimming",
+      "translations": {
+        "tr": "Yüzme 🇹🇷",
+        "emoji": "🏊",
+        "de": "Schwimmen 🇩🇪",
+        "it": "Nuoto 🇮🇹",
+        "es": "Natación 🇪🇸",
+        "fr": "Natation 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Running",
+      "translations": {
+        "tr": "Koşu 🇹🇷",
+        "emoji": "🏃",
+        "de": "Laufen 🇩🇪",
+        "it": "Corsa 🇮🇹",
+        "es": "Correr 🇪🇸",
+        "fr": "Course 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Cycling",
+      "translations": {
+        "tr": "Bisiklet Sürme 🇹🇷",
+        "emoji": "🚴",
+        "de": "Radfahren 🇩🇪",
+        "it": "Ciclismo 🇮🇹",
+        "es": "Ciclismo 🇪🇸",
+        "fr": "Cyclisme 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Yoga",
+      "translations": {
+        "tr": "Yoga 🇹🇷",
+        "emoji": "🧘",
+        "de": "Yoga 🇩🇪",
+        "it": "Yoga 🇮🇹",
+        "es": "Yoga 🇪🇸",
+        "fr": "Yoga 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Weightlifting",
+      "translations": {
+        "tr": "Ağırlık Kaldırma 🇹🇷",
+        "emoji": "🏋️",
+        "de": "Gewichtheben 🇩🇪",
+        "it": "Sollevamento pesi 🇮🇹",
+        "es": "Levantamiento de pesas 🇪🇸",
+        "fr": "Haltérophilie 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Jump Rope",
+      "translations": {
+        "tr": "İp Atlama 🇹🇷",
+        "emoji": "🤾",
+        "de": "Seilspringen 🇩🇪",
+        "it": "Saltare la corda 🇮🇹",
+        "es": "Saltar la cuerda 🇪🇸",
+        "fr": "Saut à la corde 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Treadmill",
+      "translations": {
+        "tr": "Koşu Bandı 🇹🇷",
+        "emoji": "🏃‍♂️",
+        "de": "Laufband 🇩🇪",
+        "it": "Tapis roulant 🇮🇹",
+        "es": "Cinta de correr 🇪🇸",
+        "fr": "Tapis roulant 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Tennis Racket",
+      "translations": {
+        "tr": "Tenis Raketi 🇹🇷",
+        "emoji": "🎾",
+        "de": "Tennisschläger 🇩🇪",
+        "it": "Racchetta da tennis 🇮🇹",
+        "es": "Raqueta de tenis 🇪🇸",
+        "fr": "Raquette de tennis 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Boxing Gloves",
+      "translations": {
+        "tr": "Boks Eldiveni 🇹🇷",
+        "emoji": "🥊",
+        "de": "Boxhandschuhe 🇩🇪",
+        "it": "Guantoni da boxe 🇮🇹",
+        "es": "Guantes de boxeo 🇪🇸",
+        "fr": "Gants de boxe 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Beef",
+      "translations": {
+        "tr": "Sığır Eti 🇹🇷",
+        "emoji": "🥩",
+        "de": "Rindfleisch 🇩🇪",
+        "it": "Manzo 🇮🇹",
+        "es": "Carne de res 🇪🇸",
+        "fr": "Boeuf 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Pork",
+      "translations": {
+        "tr": "Domuz Eti 🇹🇷",
+        "emoji": "🍖",
+        "de": "Schweinefleisch 🇩🇪",
+        "it": "Maiale 🇮🇹",
+        "es": "Carne de cerdo 🇪🇸",
+        "fr": "Porc 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Lamb",
+      "translations": {
+        "tr": "Kuzu Eti 🇹🇷",
+        "emoji": "🍖",
+        "de": "Lammfleisch 🇩🇪",
+        "it": "Agnello 🇮🇹",
+        "es": "Cordero 🇪🇸",
+        "fr": "Agneau 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Rice",
+      "translations": {
+        "tr": "Pirinç 🇹🇷",
+        "emoji": "🍚",
+        "de": "Reis 🇩🇪",
+        "it": "Riso 🇮🇹",
+        "es": "Arroz 🇪🇸",
+        "fr": "Riz 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Pasta",
+      "translations": {
+        "tr": "Makarna 🇹🇷",
+        "emoji": "🍝",
+        "de": "Nudeln 🇩🇪",
+        "it": "Pasta 🇮🇹",
+        "es": "Pasta 🇪🇸",
+        "fr": "Pâtes 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Pizza",
+      "translations": {
+        "tr": "Pizza 🇹🇷",
+        "emoji": "🍕",
+        "de": "Pizza 🇩🇪",
+        "it": "Pizza 🇮🇹",
+        "es": "Pizza 🇪🇸",
+        "fr": "Pizza 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Salad",
+      "translations": {
+        "tr": "Salata 🇹🇷",
+        "emoji": "🥗",
+        "de": "Salat 🇩🇪",
+        "it": "Insalata 🇮🇹",
+        "es": "Ensalada 🇪🇸",
+        "fr": "Salade 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Burger",
+      "translations": {
+        "tr": "Hamburger 🇹🇷",
+        "emoji": "🍔",
+        "de": "Burger 🇩🇪",
+        "it": "Hamburger 🇮🇹",
+        "es": "Hamburguesa 🇪🇸",
+        "fr": "Burger 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Stew",
+      "translations": {
+        "tr": "Güveç 🇹🇷",
+        "emoji": "🍲",
+        "de": "Eintopf 🇩🇪",
+        "it": "Stufato 🇮🇹",
+        "es": "Guiso 🇪🇸",
+        "fr": "Ragoût 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Omelette",
+      "translations": {
+        "tr": "Omlet 🇹🇷",
+        "emoji": "🍳",
+        "de": "Omelette 🇩🇪",
+        "it": "Frittata 🇮🇹",
+        "es": "Tortilla 🇪🇸",
+        "fr": "Omelette 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Sushi",
+      "translations": {
+        "tr": "Suşi 🇹🇷",
+        "emoji": "🍣",
+        "de": "Sushi 🇩🇪",
+        "it": "Sushi 🇮🇹",
+        "es": "Sushi 🇪🇸",
+        "fr": "Sushi 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Curry",
+      "translations": {
+        "tr": "Köri 🇹🇷",
+        "emoji": "🍛",
+        "de": "Curry 🇩🇪",
+        "it": "Curry 🇮🇹",
+        "es": "Curry 🇪🇸",
+        "fr": "Curry 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Pancakes",
+      "translations": {
+        "tr": "Krep 🇹🇷",
+        "emoji": "🥞",
+        "de": "Pfannkuchen 🇩🇪",
+        "it": "Frittelle 🇮🇹",
+        "es": "Panqueques 🇪🇸",
+        "fr": "Crêpes 🇫🇷"
+      },
+      "categoryId": 9
+    },
+    {
+      "word": "Chili",
+      "translations": {
+        "tr": "Biber 🇹🇷",
+        "emoji": "🌶️",
+        "de": "Chili 🇩🇪",
+        "it": "Chili 🇮🇹",
+        "es": "Chile 🇪🇸",
+        "fr": "Piment 🇫🇷"
+      },
+      "categoryId": 9
     }
+
+
+
+
   ]
 }
