@@ -13,66 +13,6 @@
       "categoryId": 2
     },
     {
-      "word": "Book",
-      "translations": {
-        "tr": "Kitap 🇹🇷",
-        "emoji": "📖",
-        "de": "Buch 🇩🇪",
-        "it": "Libro 🇮🇹",
-        "es": "Libro 🇲🇽",
-        "fr": "Livre 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Car",
-      "translations": {
-        "tr": "Araba 🇹🇷",
-        "emoji": "🚗",
-        "de": "Auto 🇩🇪",
-        "it": "Macchina 🇮🇹",
-        "es": "Coche 🇪🇸",
-        "fr": "Voiture 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Glass",
-      "translations": {
-        "tr": "Bardak 🇹🇷",
-        "emoji": "🍷",
-        "de": "Glas 🇩🇪",
-        "it": "Bicchiere 🇮🇹",
-        "es": "Vaso 🇪🇸",
-        "fr": "Verre 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Window",
-      "translations": {
-        "tr": "Pencere 🇹🇷",
-        "emoji": "🪟",
-        "de": "Fenster 🇩🇪",
-        "it": "Finestra 🇮🇹",
-        "es": "Ventana 🇪🇸",
-        "fr": "Fenêtre 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Door",
-      "translations": {
-        "tr": "Kapı 🇹🇷",
-        "emoji": "🚪",
-        "de": "Tür 🇩🇪",
-        "it": "Porta 🇮🇹",
-        "es": "Puerta 🇪🇸",
-        "fr": "Porte 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
       "word": "Street",
       "translations": {
         "tr": "Sokak 🇹🇷",
@@ -108,90 +48,7 @@
       },
       "categoryId": 10
     },
-    {
-      "word": "Bag",
-      "translations": {
-        "tr": "Çanta 🇹🇷",
-        "emoji": "👜",
-        "de": "Tasche 🇩🇪",
-        "it": "Borsa 🇮🇹",
-        "es": "Bolsa 🇪🇸",
-        "fr": "Sac 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Shoes",
-      "translations": {
-        "tr": "Ayakkabı 🇹🇷",
-        "emoji": "👟",
-        "de": "Schuhe 🇩🇪",
-        "it": "Scarpe 🇮🇹",
-        "es": "Zapatos 🇪🇸",
-        "fr": "Chaussures 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Shirt",
-      "translations": {
-        "tr": "Gömlek 🇹🇷",
-        "emoji": "👕",
-        "de": "Hemd 🇩🇪",
-        "it": "Camicia 🇮🇹",
-        "es": "Camisa 🇪🇸",
-        "fr": "Chemise 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Pants",
-      "translations": {
-        "tr": "Pantolon 🇹🇷",
-        "emoji": "👖",
-        "de": "Hose 🇩🇪",
-        "it": "Pantaloni 🇮🇹",
-        "es": "Pantalones 🇪🇸",
-        "fr": "Pantalon 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Lamp",
-      "translations": {
-        "tr": "Lamba 🇹🇷",
-        "emoji": "💡",
-        "de": "Lampe 🇩🇪",
-        "it": "Lampada 🇮🇹",
-        "es": "Lámpara 🇪🇸",
-        "fr": "Lampe 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Clock",
-      "translations": {
-        "tr": "Saat 🇹🇷",
-        "emoji": "🕒",
-        "de": "Uhr 🇩🇪",
-        "it": "Orologio 🇮🇹",
-        "es": "Reloj 🇪🇸",
-        "fr": "Horloge 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Mirror",
-      "translations": {
-        "tr": "Ayna 🇹🇷",
-        "emoji": "🔍",
-        "de": "Spiegel 🇩🇪",
-        "it": "Specchio 🇮🇹",
-        "es": "Espejo 🇪🇸",
-        "fr": "Miroir 🇫🇷"
-      },
-      "categoryId": 8
-    },
+
     {
       "word": "Fan",
       "translations": {
@@ -213,78 +70,6 @@
         "it": "Frigorifero 🇮🇹",
         "es": "Refrigerador 🇪🇸",
         "fr": "Réfrigérateur 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Sink",
-      "translations": {
-        "tr": "Lavabo 🇹🇷",
-        "emoji": "🚫",
-        "de": "Spüle 🇩🇪",
-        "it": "Lavello 🇮🇹",
-        "es": "Fregadero 🇪🇸",
-        "fr": "Évier 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Toothbrush",
-      "translations": {
-        "tr": "Diş Fırçası 🇹🇷",
-        "emoji": "🦷",
-        "de": "Zahnbürste 🇩🇪",
-        "it": "Spazzolino 🇮🇹",
-        "es": "Cepillo de dientes 🇪🇸",
-        "fr": "Brosse à dents 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Toothpaste",
-      "translations": {
-        "tr": "Diş Macunu 🇹🇷",
-        "emoji": "🪥",
-        "de": "Zahnpasta 🇩🇪",
-        "it": "Dentifricio 🇮🇹",
-        "es": "Pasta de dientes 🇪🇸",
-        "fr": "Dentifrice 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Spoon",
-      "translations": {
-        "tr": "Kaşık 🇹🇷",
-        "emoji": "🥄",
-        "de": "Löffel 🇩🇪",
-        "it": "Cucchiaio 🇮🇹",
-        "es": "Cuchara 🇪🇸",
-        "fr": "Cuillère 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Fork",
-      "translations": {
-        "tr": "Çatal 🇹🇷",
-        "emoji": "🍴",
-        "de": "Gabel 🇩🇪",
-        "it": "Forchetta 🇮🇹",
-        "es": "Tenedor 🇪🇸",
-        "fr": "Fourchette 🇫🇷"
-      },
-      "categoryId": 8
-    },
-    {
-      "word": "Knife",
-      "translations": {
-        "tr": "Bıçak 🇹🇷",
-        "emoji": "🔪",
-        "de": "Messer 🇩🇪",
-        "it": "Coltello 🇮🇹",
-        "es": "Cuchillo 🇪🇸",
-        "fr": "Couteau 🇫🇷"
       },
       "categoryId": 8
     },
@@ -1800,10 +1585,415 @@
         "fr": "Piment 🇫🇷"
       },
       "categoryId": 9
+    },
+    {
+      "word": "Computer",
+      "translations": {
+        "tr": "Bilgisayar 🇹🇷",
+        "emoji": "💻",
+        "de": "Computer 🇩🇪",
+        "it": "Computer 🇮🇹",
+        "es": "Computadora 🇪🇸",
+        "fr": "Ordinateur 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Internet",
+      "translations": {
+        "tr": "İnternet 🇹🇷",
+        "emoji": "🌐",
+        "de": "Internet 🇩🇪",
+        "it": "Internet 🇮🇹",
+        "es": "Internet 🇪🇸",
+        "fr": "Internet 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Software",
+      "translations": {
+        "tr": "Yazılım 🇹🇷",
+        "emoji": "🖥️",
+        "de": "Software 🇩🇪",
+        "it": "Software 🇮🇹",
+        "es": "Software 🇪🇸",
+        "fr": "Logiciel 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Program",
+      "translations": {
+        "tr": "Program 🇹🇷",
+        "emoji": "📈",
+        "de": "Programm 🇩🇪",
+        "it": "Programma 🇮🇹",
+        "es": "Programa 🇪🇸",
+        "fr": "Programme 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "App",
+      "translations": {
+        "tr": "Uygulama 🇹🇷",
+        "emoji": "📱",
+        "de": "App 🇩🇪",
+        "it": "App 🇮🇹",
+        "es": "Aplicación 🇪🇸",
+        "fr": "Application 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Website",
+      "translations": {
+        "tr": "Web Sitesi 🇹🇷",
+        "emoji": "🌍",
+        "de": "Website 🇩🇪",
+        "it": "Sito web 🇮🇹",
+        "es": "Sitio web 🇪🇸",
+        "fr": "Site web 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Cloud",
+      "translations": {
+        "tr": "Bulut 🇹🇷",
+        "emoji": "☁️",
+        "de": "Cloud 🇩🇪",
+        "it": "Cloud 🇮🇹",
+        "es": "Nube 🇪🇸",
+        "fr": "Nuage 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Data",
+      "translations": {
+        "tr": "Veri 🇹🇷",
+        "emoji": "📊",
+        "de": "Daten 🇩🇪",
+        "it": "Dati 🇮🇹",
+        "es": "Datos 🇪🇸",
+        "fr": "Données 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "File",
+      "translations": {
+        "tr": "Dosya 🇹🇷",
+        "emoji": "📁",
+        "de": "Datei 🇩🇪",
+        "it": "File 🇮🇹",
+        "es": "Archivo 🇪🇸",
+        "fr": "Fichier 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Email",
+      "translations": {
+        "tr": "E-posta 🇹🇷",
+        "emoji": "📧",
+        "de": "E-Mail 🇩🇪",
+        "it": "Email 🇮🇹",
+        "es": "Correo electrónico 🇪🇸",
+        "fr": "E-mail 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Password",
+      "translations": {
+        "tr": "Şifre 🇹🇷",
+        "emoji": "🔑",
+        "de": "Passwort 🇩🇪",
+        "it": "Password 🇮🇹",
+        "es": "Contraseña 🇪🇸",
+        "fr": "Mot de passe 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Screen",
+      "translations": {
+        "tr": "Ekran 🇹🇷",
+        "emoji": "🖥️",
+        "de": "Bildschirm 🇩🇪",
+        "it": "Schermo 🇮🇹",
+        "es": "Pantalla 🇪🇸",
+        "fr": "Écran 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Keyboard",
+      "translations": {
+        "tr": "Klavye 🇹🇷",
+        "emoji": "⌨️",
+        "de": "Tastatur 🇩🇪",
+        "it": "Tastiera 🇮🇹",
+        "es": "Teclado 🇪🇸",
+        "fr": "Clavier 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Printer",
+      "translations": {
+        "tr": "Yazıcı 🇹🇷",
+        "emoji": "🖨️",
+        "de": "Drucker 🇩🇪",
+        "it": "Stampante 🇮🇹",
+        "es": "Impresora 🇪🇸",
+        "fr": "Imprimante 🇫🇷"
+      },
+      "categoryId": 8
+    },
+    {
+      "word": "Passport",
+      "translations": {
+        "tr": "Pasaport 🇹🇷",
+        "emoji": "📘",
+        "de": "Reisepass 🇩🇪",
+        "it": "Passaporto 🇮🇹",
+        "es": "Pasaporte 🇪🇸",
+        "fr": "Passeport 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Ticket",
+      "translations": {
+        "tr": "Bilet 🇹🇷",
+        "emoji": "🎫",
+        "de": "Ticket 🇩🇪",
+        "it": "Biglietto 🇮🇹",
+        "es": "Billete 🇪🇸",
+        "fr": "Billet 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Luggage",
+      "translations": {
+        "tr": "Bavul 🇹🇷",
+        "emoji": "🧳",
+        "de": "Gepäck 🇩🇪",
+        "it": "Bagaglio 🇮🇹",
+        "es": "Equipaje 🇪🇸",
+        "fr": "Bagages 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Hotel",
+      "translations": {
+        "tr": "Otel 🇹🇷",
+        "emoji": "🏨",
+        "de": "Hotel 🇩🇪",
+        "it": "Hotel 🇮🇹",
+        "es": "Hotel 🇪🇸",
+        "fr": "Hôtel 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Airport",
+      "translations": {
+        "tr": "Havalimanı 🇹🇷",
+        "emoji": "✈️",
+        "de": "Flughafen 🇩🇪",
+        "it": "Aeroporto 🇮🇹",
+        "es": "Aeropuerto 🇪🇸",
+        "fr": "Aéroport 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Destination",
+      "translations": {
+        "tr": "Varış Yeri 🇹🇷",
+        "emoji": "📍",
+        "de": "Reiseziel 🇩🇪",
+        "it": "Meta 🇮🇹",
+        "es": "Destino 🇪🇸",
+        "fr": "Destination 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Guide",
+      "translations": {
+        "tr": "Rehber 🇹🇷",
+        "emoji": "🗺️",
+        "de": "Reiseführer 🇩🇪",
+        "it": "Guida 🇮🇹",
+        "es": "Guía 🇪🇸",
+        "fr": "Guide 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Map",
+      "translations": {
+        "tr": "Harita 🇹🇷",
+        "emoji": "🗺️",
+        "de": "Karte 🇩🇪",
+        "it": "Mappa 🇮🇹",
+        "es": "Mapa 🇪🇸",
+        "fr": "Carte 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Sightseeing",
+      "translations": {
+        "tr": "Görülmeye Değer Yerler 🇹🇷",
+        "emoji": "🏛️",
+        "de": "Besichtigung 🇩🇪",
+        "it": "Turismo 🇮🇹",
+        "es": "Turismo 🇪🇸",
+        "fr": "Visite touristique 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Adventure",
+      "translations": {
+        "tr": "Macera 🇹🇷",
+        "emoji": "🏞️",
+        "de": "Abenteuer 🇩🇪",
+        "it": "Avventura 🇮🇹",
+        "es": "Aventura 🇪🇸",
+        "fr": "Aventure 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Backpack",
+      "translations": {
+        "tr": "Sırt Çantası 🇹🇷",
+        "emoji": "🎒",
+        "de": "Rucksack 🇩🇪",
+        "it": "Zaino 🇮🇹",
+        "es": "Mochila 🇪🇸",
+        "fr": "Sac à dos 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Tour",
+      "translations": {
+        "tr": "Tur 🇹🇷",
+        "emoji": "🚌",
+        "de": "Tour 🇩🇪",
+        "it": "Tour 🇮🇹",
+        "es": "Tour 🇪🇸",
+        "fr": "Visite 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Travel",
+      "translations": {
+        "tr": "Seyahat 🇹🇷",
+        "emoji": "✈️",
+        "de": "Reisen 🇩🇪",
+        "it": "Viaggio 🇮🇹",
+        "es": "Viajar 🇪🇸",
+        "fr": "Voyage 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Reservation",
+      "translations": {
+        "tr": "Rezervasyon 🇹🇷",
+        "emoji": "📅",
+        "de": "Reservierung 🇩🇪",
+        "it": "Prenotazione 🇮🇹",
+        "es": "Reservación 🇪🇸",
+        "fr": "Réservation 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Journey",
+      "translations": {
+        "tr": "Yolculuk 🇹🇷",
+        "emoji": "🛤️",
+        "de": "Reise 🇩🇪",
+        "it": "Viaggio 🇮🇹",
+        "es": "Viaje 🇪🇸",
+        "fr": "Voyage 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Excursion",
+      "translations": {
+        "tr": "Gezinti 🇹🇷",
+        "emoji": "🏞️",
+        "de": "Ausflug 🇩🇪",
+        "it": "Escursione 🇮🇹",
+        "es": "Excursión 🇪🇸",
+        "fr": "Excursion 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Transport",
+      "translations": {
+        "tr": "Taşıma 🇹🇷",
+        "emoji": "🚍",
+        "de": "Transport 🇩🇪",
+        "it": "Trasporto 🇮🇹",
+        "es": "Transporte 🇪🇸",
+        "fr": "Transport 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Cruise",
+      "translations": {
+        "tr": "Gemi Seyahati 🇹🇷",
+        "emoji": "🛳️",
+        "de": "Kreuzfahrt 🇩🇪",
+        "it": "Crociere 🇮🇹",
+        "es": "Crucero 🇪🇸",
+        "fr": "Croisière 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Culture",
+      "translations": {
+        "tr": "Kültür 🇹🇷",
+        "emoji": "🌍",
+        "de": "Kultur 🇩🇪",
+        "it": "Cultura 🇮🇹",
+        "es": "Cultura 🇪🇸",
+        "fr": "Culture 🇫🇷"
+      },
+      "categoryId": 10
+    },
+    {
+      "word": "Explore",
+      "translations": {
+        "tr": "Keşfetmek 🇹🇷",
+        "emoji": "🔍",
+        "de": "Erkunden 🇩🇪",
+        "it": "Esplorare 🇮🇹",
+        "es": "Explorar 🇪🇸",
+        "fr": "Explorer 🇫🇷"
+      },
+      "categoryId": 10
     }
-
-
-
 
   ]
 }
