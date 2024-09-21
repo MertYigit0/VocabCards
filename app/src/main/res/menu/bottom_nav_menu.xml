@@ -4,9 +4,9 @@
 
     <!-- Word List Fragment Menu Item -->
     <item
-        android:id="@+id/wordListFragment"
+        android:id="@+id/categoryFragment"
         android:icon="@drawable/baseline_view_list_24"
-        android:title="@string/words" />
+        android:title="@string/categories" />
 
     <!-- Learned List Fragment Menu Item -->
     <item

@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.wordListFragment -> {
-                    navController.navigate(R.id.wordListFragment)
+                R.id.categoryFragment -> {
+                    navController.navigate(R.id.categoryFragment)
                     true
                 }
                 R.id.learnedListFragment -> {
