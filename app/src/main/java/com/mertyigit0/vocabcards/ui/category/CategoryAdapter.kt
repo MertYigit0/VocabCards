@@ -95,7 +95,7 @@ class CategoryAdapter(
                 }
             } else {
                 // Eğer kelime sayısı null ise default değerler
-                tvWordProgress.text = "0/0"
+                tvWordProgress.text = ""
                 progressBar.progress = 0
                 progressBar.visibility = View.GONE
             }
