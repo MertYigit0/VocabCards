@@ -1,7 +1,9 @@
 package com.mertyigit0.vocabcards.data.repository
 
 import android.content.Context
+import android.util.Log
 import androidx.room.Room
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mertyigit0.vocabcards.R
@@ -10,6 +12,7 @@ import com.mertyigit0.vocabcards.data.model.Category
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.model.WordListResponse
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 
@@ -109,17 +112,92 @@ class WordRepository(private val context: Context) {
         }
     }
 
+    suspend fun loadCategoriesFromFirestore() {
+        withContext(Dispatchers.IO) {
+            try {
+                val firestore = FirebaseFirestore.getInstance()
+
+                // Firestore'dan kategorileri çek
+                val result = firestore.collection("categories").get().await()
+
+                // Verileri map ile Category objelerine çevir
+                val categories = result.map { document ->
+                    Category(
+                        id = document.getLong("id")?.toInt() ?: 0,
+                        name = document.getString("name") ?: "",
+                        emoji = document.getString("emoji") ?: ""
+                    )
+                }
+
+                // Room veritabanına kaydet (suspend fonksiyonu burada çalıştırabilirsin)
+                db.categoryDao().insertAll(categories)
+
+            } catch (e: Exception) {
+                Log.e("FirestoreError", "Kategoriler Firestore'dan çekilirken hata oluştu", e)
+            }
+        }
+    }
+
+
+    suspend fun loadWordsFromFirestore() {
+        withContext(Dispatchers.IO) {
+            try {
+                val firestore = FirebaseFirestore.getInstance()
+
+                // Firestore'dan kelimeleri çek
+                val result = firestore.collection("words").get().await()
+
+                // Verileri map ile Word objelerine çevir
+                val words = result.map { document ->
+                    val translationsData = document.get("translations") as Map<String, String>
+                    Word(
+                        english = document.getString("word") ?: "",
+                        turkish = translationsData["tr"] ?: "",
+                        emoji = translationsData["emoji"],
+                        german = translationsData["de"],
+                        italian = translationsData["it"],
+                        spanish = translationsData["es"],
+                        french = translationsData["fr"],
+                        categoryId = document.getLong("categoryId") ?: 0L
+                    )
+                }
+
+                // Mevcut kelimeleri kontrol et ve ekle
+                val existingWords = db.wordDao().getAllWords() // Tüm kelimeleri al
+                val existingWordSet =
+                    existingWords.map { it.english }.toSet() // Mevcut kelimeleri Set olarak al
+
+                // Yeni kelimeleri filtrele
+                val newWords = words.filter { it.english !in existingWordSet }
+
+                // Room veritabanına yalnızca yeni kelimeleri kaydet
+                if (newWords.isNotEmpty()) {
+                    db.wordDao().insertAll(newWords)
+                } else {
+
+                }
+
+            } catch (e: Exception) {
+                Log.e("FirestoreError", "Kelimeler Firestore'dan çekilirken hata oluştu", e)
+            }
+        }
+    }
+
+
+
 
     // Kategoriye göre kelimeleri almak için
-    suspend fun getWordsByCategory(categoryId: Long): List<Word> {
+    suspend fun getWordsByCategory(categoryId: Int): List<Word> {
         return withContext(Dispatchers.IO) {
             db.wordDao().getWordsByCategory(categoryId) // DAO'da bu fonksiyon tanımlanmalı
         }
     }
 
-    suspend fun getWordCountByCategory(categoryId: Long): Int {
+    suspend fun getWordCountByCategory(categoryId: Int): Int {
         return withContext(Dispatchers.IO) {
             db.wordDao().getWordsByCategory(categoryId).size // Bu fonksiyonun DAO'da tanımlanması gerekir
         }
     }
 }
+
+

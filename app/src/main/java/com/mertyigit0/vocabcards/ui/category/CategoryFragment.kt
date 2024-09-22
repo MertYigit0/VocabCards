@@ -10,13 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mertyigit0.vocabcards.R
-import com.mertyigit0.vocabcards.data.model.Category
-import com.mertyigit0.vocabcards.data.repository.WordRepository
-import com.mertyigit0.vocabcards.ui.wordlist.WordListFragment
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
 class CategoryFragment : Fragment(), OnCategoryClickListener {
@@ -30,6 +23,8 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
         super.onCreate(savedInstanceState)
         categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
         sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+
+        categoryViewModel.fetchCategoriesFromFirestore()
     }
 
     override fun onCreateView(
@@ -63,7 +58,7 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
 
 
 
-    override fun onCategoryClick(categoryId: Long) {
+    override fun onCategoryClick(categoryId: Int) {
         sharedViewModel.categoryId = categoryId
         findNavController().navigate(R.id.action_categoryFragment_to_wordListFragment)
     }

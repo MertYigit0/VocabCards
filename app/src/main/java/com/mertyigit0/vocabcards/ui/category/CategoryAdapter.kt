@@ -13,7 +13,7 @@ import com.mertyigit0.vocabcards.data.model.Category
 
 
 interface OnCategoryClickListener {
-    fun onCategoryClick(categoryId: Long)
+    fun onCategoryClick(categoryId: Int)
 }
 
 class CategoryAdapter(
@@ -21,7 +21,7 @@ class CategoryAdapter(
     private val listener: OnCategoryClickListener
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
-    private var wordCounts: Map<Long, Pair<Int, Int>> = emptyMap()
+    private var wordCounts: Map<Int, Pair<Int, Int>> = emptyMap()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_category, parent, false)
@@ -57,7 +57,7 @@ class CategoryAdapter(
 
     override fun getItemCount() = categories.size
 
-    fun updateWordCounts(newWordCounts: Map<Long, Pair<Int, Int>>) {
+    fun updateWordCounts(newWordCounts: Map<Int, Pair<Int, Int>>) {
         wordCounts = newWordCounts
         notifyDataSetChanged() // Tüm öğeleri güncelle
     }

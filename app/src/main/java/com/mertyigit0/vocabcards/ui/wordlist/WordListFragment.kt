@@ -27,6 +27,7 @@ class WordListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("FragmentLifecycle", "onCreate: MyFragment")
+
     }
 
     override fun onCreateView(
@@ -51,7 +52,7 @@ class WordListFragment : Fragment() {
             findNavController().navigate(action)
         }
         binding.recyclerView.adapter = adapter
-
+        viewModel.fetchWords()
         viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
             adapter.updateData(wordList)
         }

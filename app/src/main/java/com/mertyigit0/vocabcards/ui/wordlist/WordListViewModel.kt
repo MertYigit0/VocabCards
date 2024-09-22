@@ -17,10 +17,10 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     val wordList: LiveData<List<Word>> get() = _wordList
 
     // Kategori ID'sini saklayacak bir değişken
-    private var categoryId: Long? = null
+    private var categoryId: Int? = null
 
     // Kategori ID'sini ayarlamak için bir yöntem
-    fun setCategoryId(id: Long) {
+    fun setCategoryId(id: Int) {
         categoryId = id
         updateWordList()
     }
@@ -56,6 +56,13 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     fun searchWord(query: String) {
         viewModelScope.launch {
             _wordList.value = repository.searchWords(query)
+        }
+    }
+
+
+    fun fetchWords() {
+        viewModelScope.launch {
+            repository.loadWordsFromFirestore()
         }
     }
 }

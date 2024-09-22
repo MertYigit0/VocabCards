@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.mertyigit0.vocabcards.data.local.WordDatabase
 import com.mertyigit0.vocabcards.data.model.Category
 import com.mertyigit0.vocabcards.data.repository.WordRepository
 import kotlinx.coroutines.launch
@@ -17,8 +16,8 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
     private val _categories = MutableLiveData<List<Category>>()
     val categories: LiveData<List<Category>> get() = _categories
     private val _wordCount = MutableLiveData<Pair<Int, Int>>() // (öğrenilen kelime sayısı, toplam kelime sayısı)
-    private val _wordCountMap = MutableLiveData<Map<Long, Pair<Int, Int>>>()
-    val wordCountMap: LiveData<Map<Long, Pair<Int, Int>>> get() = _wordCountMap
+    private val _wordCountMap = MutableLiveData<Map<Int, Pair<Int, Int>>>()
+    val wordCountMap: LiveData<Map<Int, Pair<Int, Int>>> get() = _wordCountMap
 
     init {
         repository = WordRepository(application) // Yalnızca repository'i kullan
@@ -34,26 +33,31 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun loadWordCountForCategory(categoryId: Long) {
+    fun loadWordCountForCategory(categoryId: Int) {
         viewModelScope.launch {
-            val totalWords = repository.getWordCountByCategory(categoryId)
-            val learnedWords = repository.getLearnedWords().count { it.categoryId == categoryId }
+           // val totalWords = repository.getWordCountByCategory(categoryId)
+            //val learnedWords = repository.getLearnedWords().count { it.categoryId == categoryId }
 
-            _wordCount.value = Pair(learnedWords, totalWords)
+           // _wordCount.value = Pair(learnedWords, totalWords)
         }
     }
 
     fun loadWordCounts() {
         viewModelScope.launch {
-            val counts = mutableMapOf<Long, Pair<Int, Int>>()
+            val counts = mutableMapOf<Int, Pair<Int, Int>>()
             val categories = repository.getAllCategories()
 
             for (category in categories) {
                 val totalWords = repository.getWordCountByCategory(category.id)
-                val learnedWords = repository.getLearnedWords().count { it.categoryId == category.id }
+                val learnedWords = repository.getLearnedWords().count { it.categoryId.toInt() == category.id }
                 counts[category.id] = Pair(learnedWords, totalWords)
             }
             _wordCountMap.value = counts
+        }
+    }
+    fun fetchCategoriesFromFirestore() {
+        viewModelScope.launch {
+            repository.loadCategoriesFromFirestore()
         }
     }
 

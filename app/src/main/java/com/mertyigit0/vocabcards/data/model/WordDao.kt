@@ -30,7 +30,7 @@ interface WordDao {
     suspend fun insert(word: Word)
 
     @Query("SELECT * FROM word_table WHERE categoryId = :categoryId")
-    suspend fun getWordsByCategory(categoryId: Long): List<Word>
+    suspend fun getWordsByCategory(categoryId: Int): List<Word>
 
 }
 
