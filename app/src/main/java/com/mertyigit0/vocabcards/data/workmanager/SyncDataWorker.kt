@@ -1,6 +1,7 @@
 package com.mertyigit0.vocabcards.data.workmanager
 
 import android.content.Context
+import androidx.room.util.newStringBuilder
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
@@ -16,21 +17,44 @@ class SyncDataWorker(
 ) : CoroutineWorker(context, workerParams) {
 
     override suspend fun doWork(): Result {
-        // Repository'ye erişim
+        // Bildirim kanalını oluştur
+        NotificationUtils.createNotificationChannel(applicationContext)
+
         val repository = WordRepository(applicationContext)
 
         return try {
-            // Firestore'dan verileri çek
-            repository.loadWordsFromFirestore()
-            repository.loadCategoriesFromFirestore()
+            // Firestore'dan önceki veriler ile yeni verileri karşılaştır (örnek)
+            val previousWords = repository.getAllWords() // Local'den mevcut kelimeler
+            val newWords = repository.loadWordsFromFirestore() // Firestore'dan yeni kelimeler
 
-            // Başarıyla tamamlandığını bildir
+            val previousCategories = repository.getAllCategories() // Local'den mevcut kategoriler
+            val newCategories = repository.loadCategoriesFromFirestore() // Firestore'dan yeni kategoriler
+
+            // Yeni kelime eklenmişse bildirim gönder
+            if (newWords.isNotEmpty()) {
+                NotificationUtils.sendNotification(
+                    applicationContext,
+                    "Yeni Kelime Eklendi",
+                    "Veritabanınıza yeni kelimeler eklendi!"
+                )
+            }
+
+            // Yeni kategori eklenmişse bildirim gönder
+            if (newCategories.isNotEmpty()) {
+                NotificationUtils.sendNotification(
+                    applicationContext,
+                    "Yeni Kategori Eklendi",
+                    "Veritabanınıza yeni kategoriler eklendi!"
+                )
+            }
+
             Result.success()
         } catch (e: Exception) {
-            // Hata durumunda başarısız bildirimi
             Result.failure()
         }
     }
+
+
 
     companion object {
         fun scheduleSyncDataWork(context: Context) {
@@ -39,7 +63,7 @@ class SyncDataWorker(
             // Zamanlamak istediğiniz saat (örn. sabah 04:00)
             val targetTime = Calendar.getInstance().apply {
                 set(Calendar.HOUR_OF_DAY, 21)
-                set(Calendar.MINUTE, 56)
+                set(Calendar.MINUTE, 12)
                 set(Calendar.SECOND, 0)
             }
 

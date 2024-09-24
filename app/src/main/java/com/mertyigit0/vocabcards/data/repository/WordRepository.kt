@@ -112,8 +112,8 @@ class WordRepository(private val context: Context) {
         }
     }
 
-    suspend fun loadCategoriesFromFirestore() {
-        withContext(Dispatchers.IO) {
+    suspend fun loadCategoriesFromFirestore(): List<Category> {
+        return withContext(Dispatchers.IO) {
             try {
                 val firestore = FirebaseFirestore.getInstance()
 
@@ -129,18 +129,31 @@ class WordRepository(private val context: Context) {
                     )
                 }
 
-                // Room veritabanına kaydet (suspend fonksiyonu burada çalıştırabilirsin)
-                db.categoryDao().insertAll(categories)
+                // Mevcut kategorileri kontrol et
+                val existingCategories = db.categoryDao().getAllCategories() // Tüm kategorileri al
+                val existingCategorySet = existingCategories.map { it.name }.toSet() // Mevcut kategorileri Set olarak al
 
+                // Yeni kategorileri filtrele
+                val newCategories = categories.filter { it.name !in existingCategorySet }
+
+                // Room veritabanına yalnızca yeni kategorileri kaydet
+                if (newCategories.isNotEmpty()) {
+                    db.categoryDao().insertAll(newCategories)
+                }
+
+                // Yeni kategorileri döndür
+                return@withContext newCategories
             } catch (e: Exception) {
                 Log.e("FirestoreError", "Kategoriler Firestore'dan çekilirken hata oluştu", e)
+                return@withContext emptyList()
             }
         }
     }
 
 
-    suspend fun loadWordsFromFirestore() {
-        withContext(Dispatchers.IO) {
+
+    suspend fun loadWordsFromFirestore(): List<Word> {
+        return withContext(Dispatchers.IO) {
             try {
                 val firestore = FirebaseFirestore.getInstance()
 
@@ -164,8 +177,7 @@ class WordRepository(private val context: Context) {
 
                 // Mevcut kelimeleri kontrol et ve ekle
                 val existingWords = db.wordDao().getAllWords() // Tüm kelimeleri al
-                val existingWordSet =
-                    existingWords.map { it.english }.toSet() // Mevcut kelimeleri Set olarak al
+                val existingWordSet = existingWords.map { it.english }.toSet() // Mevcut kelimeleri Set olarak al
 
                 // Yeni kelimeleri filtrele
                 val newWords = words.filter { it.english !in existingWordSet }
@@ -173,15 +185,17 @@ class WordRepository(private val context: Context) {
                 // Room veritabanına yalnızca yeni kelimeleri kaydet
                 if (newWords.isNotEmpty()) {
                     db.wordDao().insertAll(newWords)
-                } else {
-
                 }
 
+                // Yeni kelimeleri döndür
+                return@withContext newWords
             } catch (e: Exception) {
                 Log.e("FirestoreError", "Kelimeler Firestore'dan çekilirken hata oluştu", e)
+                return@withContext emptyList()
             }
         }
     }
+
 
 
 

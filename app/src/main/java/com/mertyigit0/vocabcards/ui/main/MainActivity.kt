@@ -1,10 +1,15 @@
 package com.mertyigit0.vocabcards.ui.main
 
+import android.Manifest
 import android.content.Context
+import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
@@ -76,6 +81,33 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+
+
+
+
+
+
+        // Android 13 ve üzeri cihazlar için POST_NOTIFICATIONS iznini kontrol et
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            checkNotificationPermission()
+        } else {
+            // Daha düşük sürümlerde izne gerek yok, işlemleri yap
+            startSyncDataWork()
+        }
+    }
+
+    // İzin sonuçlarını dinlemek için launcher
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            // İzin verildi, WorkManager işlemini başlat
+            startSyncDataWork()
+        } else {
+            // İzin reddedildi
+            Toast.makeText(this, "Bildirim izni gerekli.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -138,6 +170,31 @@ class MainActivity : AppCompatActivity() {
         val config = Configuration(resources.configuration)
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+
+    private fun checkNotificationPermission() {
+        when {
+            ContextCompat.checkSelfPermission(
+                this, Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED -> {
+                // İzin zaten verilmiş, WorkManager işlemini başlat
+                startSyncDataWork()
+            }
+            shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) -> {
+                // Kullanıcı izni reddetmiş ancak tekrar sorabilirsiniz
+                Toast.makeText(this, "Bildirim izni gerekli.", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                // İzin isteme
+                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
+    }
+
+    private fun startSyncDataWork() {
+        // Burada WorkManager işlerinizi başlatabilirsiniz
+        SyncDataWorker.scheduleSyncDataWork(applicationContext)
     }
 
 }
