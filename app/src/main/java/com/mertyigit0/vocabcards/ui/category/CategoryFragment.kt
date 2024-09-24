@@ -24,7 +24,7 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
         categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
         sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
-        categoryViewModel.fetchCategoriesFromFirestore()
+       // categoryViewModel.fetchCategoriesFromFirestore()
     }
 
     override fun onCreateView(

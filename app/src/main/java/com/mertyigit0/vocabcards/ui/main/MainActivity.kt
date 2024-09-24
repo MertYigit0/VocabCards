@@ -15,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.mertyigit0.vocabcards.R
+import com.mertyigit0.vocabcards.data.workmanager.SyncDataWorker
 import com.mertyigit0.vocabcards.databinding.ActivityMainBinding
 import java.util.Locale
 
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // WorkManager'ı başlat
+        SyncDataWorker.scheduleSyncDataWork(applicationContext)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)

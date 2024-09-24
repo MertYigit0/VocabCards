@@ -76,4 +76,10 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.firestore)
+
+    // (Java only)
+    implementation(libs.androidx.work.runtime)
+
+    // Kotlin + coroutines
+    implementation(libs.androidx.work.runtime.ktx)
 }
