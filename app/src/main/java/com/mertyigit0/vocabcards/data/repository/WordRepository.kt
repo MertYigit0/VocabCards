@@ -122,8 +122,16 @@ class WordRepository(private val context: Context) {
 
                 // Verileri map ile Category objelerine çevir
                 val categories = result.map { document ->
+                    // 'id' değerini güvenli bir şekilde alma
+                    val idValue = document.get("id")
+                    val id = when (idValue) {
+                        is Number -> idValue.toInt()  // Eğer id Number ise Int'e çevir
+                        is String -> idValue.toIntOrNull() ?: 0  // Eğer id String ise ve sayıya çevrilebiliyorsa çevir
+                        else -> 0  // Diğer durumlarda varsayılan olarak 0
+                    }
+
                     Category(
-                        id = document.getLong("id")?.toInt() ?: 0,
+                        id = id,
                         name = document.getString("name") ?: "",
                         emoji = document.getString("emoji") ?: ""
                     )
@@ -149,6 +157,7 @@ class WordRepository(private val context: Context) {
             }
         }
     }
+
 
 
 

@@ -62,8 +62,8 @@ class SyncDataWorker(
 
             // Zamanlamak istediğiniz saat (örn. sabah 04:00)
             val targetTime = Calendar.getInstance().apply {
-                set(Calendar.HOUR_OF_DAY, 21)
-                set(Calendar.MINUTE, 12)
+                set(Calendar.HOUR_OF_DAY, 14)
+                set(Calendar.MINUTE, 9)
                 set(Calendar.SECOND, 0)
             }
 
