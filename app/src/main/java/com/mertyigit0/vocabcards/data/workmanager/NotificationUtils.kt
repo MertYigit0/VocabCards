@@ -1,11 +1,16 @@
 package com.mertyigit0.vocabcards.data.workmanager
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.mertyigit0.vocabcards.ui.main.MainActivity
+import com.mertyigit0.vocabcards.ui.splash.SplashActivity
 
 object NotificationUtils {
 
@@ -39,16 +44,35 @@ object NotificationUtils {
             }
         }
 
-        // İzin verilmişse bildirim oluştur ve göster
+        // Uygulama açılması gereken Intent oluştur
+        val intent = Intent(context, SplashActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // Yeni bir görev olarak başlat, eski yığın temizlensin
+        }
+
+        // PendingIntent oluştur
+        val pendingIntent: PendingIntent = PendingIntent.getActivity(
+            context,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE // İzinler ve güncelleme bayrağı
+        )
+
+        // Bildirimi oluştur
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.sym_def_app_icon)
+            .setSmallIcon(android.R.drawable.btn_star_big_off)
             .setContentTitle(title)
             .setContentText(message)
+            .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)) // Ses
+            .setVibrate(longArrayOf(0, 1000, 500, 1000)) // Titreşim
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(pendingIntent) // Bildirime PendingIntent ekle
+            .setAutoCancel(true) // Bildirime tıklandığında otomatik olarak kapansın
 
+        // Bildirimi göster
         with(NotificationManagerCompat.from(context)) {
             notify(System.currentTimeMillis().toInt(), builder.build())
         }
     }
+
 
 }

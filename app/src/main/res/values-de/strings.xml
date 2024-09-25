@@ -40,6 +40,17 @@
     <string name="categories">Kategorien</string>
     <string name="all_words_learned">Herzlichen Glückwunsch, Sie haben alle Wörter gelernt! %1$s </string>
     <string name="no_words_learned">Noch keine Wörter gelernt! 📚</string>
+
+
+    <!-- Kategori-Benachrichtigungen -->
+    <string name="notification_new_category_title">Neue Kategorie Hinzugefügt 🎉</string>
+    <string name="notification_new_category_message">Neue Kategorien wurden zu Vocabcards hinzugefügt! Schau sie dir an 👀</string>
+
+    <!-- Wort-Benachrichtigungen -->
+    <string name="notification_new_word_title">Neue Wörter Hinzugefügt 📚</string>
+    <string name="notification_new_word_message">Neue Wörter wurden zu Vocabcards hinzugefügt! Komm und sieh sie dir an 👀</string>
+
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

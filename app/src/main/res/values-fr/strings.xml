@@ -40,6 +40,16 @@
     <string name="categories">Catégories</string>
     <string name="all_words_learned">Félicitations, vous avez appris tous les mots ! %1$s </string>
     <string name="no_words_learned">Aucun mot appris pour le moment! 📚</string>
+
+    <!-- Messages de Notification de Catégorie -->
+    <string name="notification_new_category_title">Nouvelle Catégorie Ajoutée 🎉</string>
+    <string name="notification_new_category_message">De nouvelles catégories ont été ajoutées à Vocabcards ! Venez les découvrir 👀</string>
+
+    <!-- Messages de Notification de Mots -->
+    <string name="notification_new_word_title">Nouveaux Mots Ajoutés 📚</string>
+    <string name="notification_new_word_message">De nouveaux mots ont été ajoutés à Vocabcards ! Venez y jeter un coup d\'œil 👀</string>
+
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

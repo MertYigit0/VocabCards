@@ -37,6 +37,15 @@
     <string name="all_words_learned">Congratulations, you\'ve learned all the words! %1$s </string>
     <string name="no_words_learned">No words learned yet! 📚</string>
 
+    <!-- Category Notification Messages -->
+    <string name="notification_new_category_title">New Category Added 🎉</string>
+    <string name="notification_new_category_message">New categories have been added to Vocabcards! Come and check them out 👀</string>
+
+    <!-- Word Notification Messages -->
+    <string name="notification_new_word_title">New Words Added 📚</string>
+    <string name="notification_new_word_message">New words have been added to Vocabcards! Come take a look 👀</string>
+
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>

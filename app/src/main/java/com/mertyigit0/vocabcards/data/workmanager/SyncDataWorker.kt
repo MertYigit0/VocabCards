@@ -23,15 +23,18 @@ class SyncDataWorker(
         val repository = WordRepository(applicationContext)
 
         return try {
-            // Firestore'dan önceki veriler ile yeni verileri karşılaştır (örnek)
-            val previousWords = repository.getAllWords() // Local'den mevcut kelimeler
             val newWords = repository.loadWordsFromFirestore() // Firestore'dan yeni kelimeler
-
-            val previousCategories = repository.getAllCategories() // Local'den mevcut kategoriler
             val newCategories = repository.loadCategoriesFromFirestore() // Firestore'dan yeni kategoriler
 
-            // Yeni kelime eklenmişse bildirim gönder
-            if (newWords.isNotEmpty()) {
+            // Yeni kategori eklenmişse bildirim gönder ve kelimeler için bildirim göndermeyi atla
+            if (newCategories.isNotEmpty()) {
+                NotificationUtils.sendNotification(
+                    applicationContext,
+                    "Yeni Kategori Eklendi",
+                    "Veritabanınıza yeni kategoriler eklendi!"
+                )
+            } else if (newWords.isNotEmpty()) {
+                // Yeni kategori eklenmediyse ve sadece yeni kelime eklenmişse bildirim gönder
                 NotificationUtils.sendNotification(
                     applicationContext,
                     "Yeni Kelime Eklendi",
@@ -39,14 +42,6 @@ class SyncDataWorker(
                 )
             }
 
-            // Yeni kategori eklenmişse bildirim gönder
-            if (newCategories.isNotEmpty()) {
-                NotificationUtils.sendNotification(
-                    applicationContext,
-                    "Yeni Kategori Eklendi",
-                    "Veritabanınıza yeni kategoriler eklendi!"
-                )
-            }
 
             Result.success()
         } catch (e: Exception) {
@@ -60,10 +55,10 @@ class SyncDataWorker(
         fun scheduleSyncDataWork(context: Context) {
             val currentTime = Calendar.getInstance()
 
-            // Zamanlamak istediğiniz saat (örn. sabah 04:00)
+            // Zamanlamak istediğiniz saat (örn. aksam 17:30)
             val targetTime = Calendar.getInstance().apply {
                 set(Calendar.HOUR_OF_DAY, 14)
-                set(Calendar.MINUTE, 9)
+                set(Calendar.MINUTE, 48)
                 set(Calendar.SECOND, 0)
             }
 
