@@ -81,13 +81,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-
-
-
-
-
-
         // Android 13 ve üzeri cihazlar için POST_NOTIFICATIONS iznini kontrol et
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             checkNotificationPermission()
@@ -154,7 +147,6 @@ class MainActivity : AppCompatActivity() {
             putString("language_code", languageCode)
             apply()
         }
-
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = Configuration(resources.configuration)
@@ -171,7 +163,6 @@ class MainActivity : AppCompatActivity() {
         config.setLocale(locale)
         resources.updateConfiguration(config, resources.displayMetrics)
     }
-
 
     private fun checkNotificationPermission() {
         when {

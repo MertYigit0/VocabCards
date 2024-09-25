@@ -40,7 +40,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun updateWordList() {
+    private fun updateWordList() {
         viewModelScope.launch {
             val allWords = categoryId?.let { repository.getWordsByCategory(it) }?.shuffled() ?: emptyList()
             Log.d("WordListViewModela", "All words from category: $allWords")
@@ -60,9 +60,5 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
     }
 
 
-    fun fetchWords() {
-        viewModelScope.launch {
-            repository.loadWordsFromFirestore()
-        }
-    }
+
 }

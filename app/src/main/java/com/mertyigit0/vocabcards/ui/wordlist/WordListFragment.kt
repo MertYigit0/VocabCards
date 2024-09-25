@@ -52,7 +52,6 @@ class WordListFragment : Fragment() {
             findNavController().navigate(action)
         }
         binding.recyclerView.adapter = adapter
-       // viewModel.fetchWords()
         viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
             adapter.updateData(wordList)
         }

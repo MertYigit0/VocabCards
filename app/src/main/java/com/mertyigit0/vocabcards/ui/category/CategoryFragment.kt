@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mertyigit0.vocabcards.R
+import com.mertyigit0.vocabcards.ui.wordlist.WordListViewModel
 
 
 class CategoryFragment : Fragment(), OnCategoryClickListener {
@@ -22,9 +23,11 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
-        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        //kelimlerin uygulama ilk yuklendiginde jsondan cekilmesi icin
+        val wordListViewModel = ViewModelProvider(this)[WordListViewModel::class.java]
 
-       // categoryViewModel.fetchCategoriesFromFirestore()
+
     }
 
     override fun onCreateView(
@@ -50,13 +53,7 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
         categoryViewModel.wordCountMap.observe(viewLifecycleOwner) { wordCounts ->
             categoryAdapter.updateWordCounts(wordCounts) // Kelime sayılarını güncelle
         }
-
-
-
     }
-
-
-
 
     override fun onCategoryClick(categoryId: Int) {
         sharedViewModel.categoryId = categoryId

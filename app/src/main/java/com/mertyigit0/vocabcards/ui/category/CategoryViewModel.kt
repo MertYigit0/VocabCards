@@ -15,7 +15,6 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
     private val repository: WordRepository
     private val _categories = MutableLiveData<List<Category>>()
     val categories: LiveData<List<Category>> get() = _categories
-    private val _wordCount = MutableLiveData<Pair<Int, Int>>() // (öğrenilen kelime sayısı, toplam kelime sayısı)
     private val _wordCountMap = MutableLiveData<Map<Int, Pair<Int, Int>>>()
     val wordCountMap: LiveData<Map<Int, Pair<Int, Int>>> get() = _wordCountMap
 
@@ -33,15 +32,6 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun loadWordCountForCategory(categoryId: Int) {
-        viewModelScope.launch {
-           // val totalWords = repository.getWordCountByCategory(categoryId)
-            //val learnedWords = repository.getLearnedWords().count { it.categoryId == categoryId }
-
-           // _wordCount.value = Pair(learnedWords, totalWords)
-        }
-    }
-
     fun loadWordCounts() {
         viewModelScope.launch {
             val counts = mutableMapOf<Int, Pair<Int, Int>>()
@@ -55,13 +45,6 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
             _wordCountMap.value = counts
         }
     }
-    fun fetchCategoriesFromFirestore() {
-        viewModelScope.launch {
-            repository.loadCategoriesFromFirestore()
-        }
-    }
-
-
 
 }
 
