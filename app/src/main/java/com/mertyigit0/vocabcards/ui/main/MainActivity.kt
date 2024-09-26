@@ -2,6 +2,7 @@ package com.mertyigit0.vocabcards.ui.main
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
@@ -22,6 +23,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.workmanager.SyncDataWorker
 import com.mertyigit0.vocabcards.databinding.ActivityMainBinding
+import com.mertyigit0.vocabcards.ui.onboarding.OnboardingActivity
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -30,11 +32,35 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         // WorkManager'ı başlat
         SyncDataWorker.scheduleSyncDataWork(applicationContext)
-
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+
+        // Onboarding kontrolü
+        val sharedPreferencess = getSharedPreferences("prefs", MODE_PRIVATE)
+        val isOnboardingCompleted = sharedPreferencess.getBoolean("isOnboardingCompleted", false)
+
+        // Eğer onboarding tamamlanmadıysa OnboardingActivity'e yönlendir
+        if (!isOnboardingCompleted) {
+            startActivity(Intent(this, OnboardingActivity::class.java))
+            finish() // MainActivity'yi bitir
+            return // Onboarding işlemi tamamlandığı için burada dur
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
 
         val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
@@ -88,6 +114,24 @@ class MainActivity : AppCompatActivity() {
             // Daha düşük sürümlerde izne gerek yok, işlemleri yap
             startSyncDataWork()
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     // İzin sonuçlarını dinlemek için launcher
