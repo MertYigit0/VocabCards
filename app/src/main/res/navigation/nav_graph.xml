@@ -14,9 +14,7 @@
         <!-- Tek bir action tanımlandı -->
         <action
             android:id="@+id/action_learnedListFragment_to_wordDetailFragment"
-            app:destination="@id/wordDetailFragment"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down">
+            app:destination="@id/wordDetailFragment">
             <!-- Eğer argüman gerekiyorsa burada tanımlayın -->
             <argument
                 android:name="word"
@@ -32,9 +30,7 @@
         android:label="Word List">
         <action
             android:id="@+id/action_wordListFragment_to_wordDetailFragment"
-            app:destination="@id/wordDetailFragment"
-            app:enterAnim="@anim/slide_up"
-            app:exitAnim="@anim/slide_down">
+            app:destination="@id/wordDetailFragment">
             <argument
                 android:name="word"
                 app:argType="com.mertyigit0.vocabcards.data.model.Word"
@@ -56,14 +52,10 @@
             app:nullable="false" />
         <action
             android:id="@+id/action_wordDetailFragment_to_wordListFragment"
-            app:destination="@id/wordListFragment"
-            app:enterAnim="@anim/slide_down"
-            app:exitAnim="@anim/slide_up" />
+            app:destination="@id/wordListFragment" />
         <action
             android:id="@+id/action_wordDetailFragment_to_learnedListFragment"
-            app:destination="@id/learnedListFragment"
-            app:enterAnim="@anim/slide_down"
-            app:exitAnim="@anim/slide_up" />
+            app:destination="@id/learnedListFragment" />
     </fragment>
 
     <!-- CategoryFragment -->

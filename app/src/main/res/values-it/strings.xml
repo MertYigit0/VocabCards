@@ -48,6 +48,9 @@
     <string name="notification_new_word_title">Nuove Parole Aggiunte 📚</string>
     <string name="notification_new_word_message">Sono state aggiunte nuove parole a Vocabcards! Vieni a dare un\'occhiata 👀</string>
 
+    <string name="word_learned_message">La parola è stata imparata.</string>
+    <string name="word_unlearned_message">La parola è stata rimossa dall\'elenco delle parole apprese.</string>
+
 
     <string-array name="language_array">
         <item>English</item>

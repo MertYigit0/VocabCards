@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -106,9 +107,20 @@ class WordDetailFragment : Fragment() {
 
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
+
+
+            // Mesaj göster
+            val message = if (viewModel.isLearned.value == true) {
+                getString(R.string.word_unlearned_message)// Örneğin: "Kelime öğrenildi."
+            } else {
+                getString(R.string.word_learned_message)
+                // Örneğin: "Kelime öğrenilmekten çıkarıldı."
+            }
+            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+
             // Navigate based on updated status
             val action = if (viewModel.isLearned.value == true) {
-               WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
+                WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
             } else {
                 WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
             }

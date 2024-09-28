@@ -50,6 +50,9 @@
     <string name="notification_new_word_title">Yeni Kelimeler Eklendi 📚</string>
     <string name="notification_new_word_message">Vocabcards\'a yeni kelimeler eklendi! Gel de bir göz at! 👀</string>
 
+    <string name="word_learned_message">Kelime öğrenildi.</string>
+    <string name="word_unlearned_message">Kelime, öğrenilen kelimeler listesinden kaldırıldı.</string>
+
     <string-array name="language_array">
         <item>English</item>
         <item>Türkçe</item>
