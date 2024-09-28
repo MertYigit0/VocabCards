@@ -8,5 +8,11 @@
   { "id": 7, "name": "Music", "emoji": "🎵" },
   { "id": 8, "name": "Technology", "emoji": "💻" },
   { "id": 9, "name": "Food", "emoji": "🍔" },
-  { "id": 10, "name": "Travel", "emoji": "✈️" }
+  { "id": 10, "name": "Travel", "emoji": "✈️" },
+  { "id": 11, "name": "Clothing", "emoji": "👕" },
+  { "id": 12, "name": "Furniture", "emoji": "🛋️" },
+  { "id": 13, "name": "Emotions", "emoji": "😊" },
+  { "id": 14, "name": "Weather", "emoji": "🌧️" },
+  { "id": 15, "name": "Nature", "emoji": "🌳" },
+  { "id": 16, "name": "Countries", "emoji": "🌍" }
 ]

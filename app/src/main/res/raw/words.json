@@ -1993,7 +1993,1341 @@
         "fr": "Explorer 🇫🇷"
       },
       "categoryId": 10
+    },
+    {
+      "word": "Shirt",
+      "translations": {
+        "tr": "Gömlek 🇹🇷",
+        "emoji": "👕",
+        "de": "Hemd 🇩🇪",
+        "it": "Camicia 🇮🇹",
+        "es": "Camisa 🇪🇸",
+        "fr": "Chemise 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Dress",
+      "translations": {
+        "tr": "Elbise 🇹🇷",
+        "emoji": "👗",
+        "de": "Kleid 🇩🇪",
+        "it": "Vestito 🇮🇹",
+        "es": "Vestido 🇪🇸",
+        "fr": "Robe 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Jacket",
+      "translations": {
+        "tr": "Ceket 🇹🇷",
+        "emoji": "🧥",
+        "de": "Jacke 🇩🇪",
+        "it": "Giacca 🇮🇹",
+        "es": "Chaqueta 🇪🇸",
+        "fr": "Veste 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Trousers",
+      "translations": {
+        "tr": "Pantolon 🇹🇷",
+        "emoji": "👖",
+        "de": "Hose 🇩🇪",
+        "it": "Pantaloni 🇮🇹",
+        "es": "Pantalones 🇪🇸",
+        "fr": "Pantalon 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Hat",
+      "translations": {
+        "tr": "Şapka 🇹🇷",
+        "emoji": "👒",
+        "de": "Hut 🇩🇪",
+        "it": "Cappello 🇮🇹",
+        "es": "Sombrero 🇪🇸",
+        "fr": "Chapeau 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Shoes",
+      "translations": {
+        "tr": "Ayakkabı 🇹🇷",
+        "emoji": "👟",
+        "de": "Schuhe 🇩🇪",
+        "it": "Scarpe 🇮🇹",
+        "es": "Zapatos 🇪🇸",
+        "fr": "Chaussures 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Socks",
+      "translations": {
+        "tr": "Çorap 🇹🇷",
+        "emoji": "🧦",
+        "de": "Socken 🇩🇪",
+        "it": "Calzini 🇮🇹",
+        "es": "Calcetines 🇪🇸",
+        "fr": "Chaussettes 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Gloves",
+      "translations": {
+        "tr": "Eldiven 🇹🇷",
+        "emoji": "🧤",
+        "de": "Handschuhe 🇩🇪",
+        "it": "Guanti 🇮🇹",
+        "es": "Guantes 🇪🇸",
+        "fr": "Gants 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Scarf",
+      "translations": {
+        "tr": "Atkı 🇹🇷",
+        "emoji": "🧣",
+        "de": "Schal 🇩🇪",
+        "it": "Sciarpa 🇮🇹",
+        "es": "Bufanda 🇪🇸",
+        "fr": "Écharpe 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Jeans",
+      "translations": {
+        "tr": "Kot Pantolon 🇹🇷",
+        "emoji": "👖",
+        "de": "Jeans 🇩🇪",
+        "it": "Jeans 🇮🇹",
+        "es": "Vaqueros 🇪🇸",
+        "fr": "Jean 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "T-shirt",
+      "translations": {
+        "tr": "Tişört 🇹🇷",
+        "emoji": "👕",
+        "de": "T-Shirt 🇩🇪",
+        "it": "Maglietta 🇮🇹",
+        "es": "Camiseta 🇪🇸",
+        "fr": "T-shirt 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Suit",
+      "translations": {
+        "tr": "Takım Elbise 🇹🇷",
+        "emoji": "🤵",
+        "de": "Anzug 🇩🇪",
+        "it": "Completo 🇮🇹",
+        "es": "Traje 🇪🇸",
+        "fr": "Costume 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Boots",
+      "translations": {
+        "tr": "Bot 🇹🇷",
+        "emoji": "👢",
+        "de": "Stiefel 🇩🇪",
+        "it": "Stivali 🇮🇹",
+        "es": "Botas 🇪🇸",
+        "fr": "Bottes 🇫🇷"
+      },
+      "categoryId": 11
+    },
+    {
+      "word": "Sofa",
+      "translations": {
+        "tr": "Kanepe 🇹🇷",
+        "emoji": "🛋️",
+        "de": "Sofa 🇩🇪",
+        "it": "Divano 🇮🇹",
+        "es": "Sofá 🇪🇸",
+        "fr": "Canapé 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Table",
+      "translations": {
+        "tr": "Masa 🇹🇷",
+        "emoji": "🖼️",
+        "de": "Tisch 🇩🇪",
+        "it": "Tavolo 🇮🇹",
+        "es": "Mesa 🇪🇸",
+        "fr": "Table 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Chair",
+      "translations": {
+        "tr": "Sandalye 🇹🇷",
+        "emoji": "🪑",
+        "de": "Stuhl 🇩🇪",
+        "it": "Sedia 🇮🇹",
+        "es": "Silla 🇪🇸",
+        "fr": "Chaise 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Bed",
+      "translations": {
+        "tr": "Yatak 🇹🇷",
+        "emoji": "🛏️",
+        "de": "Bett 🇩🇪",
+        "it": "Letto 🇮🇹",
+        "es": "Cama 🇪🇸",
+        "fr": "Lit 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Wardrobe",
+      "translations": {
+        "tr": "Gardırop 🇹🇷",
+        "emoji": "🚪",
+        "de": "Kleiderschrank 🇩🇪",
+        "it": "Armadio 🇮🇹",
+        "es": "Armario 🇪🇸",
+        "fr": "Garde-robe 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Desk",
+      "translations": {
+        "tr": "Masa 🇹🇷",
+        "emoji": "🖥️",
+        "de": "Schreibtisch 🇩🇪",
+        "it": "Scrivania 🇮🇹",
+        "es": "Escritorio 🇪🇸",
+        "fr": "Bureau 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Shelf",
+      "translations": {
+        "tr": "Raf 🇹🇷",
+        "emoji": "📚",
+        "de": "Regal 🇩🇪",
+        "it": "Scaffale 🇮🇹",
+        "es": "Estante 🇪🇸",
+        "fr": "Étagère 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Dresser",
+      "translations": {
+        "tr": "Şifonyer 🇹🇷",
+        "emoji": "🛋️",
+        "de": "Kommode 🇩🇪",
+        "it": "Comò 🇮🇹",
+        "es": "Cómoda 🇪🇸",
+        "fr": "Commode 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Nightstand",
+      "translations": {
+        "tr": "Gece Masası 🇹🇷",
+        "emoji": "🛏️",
+        "de": "Nachttisch 🇩🇪",
+        "it": "Comodino 🇮🇹",
+        "es": "Mesita de noche 🇪🇸",
+        "fr": "Table de nuit 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Cabinet",
+      "translations": {
+        "tr": "Dolap 🇹🇷",
+        "emoji": "🗄️",
+        "de": "Schrank 🇩🇪",
+        "it": "Armadio 🇮🇹",
+        "es": "Gabinete 🇪🇸",
+        "fr": "Armoire 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Ottoman",
+      "translations": {
+        "tr": "Puf 🇹🇷",
+        "emoji": "🛋️",
+        "de": "Ottoman 🇩🇪",
+        "it": "Puff 🇮🇹",
+        "es": "Ottomán 🇪🇸",
+        "fr": "Pouf 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Coffee Table",
+      "translations": {
+        "tr": "Kahve Masası 🇹🇷",
+        "emoji": "☕",
+        "de": "Couchtisch 🇩🇪",
+        "it": "Tavolino da caffè 🇮🇹",
+        "es": "Mesa de café 🇪🇸",
+        "fr": "Table basse 🇫🇷"
+      },
+      "categoryId": 12
+    },
+    {
+      "word": "Happy",
+      "translations": {
+        "tr": "Mutlu 🇹🇷",
+        "emoji": "😊",
+        "de": "Froh 🇩🇪",
+        "it": "Felice 🇮🇹",
+        "es": "Feliz 🇪🇸",
+        "fr": "Heureux 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Sad",
+      "translations": {
+        "tr": "Üzgün 🇹🇷",
+        "emoji": "😢",
+        "de": "Traurig 🇩🇪",
+        "it": "Triste 🇮🇹",
+        "es": "Triste 🇪🇸",
+        "fr": "Triste 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Angry",
+      "translations": {
+        "tr": "Kızgın 🇹🇷",
+        "emoji": "😠",
+        "de": "Wütend 🇩🇪",
+        "it": "Arrabbiato 🇮🇹",
+        "es": "Enojado 🇪🇸",
+        "fr": "Fâché 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Surprised",
+      "translations": {
+        "tr": "Şaşırmış 🇹🇷",
+        "emoji": "😮",
+        "de": "Überrascht 🇩🇪",
+        "it": "Sorpreso 🇮🇹",
+        "es": "Sorprendido 🇪🇸",
+        "fr": "Surpris 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Excited",
+      "translations": {
+        "tr": "Heyecanlı 🇹🇷",
+        "emoji": "🤩",
+        "de": "Aufgeregt 🇩🇪",
+        "it": "Eccitato 🇮🇹",
+        "es": "Emocionado 🇪🇸",
+        "fr": "Excité 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Nervous",
+      "translations": {
+        "tr": "Gergin 🇹🇷",
+        "emoji": "😰",
+        "de": "Nervös 🇩🇪",
+        "it": "Nervoso 🇮🇹",
+        "es": "Nervioso 🇪🇸",
+        "fr": "Nerveux 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Bored",
+      "translations": {
+        "tr": "Sıkılmış 🇹🇷",
+        "emoji": "😒",
+        "de": "Bored 🇩🇪",
+        "it": "Annoiato 🇮🇹",
+        "es": "Aburrido 🇪🇸",
+        "fr": "Ennuyé 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Confused",
+      "translations": {
+        "tr": "Kafası karışık 🇹🇷",
+        "emoji": "😕",
+        "de": "Verwirrt 🇩🇪",
+        "it": "Confuso 🇮🇹",
+        "es": "Confundido 🇪🇸",
+        "fr": "Confus 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Calm",
+      "translations": {
+        "tr": "Sakin 🇹🇷",
+        "emoji": "😌",
+        "de": "Ruhig 🇩🇪",
+        "it": "Calmo 🇮🇹",
+        "es": "Calmado 🇪🇸",
+        "fr": "Calme 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Lonely",
+      "translations": {
+        "tr": "Yalnız 🇹🇷",
+        "emoji": "😔",
+        "de": "Einsam 🇩🇪",
+        "it": "Solo 🇮🇹",
+        "es": "Solitario 🇪🇸",
+        "fr": "Seul 🇫🇷"
+      },
+      "categoryId": 13
+    },
+    {
+      "word": "Sunny",
+      "translations": {
+        "tr": "Güneşli 🇹🇷",
+        "emoji": "☀️",
+        "de": "Sonnig 🇩🇪",
+        "it": "Soleggiato 🇮🇹",
+        "es": "Soleado 🇪🇸",
+        "fr": "Ensoleillé 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Rainy",
+      "translations": {
+        "tr": "Yağmurlu 🇹🇷",
+        "emoji": "🌧️",
+        "de": "Regnerisch 🇩🇪",
+        "it": "Piovoso 🇮🇹",
+        "es": "Lluvioso 🇪🇸",
+        "fr": "Pluvieux 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Cloudy",
+      "translations": {
+        "tr": "Bulutlu 🇹🇷",
+        "emoji": "☁️",
+        "de": "Bewölkt 🇩🇪",
+        "it": "Nuvoloso 🇮🇹",
+        "es": "Nublado 🇪🇸",
+        "fr": "Nuageux 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Stormy",
+      "translations": {
+        "tr": "Fırtınalı 🇹🇷",
+        "emoji": "⛈️",
+        "de": "Stürmisch 🇩🇪",
+        "it": "Tempestoso 🇮🇹",
+        "es": "Tormentoso 🇪🇸",
+        "fr": "Orageux 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Snowy",
+      "translations": {
+        "tr": "Karla kaplı 🇹🇷",
+        "emoji": "❄️",
+        "de": "Schneebedeckt 🇩🇪",
+        "it": "Nevoso 🇮🇹",
+        "es": "Nevado 🇪🇸",
+        "fr": "Enneigé 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Windy",
+      "translations": {
+        "tr": "Rüzgarlı 🇹🇷",
+        "emoji": "🌬️",
+        "de": "Windig 🇩🇪",
+        "it": "Ventoso 🇮🇹",
+        "es": "Ventoso 🇪🇸",
+        "fr": "Venteux 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Foggy",
+      "translations": {
+        "tr": "Sisli 🇹🇷",
+        "emoji": "🌫️",
+        "de": "Neblig 🇩🇪",
+        "it": "Nebuloso 🇮🇹",
+        "es": "Niebla 🇪🇸",
+        "fr": "Brumeux 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Humid",
+      "translations": {
+        "tr": "Nemli 🇹🇷",
+        "emoji": "🌧️",
+        "de": "Feucht 🇩🇪",
+        "it": "Umido 🇮🇹",
+        "es": "Húmedo 🇪🇸",
+        "fr": "Humide 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Temperature",
+      "translations": {
+        "tr": "Sıcaklık 🇹🇷",
+        "emoji": "🌡️",
+        "de": "Temperatur 🇩🇪",
+        "it": "Temperatura 🇮🇹",
+        "es": "Temperatura 🇪🇸",
+        "fr": "Température 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Forecast",
+      "translations": {
+        "tr": "Hava tahmini 🇹🇷",
+        "emoji": "📈",
+        "de": "Wettervorhersage 🇩🇪",
+        "it": "Previsione 🇮🇹",
+        "es": "Pronóstico 🇪🇸",
+        "fr": "Prévisions 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Lightning",
+      "translations": {
+        "tr": "Şimşek 🇹🇷",
+        "emoji": "⚡",
+        "de": "Blitz 🇩🇪",
+        "it": "Fulmine 🇮🇹",
+        "es": "Rayo 🇪🇸",
+        "fr": "Éclair 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Drizzle",
+      "translations": {
+        "tr": "Çiselemek 🇹🇷",
+        "emoji": "🌦️",
+        "de": "Nieseln 🇩🇪",
+        "it": "Spruzzare 🇮🇹",
+        "es": "Llovizna 🇪🇸",
+        "fr": "Bruine 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Hail",
+      "translations": {
+        "tr": "Dolu 🇹🇷",
+        "emoji": "🌨️",
+        "de": "Hagel 🇩🇪",
+        "it": "Grandine 🇮🇹",
+        "es": "Granizo 🇪🇸",
+        "fr": "Grêle 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Rainbow",
+      "translations": {
+        "tr": "Gökkuşağı 🇹🇷",
+        "emoji": "🌈",
+        "de": "Regenbogen 🇩🇪",
+        "it": "Arcobaleno 🇮🇹",
+        "es": "Arcoíris 🇪🇸",
+        "fr": "Arc-en-ciel 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Tornado",
+      "translations": {
+        "tr": "Kasırga 🇹🇷",
+        "emoji": "🌪️",
+        "de": "Tornado 🇩🇪",
+        "it": "Tornado 🇮🇹",
+        "es": "Tornado 🇪🇸",
+        "fr": "Tornade 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Cyclone",
+      "translations": {
+        "tr": "Siklon 🇹🇷",
+        "emoji": "🌀",
+        "de": "Zyklon 🇩🇪",
+        "it": "Ciclone 🇮🇹",
+        "es": "Ciclón 🇪🇸",
+        "fr": "Cyclone 🇫🇷"
+      },
+      "categoryId": 14
+    },
+    {
+      "word": "Tree",
+      "translations": {
+        "tr": "Ağaç 🇹🇷",
+        "emoji": "🌳",
+        "de": "Baum 🇩🇪",
+        "it": "Albero 🇮🇹",
+        "es": "Árbol 🇪🇸",
+        "fr": "Arbre 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Flower",
+      "translations": {
+        "tr": "Çiçek 🇹🇷",
+        "emoji": "🌸",
+        "de": "Blume 🇩🇪",
+        "it": "Fiore 🇮🇹",
+        "es": "Flor 🇪🇸",
+        "fr": "Fleur 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "River",
+      "translations": {
+        "tr": "Nehir 🇹🇷",
+        "emoji": "🏞️",
+        "de": "Fluss 🇩🇪",
+        "it": "Fiume 🇮🇹",
+        "es": "Río 🇪🇸",
+        "fr": "Rivière 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Mountain",
+      "translations": {
+        "tr": "Dağ 🇹🇷",
+        "emoji": "⛰️",
+        "de": "Berg 🇩🇪",
+        "it": "Montagna 🇮🇹",
+        "es": "Montaña 🇪🇸",
+        "fr": "Montagne 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Ocean",
+      "translations": {
+        "tr": "Okyanus 🇹🇷",
+        "emoji": "🌊",
+        "de": "Ozean 🇩🇪",
+        "it": "Oceano 🇮🇹",
+        "es": "Océano 🇪🇸",
+        "fr": "Océan 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Desert",
+      "translations": {
+        "tr": "Çöl 🇹🇷",
+        "emoji": "🏜️",
+        "de": "Wüste 🇩🇪",
+        "it": "Deserto 🇮🇹",
+        "es": "Desierto 🇪🇸",
+        "fr": "Désert 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Forest",
+      "translations": {
+        "tr": "Orman 🇹🇷",
+        "emoji": "🌲",
+        "de": "Wald 🇩🇪",
+        "it": "Foresta 🇮🇹",
+        "es": "Bosque 🇪🇸",
+        "fr": "Forêt 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Sky",
+      "translations": {
+        "tr": "Gökyüzü 🇹🇷",
+        "emoji": "🌌",
+        "de": "Himmel 🇩🇪",
+        "it": "Cielo 🇮🇹",
+        "es": "Cielo 🇪🇸",
+        "fr": "Ciel 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Grass",
+      "translations": {
+        "tr": "Çim 🇹🇷",
+        "emoji": "🌿",
+        "de": "Gras 🇩🇪",
+        "it": "Erba 🇮🇹",
+        "es": "Hierba 🇪🇸",
+        "fr": "Herbe 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Lake",
+      "translations": {
+        "tr": "Göl 🇹🇷",
+        "emoji": "🏞️",
+        "de": "See 🇩🇪",
+        "it": "Lago 🇮🇹",
+        "es": "Lago 🇪🇸",
+        "fr": "Lac 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Wildlife",
+      "translations": {
+        "tr": "Yaban hayatı 🇹🇷",
+        "emoji": "🦒",
+        "de": "Wildtier 🇩🇪",
+        "it": "Fauna selvatica 🇮🇹",
+        "es": "Vida salvaje 🇪🇸",
+        "fr": "Faune 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Sun",
+      "translations": {
+        "tr": "Güneş 🇹🇷",
+        "emoji": "🌞",
+        "de": "Sonne 🇩🇪",
+        "it": "Sole 🇮🇹",
+        "es": "Sol 🇪🇸",
+        "fr": "Soleil 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Earth",
+      "translations": {
+        "tr": "Dünya 🇹🇷",
+        "emoji": "🌍",
+        "de": "Erde 🇩🇪",
+        "it": "Terra 🇮🇹",
+        "es": "Tierra 🇪🇸",
+        "fr": "Terre 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Cloud",
+      "translations": {
+        "tr": "Bulut 🇹🇷",
+        "emoji": "☁️",
+        "de": "Wolke 🇩🇪",
+        "it": "Nuvola 🇮🇹",
+        "es": "Nube 🇪🇸",
+        "fr": "Nuage 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Stone",
+      "translations": {
+        "tr": "Taş 🇹🇷",
+        "emoji": "🪨",
+        "de": "Stein 🇩🇪",
+        "it": "Pietra 🇮🇹",
+        "es": "Piedra 🇪🇸",
+        "fr": "Pierre 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Path",
+      "translations": {
+        "tr": "Patika 🇹🇷",
+        "emoji": "🛤️",
+        "de": "Pfad 🇩🇪",
+        "it": "Sentiero 🇮🇹",
+        "es": "Sendero 🇪🇸",
+        "fr": "Sentier 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Blossom",
+      "translations": {
+        "tr": "Çiçek açmak 🇹🇷",
+        "emoji": "🌼",
+        "de": "Blüte 🇩🇪",
+        "it": "Fiorire 🇮🇹",
+        "es": "Florecer 🇪🇸",
+        "fr": "Fleurir 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Field",
+      "translations": {
+        "tr": "Tarla 🇹🇷",
+        "emoji": "🌾",
+        "de": "Feld 🇩🇪",
+        "it": "Campo 🇮🇹",
+        "es": "Campo 🇪🇸",
+        "fr": "Champ 🇫🇷"
+      },
+      "categoryId": 15
+    },
+    {
+      "word": "Turkey",
+      "translations": {
+        "tr": "Türkiye 🇹🇷",
+        "emoji": "🇹🇷",
+        "de": "Türkei 🇩🇪",
+        "it": "Turchia 🇮🇹",
+        "es": "Turquía 🇪🇸",
+        "fr": "Turquie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "United States",
+      "translations": {
+        "tr": "Amerika Birleşik Devletleri 🇺🇸",
+        "emoji": "🇺🇸",
+        "de": "Vereinigte Staaten 🇩🇪",
+        "it": "Stati Uniti 🇮🇹",
+        "es": "Estados Unidos 🇪🇸",
+        "fr": "États-Unis 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Germany",
+      "translations": {
+        "tr": "Almanya 🇩🇪",
+        "emoji": "🇩🇪",
+        "de": "Deutschland 🇩🇪",
+        "it": "Germania 🇮🇹",
+        "es": "Alemania 🇪🇸",
+        "fr": "Allemagne 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Italy",
+      "translations": {
+        "tr": "İtalya 🇮🇹",
+        "emoji": "🇮🇹",
+        "de": "Italien 🇩🇪",
+        "it": "Italia 🇮🇹",
+        "es": "Italia 🇪🇸",
+        "fr": "Italie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Spain",
+      "translations": {
+        "tr": "İspanya 🇪🇸",
+        "emoji": "🇪🇸",
+        "de": "Spanien 🇩🇪",
+        "it": "Spagna 🇮🇹",
+        "es": "España 🇪🇸",
+        "fr": "Espagne 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "France",
+      "translations": {
+        "tr": "Fransa 🇫🇷",
+        "emoji": "🇫🇷",
+        "de": "Frankreich 🇩🇪",
+        "it": "Francia 🇮🇹",
+        "es": "Francia 🇪🇸",
+        "fr": "France 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Japan",
+      "translations": {
+        "tr": "Japonya 🇯🇵",
+        "emoji": "🇯🇵",
+        "de": "Japan 🇩🇪",
+        "it": "Giappone 🇮🇹",
+        "es": "Japón 🇪🇸",
+        "fr": "Japon 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "United Kingdom",
+      "translations": {
+        "tr": "Birleşik Krallık 🇬🇧",
+        "emoji": "🇬🇧",
+        "de": "Vereinigtes Königreich 🇩🇪",
+        "it": "Regno Unito 🇮🇹",
+        "es": "Reino Unido 🇪🇸",
+        "fr": "Royaume-Uni 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Brazil",
+      "translations": {
+        "tr": "Brezilya 🇧🇷",
+        "emoji": "🇧🇷",
+        "de": "Brasilien 🇩🇪",
+        "it": "Brasile 🇮🇹",
+        "es": "Brasil 🇪🇸",
+        "fr": "Brésil 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Canada",
+      "translations": {
+        "tr": "Kanada 🇨🇦",
+        "emoji": "🇨🇦",
+        "de": "Kanada 🇩🇪",
+        "it": "Canada 🇮🇹",
+        "es": "Canadá 🇪🇸",
+        "fr": "Canada 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Australia",
+      "translations": {
+        "tr": "Avustralya 🇦🇺",
+        "emoji": "🇦🇺",
+        "de": "Australien 🇩🇪",
+        "it": "Australia 🇮🇹",
+        "es": "Australia 🇪🇸",
+        "fr": "Australie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "India",
+      "translations": {
+        "tr": "Hindistan 🇮🇳",
+        "emoji": "🇮🇳",
+        "de": "Indien 🇩🇪",
+        "it": "India 🇮🇹",
+        "es": "India 🇪🇸",
+        "fr": "Inde 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Russia",
+      "translations": {
+        "tr": "Rusya 🇷🇺",
+        "emoji": "🇷🇺",
+        "de": "Russland 🇩🇪",
+        "it": "Russia 🇮🇹",
+        "es": "Rusia 🇪🇸",
+        "fr": "Russie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "China",
+      "translations": {
+        "tr": "Çin 🇨🇳",
+        "emoji": "🇨🇳",
+        "de": "China 🇩🇪",
+        "it": "Cina 🇮🇹",
+        "es": "China 🇪🇸",
+        "fr": "Chine 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "South Africa",
+      "translations": {
+        "tr": "Güney Afrika 🇿🇦",
+        "emoji": "🇿🇦",
+        "de": "Südafrika 🇩🇪",
+        "it": "Sudafrica 🇮🇹",
+        "es": "Sudáfrica 🇪🇸",
+        "fr": "Afrique du Sud 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Mexico",
+      "translations": {
+        "tr": "Meksika 🇲🇽",
+        "emoji": "🇲🇽",
+        "de": "Mexiko 🇩🇪",
+        "it": "Messico 🇮🇹",
+        "es": "México 🇪🇸",
+        "fr": "Mexique 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Argentina",
+      "translations": {
+        "tr": "Arjantin 🇦🇷",
+        "emoji": "🇦🇷",
+        "de": "Argentinien 🇩🇪",
+        "it": "Argentina 🇮🇹",
+        "es": "Argentina 🇪🇸",
+        "fr": "Argentine 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Philippines",
+      "translations": {
+        "tr": "Filipinler 🇵🇭",
+        "emoji": "🇵🇭",
+        "de": "Philippinen 🇩🇪",
+        "it": "Filippine 🇮🇹",
+        "es": "Filipinas 🇪🇸",
+        "fr": "Philippines 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Sweden",
+      "translations": {
+        "tr": "İsveç 🇸🇪",
+        "emoji": "🇸🇪",
+        "de": "Schweden 🇩🇪",
+        "it": "Svezia 🇮🇹",
+        "es": "Suecia 🇪🇸",
+        "fr": "Suède 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Norway",
+      "translations": {
+        "tr": "Norveç 🇳🇴",
+        "emoji": "🇳🇴",
+        "de": "Norwegen 🇩🇪",
+        "it": "Norvegia 🇮🇹",
+        "es": "Noruega 🇪🇸",
+        "fr": "Norvège 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Finland",
+      "translations": {
+        "tr": "Finlandiya 🇫🇮",
+        "emoji": "🇫🇮",
+        "de": "Finnland 🇩🇪",
+        "it": "Finlandia 🇮🇹",
+        "es": "Finlandia 🇪🇸",
+        "fr": "Finlande 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Denmark",
+      "translations": {
+        "tr": "Danimarka 🇩🇰",
+        "emoji": "🇩🇰",
+        "de": "Dänemark 🇩🇪",
+        "it": "Danimarca 🇮🇹",
+        "es": "Dinamarca 🇪🇸",
+        "fr": "Danemark 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Belgium",
+      "translations": {
+        "tr": "Belçika 🇧🇪",
+        "emoji": "🇧🇪",
+        "de": "Belgien 🇩🇪",
+        "it": "Belgio 🇮🇹",
+        "es": "Bélgica 🇪🇸",
+        "fr": "Belgique 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Netherlands",
+      "translations": {
+        "tr": "Hollanda 🇳🇱",
+        "emoji": "🇳🇱",
+        "de": "Niederlande 🇩🇪",
+        "it": "Paesi Bassi 🇮🇹",
+        "es": "Países Bajos 🇪🇸",
+        "fr": "Pays-Bas 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Switzerland",
+      "translations": {
+        "tr": "İsviçre 🇨🇭",
+        "emoji": "🇨🇭",
+        "de": "Schweiz 🇩🇪",
+        "it": "Svizzera 🇮🇹",
+        "es": "Suiza 🇪🇸",
+        "fr": "Suisse 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Austria",
+      "translations": {
+        "tr": "Avusturya 🇦🇹",
+        "emoji": "🇦🇹",
+        "de": "Österreich 🇩🇪",
+        "it": "Austria 🇮🇹",
+        "es": "Austria 🇪🇸",
+        "fr": "Autriche 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Greece",
+      "translations": {
+        "tr": "Yunanistan 🇬🇷",
+        "emoji": "🇬🇷",
+        "de": "Griechenland 🇩🇪",
+        "it": "Grecia 🇮🇹",
+        "es": "Grecia 🇪🇸",
+        "fr": "Grèce 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Portugal",
+      "translations": {
+        "tr": "Portekiz 🇵🇹",
+        "emoji": "🇵🇹",
+        "de": "Portugal 🇩🇪",
+        "it": "Portogallo 🇮🇹",
+        "es": "Portugal 🇪🇸",
+        "fr": "Portugal 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Ireland",
+      "translations": {
+        "tr": "İrlanda 🇮🇪",
+        "emoji": "🇮🇪",
+        "de": "Irland 🇩🇪",
+        "it": "Irlanda 🇮🇹",
+        "es": "Irlanda 🇪🇸",
+        "fr": "Irlande 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Czech Republic",
+      "translations": {
+        "tr": "Çek Cumhuriyeti 🇨🇿",
+        "emoji": "🇨🇿",
+        "de": "Tschechische Republik 🇩🇪",
+        "it": "Repubblica Ceca 🇮🇹",
+        "es": "República Checa 🇪🇸",
+        "fr": "République tchèque 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Hungary",
+      "translations": {
+        "tr": "Macaristan 🇭🇺",
+        "emoji": "🇭🇺",
+        "de": "Ungarn 🇩🇪",
+        "it": "Ungheria 🇮🇹",
+        "es": "Hungría 🇪🇸",
+        "fr": "Hongrie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Romania",
+      "translations": {
+        "tr": "Romanya 🇷🇴",
+        "emoji": "🇷🇴",
+        "de": "Rumänien 🇩🇪",
+        "it": "Romania 🇮🇹",
+        "es": "Rumanía 🇪🇸",
+        "fr": "Roumanie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Slovakia",
+      "translations": {
+        "tr": "Slovakya 🇸🇰",
+        "emoji": "🇸🇰",
+        "de": "Slowakei 🇩🇪",
+        "it": "Slovacchia 🇮🇹",
+        "es": "Eslovaquia 🇪🇸",
+        "fr": "Slovaquie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Bulgaria",
+      "translations": {
+        "tr": "Bulgaristan 🇧🇬",
+        "emoji": "🇧🇬",
+        "de": "Bulgarien 🇩🇪",
+        "it": "Bulgaria 🇮🇹",
+        "es": "Bulgaria 🇪🇸",
+        "fr": "Bulgarie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Serbia",
+      "translations": {
+        "tr": "Sırbistan 🇷🇸",
+        "emoji": "🇷🇸",
+        "de": "Serbien 🇩🇪",
+        "it": "Serbia 🇮🇹",
+        "es": "Serbia 🇪🇸",
+        "fr": "Serbie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Ukraine",
+      "translations": {
+        "tr": "Ukrayna 🇺🇦",
+        "emoji": "🇺🇦",
+        "de": "Ukrain 🇩🇪",
+        "it": "Ucraina 🇮🇹",
+        "es": "Ucrania 🇪🇸",
+        "fr": "Ukraine 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Thailand",
+      "translations": {
+        "tr": "Tayland 🇹🇭",
+        "emoji": "🇹🇭",
+        "de": "Thailand 🇩🇪",
+        "it": "Thailandia 🇮🇹",
+        "es": "Tailandia 🇪🇸",
+        "fr": "Thaïlande 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Malaysia",
+      "translations": {
+        "tr": "Malezya 🇲🇾",
+        "emoji": "🇲🇾",
+        "de": "Malaysia 🇩🇪",
+        "it": "Malesia 🇮🇹",
+        "es": "Malasia 🇪🇸",
+        "fr": "Malaisie 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Vietnam",
+      "translations": {
+        "tr": "Vietnam 🇻🇳",
+        "emoji": "🇻🇳",
+        "de": "Vietnam 🇩🇪",
+        "it": "Vietnam 🇮🇹",
+        "es": "Vietnam 🇪🇸",
+        "fr": "Viêt Nam 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "India",
+      "translations": {
+        "tr": "Hindistan 🇮🇳",
+        "emoji": "🇮🇳",
+        "de": "Indien 🇩🇪",
+        "it": "India 🇮🇹",
+        "es": "India 🇪🇸",
+        "fr": "Inde 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "South Africa",
+      "translations": {
+        "tr": "Güney Afrika 🇿🇦",
+        "emoji": "🇿🇦",
+        "de": "Südafrika 🇩🇪",
+        "it": "Sudafrica 🇮🇹",
+        "es": "Sudáfrica 🇪🇸",
+        "fr": "Afrique du Sud 🇫🇷"
+      },
+      "categoryId": 16
+    },
+    {
+      "word": "Egypt",
+      "translations": {
+        "tr": "Mısır 🇪🇬",
+        "emoji": "🇪🇬",
+        "de": "Ägypten 🇩🇪",
+        "it": "Egitto 🇮🇹",
+        "es": "Egipto 🇪🇸",
+        "fr": "Égypte 🇫🇷"
+      },
+      "categoryId": 16
     }
+
+
 
   ]
 }
