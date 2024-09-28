@@ -15,24 +15,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+
             android:gravity="center"
             android:orientation="vertical">
 
             <!-- ProgressBar -->
-            <LinearLayout
-                android:id="@+id/loadingContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
 
             <!-- Other UI elements, initially hidden -->
             <LinearLayout
@@ -40,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -77,14 +65,7 @@
                             android:layout_gravity="center_vertical" />
 
                         <!-- Phonetic -->
-                        <TextView
-                            android:id="@+id/tvPhonetic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:paddingStart="8dp"
-                            android:text="@string/tvphonetic"
-                            android:layout_gravity="center_vertical" />
+
 
                     </LinearLayout>
 
@@ -142,12 +123,7 @@
                             android:paddingTop="18dp" />
 
                         <!-- Definitions -->
-                        <TextView
-                            android:id="@+id/tvDefinitions"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="16dp"
-                            android:text="@string/definitions" />
+
 
                     </LinearLayout>
 
@@ -173,38 +149,18 @@
                         android:layout_alignParentTop="true" />
 
                     <!-- LinearLayout with Button and LottieAnimationView -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_below="@id/tvEnglishPronunciation">
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnPlayAudio"
-                            android:layout_width="60dp"
-                            android:layout_height="55dp"
-                            android:background="@drawable/playcircle" />
-
-                        <com.airbnb.lottie.LottieAnimationView
-                            android:id="@+id/lottiePlayAnimation"
-                            android:layout_width="250dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="50dp"
-                            app:lottie_rawRes="@raw/audio"
-                            app:lottie_autoPlay="false"
-                            app:lottie_loop="true" />
-                    </LinearLayout>
                 </RelativeLayout>
 
                 <Button
                     android:id="@+id/learnedButton"
-                    android:layout_width="159dp"
-                    android:layout_height="52dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="-56dp"
-                    android:backgroundTint="#ED7A27"
-                    android:text="@string/learned" />
+                    android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="#ED7A27"
+                android:text="@string/learned" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

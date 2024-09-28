@@ -9,7 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.model.WordResponse
 import com.mertyigit0.vocabcards.data.repository.WordRepository
-import com.mertyigit0.vocabcards.data.network.RetrofitInstance
+//import com.mertyigit0.vocabcards.data.network.RetrofitInstance
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -46,7 +46,7 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-
+/*
     fun fetchWordDetails(word: String) {
         RetrofitInstance.api.getWordDetails(word).enqueue(object : Callback<List<WordResponse>> {
             override fun onResponse(
@@ -63,7 +63,7 @@ class WordDetailViewModel(application: Application) : AndroidViewModel(applicati
             }
         })
     }
-
+*/
 
     fun playAudio(url: String) {
         mediaPlayer?.release()

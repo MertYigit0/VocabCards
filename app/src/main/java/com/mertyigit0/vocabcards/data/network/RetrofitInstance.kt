@@ -2,7 +2,7 @@ package com.mertyigit0.vocabcards.data.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+/*
 object RetrofitInstance {
     private val retrofit by lazy {
         Retrofit.Builder()
@@ -15,3 +15,4 @@ object RetrofitInstance {
         retrofit.create(DictionaryApiService::class.java)
     }
 }
+*/

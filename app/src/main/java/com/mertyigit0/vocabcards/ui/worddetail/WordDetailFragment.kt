@@ -48,8 +48,8 @@ class WordDetailFragment : Fragment() {
         word = args.word
 
         // Show ProgressBar and hide content initially
-        binding.loadingContainer.visibility = View.VISIBLE
-        binding.contentContainer.visibility = View.GONE
+       // binding.loadingContainer.visibility = View.VISIBLE
+       // binding.contentContainer.visibility = View.GONE
 
         // Setup UI
         binding.tvDetailEnglishWord.text = word.english
@@ -69,8 +69,10 @@ class WordDetailFragment : Fragment() {
         viewModel.checkIfWordIsLearned(word)
 
         // Trigger fetching word details from the API
-        viewModel.fetchWordDetails(word.english)
+       // viewModel.fetchWordDetails(word.english)
 
+
+        /*
         // Observe word details from the API
         viewModel.wordDetail.observe(viewLifecycleOwner) { wordResponse ->
             wordResponse?.let {
@@ -104,6 +106,7 @@ class WordDetailFragment : Fragment() {
                 binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.INVISIBLE
             }
         }
+*/
 
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
