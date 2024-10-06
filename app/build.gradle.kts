@@ -4,7 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
+    //id("com.google.gms.google-services")
 }
 
 android {
@@ -15,7 +15,7 @@ android {
         applicationId = "com.mertyigit0.vocabcards"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
+        versionCode = 6
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -49,7 +49,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,9 +72,7 @@ dependencies {
     implementation(libs.androidx.viewpager2)
     implementation (libs.material.v180)
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.firestore)
+
 
     // (Java only)
     implementation(libs.androidx.work.runtime)

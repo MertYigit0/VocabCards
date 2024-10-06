@@ -3,7 +3,7 @@ package com.mertyigit0.vocabcards.data.repository
 import android.content.Context
 import android.util.Log
 import androidx.room.Room
-import com.google.firebase.firestore.FirebaseFirestore
+//import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.mertyigit0.vocabcards.R
@@ -12,7 +12,7 @@ import com.mertyigit0.vocabcards.data.model.Category
 import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.data.model.WordListResponse
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.tasks.await
+//import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 
@@ -111,7 +111,7 @@ class WordRepository(private val context: Context) {
             db.categoryDao().insertAll(categoryList) // Tüm kategorileri ekle
         }
     }
-
+/*
     suspend fun loadCategoriesFromFirestore(): List<Category> {
         return withContext(Dispatchers.IO) {
             try {
@@ -157,10 +157,10 @@ class WordRepository(private val context: Context) {
             }
         }
     }
+*/
 
 
-
-
+/*
     suspend fun loadWordsFromFirestore(): List<Word> {
         return withContext(Dispatchers.IO) {
             try {
@@ -205,7 +205,7 @@ class WordRepository(private val context: Context) {
         }
     }
 
-
+*/
 
 
 

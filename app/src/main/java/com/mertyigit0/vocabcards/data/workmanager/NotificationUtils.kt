@@ -11,7 +11,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.mertyigit0.vocabcards.ui.main.MainActivity
 import com.mertyigit0.vocabcards.ui.splash.SplashActivity
-
+/*
 object NotificationUtils {
 
     private const val CHANNEL_ID = "sync_channel"
@@ -76,3 +76,4 @@ object NotificationUtils {
 
 
 }
+*/

@@ -374,18 +374,6 @@
       "categoryId": 1
     },
     {
-      "word": "Elephant",
-      "translations": {
-        "tr": "Fil 🇹🇷",
-        "emoji": "🐘",
-        "de": "Elefant 🇩🇪",
-        "it": "Elefante 🇮🇹",
-        "es": "Elefante 🇪🇸",
-        "fr": "Éléphant 🇫🇷"
-      },
-      "categoryId": 1
-    },
-    {
       "word": "Tiger",
       "translations": {
         "tr": "Kaplan 🇹🇷",
@@ -518,18 +506,6 @@
       "categoryId": 1
     },
     {
-      "word": "Tiger",
-      "translations": {
-        "tr": "Kaplan 🇹🇷",
-        "emoji": "🐅",
-        "de": "Tiger 🇩🇪",
-        "it": "Tigre 🇮🇹",
-        "es": "Tigre 🇪🇸",
-        "fr": "Tigre 🇫🇷"
-      },
-      "categoryId": 1
-    },
-    {
       "word": "Deer",
       "translations": {
         "tr": "Geyik 🇹🇷",
@@ -538,18 +514,6 @@
         "it": "Cervo 🇮🇹",
         "es": "Ciervo 🇪🇸",
         "fr": "Cerf 🇫🇷"
-      },
-      "categoryId": 1
-    },
-    {
-      "word": "Horse",
-      "translations": {
-        "tr": "At 🇹🇷",
-        "emoji": "🐴",
-        "de": "Pferd 🇩🇪",
-        "it": "Cavallo 🇮🇹",
-        "es": "Caballo 🇪🇸",
-        "fr": "Cheval 🇫🇷"
       },
       "categoryId": 1
     },

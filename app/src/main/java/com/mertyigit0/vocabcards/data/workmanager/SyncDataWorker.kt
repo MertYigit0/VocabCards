@@ -1,5 +1,5 @@
 package com.mertyigit0.vocabcards.data.workmanager
-
+/*
 import android.content.Context
 import androidx.room.util.newStringBuilder
 import androidx.work.CoroutineWorker
@@ -83,3 +83,4 @@ class SyncDataWorker(
         }
     }
 }
+*/
