@@ -29,7 +29,9 @@
     <string name="start_learning">Start Learning</string>
     <string name="welcome_to_vocabcards">Welcome to VocabCards!</string>
     <string name="discover_a_fun_and_interactive_way_to_learn_new_words_and_expand_your_vocabulary_let_s_get_started_on_your_language_journey">Discover a fun and interactive way to learn new words and expand your vocabulary. Let’s get started on your language journey!</string>
-    <string name="with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">With VocabCards, you can create custom flashcards, track your progress, and review learned words easily. Make your learning experience unique and tailored to your needs!</string>
+    <string name="with_vocabcards_you_can_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">With VocabCards, you can track your progress and review learned words easily. Make your learning experience unique and tailored to your needs!</string>
+
+
     <string name="explore_features">Explore Features</string>
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Let’s dive in! Click below to start your first vocabulary lesson and unlock the world of words. Your journey to fluency begins now!</string>
     <string name="ready_to_begin">Ready to Begin?</string>

@@ -129,29 +129,6 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <RelativeLayout
-                    android:id="@+id/pronunciationLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <!-- English Pronunciation TextView -->
-                    <TextView
-                        android:id="@+id/tvEnglishPronunciation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/listen_english_pronunciation"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_marginBottom="-70dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true" />
-
-                    <!-- LinearLayout with Button and LottieAnimationView -->
-
-                </RelativeLayout>
-
                 <Button
                     android:id="@+id/learnedButton"
                     android:layout_width="160dp"

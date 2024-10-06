@@ -33,7 +33,8 @@
     <string name="start_learning">Commencer à Apprendre</string>
     <string name="welcome_to_vocabcards">Bienvenue sur VocabCards!</string>
     <string name="discover_a_fun_and_interactive_way_to_learn_new_words_and_expand_your_vocabulary_let_s_get_started_on_your_language_journey">Découvrez une façon amusante et interactive d\'apprendre de nouveaux mots et d\'élargir votre vocabulaire. Commençons votre voyage linguistique!</string>
-    <string name="with_vocabcards_you_can_create_custom_flashcards_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">Avec VocabCards, vous pouvez créer des cartes mémoire personnalisées, suivre vos progrès et revoir facilement les mots appris. Rendez votre expérience d\'apprentissage unique et adaptée à vos besoins!</string>
+    <string name="with_vocabcards_you_can_track_your_progress_and_review_learned_words_easily_make_your_learning_experience_unique_and_tailored_to_your_needs">Avec VocabCards, vous pouvez suivre vos progrès et revoir facilement les mots appris. Rendez votre expérience d\'apprentissage unique et adaptée à vos besoins !</string>
+
     <string name="explore_features">Explorer les Caractéristiques</string>
     <string name="let_s_dive_in_click_below_to_start_your_first_vocabulary_lesson_and_unlock_the_world_of_words_your_journey_to_fluency_begins_now">Plongeons-nous! Cliquez ci-dessous pour commencer votre première leçon de vocabulaire et déverrouiller le monde des mots. Votre voyage vers la maîtrise commence maintenant!</string>
     <string name="ready_to_begin">Prêt à Commencer?</string>
