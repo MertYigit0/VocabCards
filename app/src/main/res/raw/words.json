@@ -1383,6 +1383,366 @@
       "categoryId": 6
     },
     {
+      "word": "Table Tennis",
+      "translations": {
+        "tr": "Masa Tenisi 🇹🇷",
+        "emoji": "🏓",
+        "de": "Tischtennis 🇩🇪",
+        "it": "Tennis da tavolo 🇮🇹",
+        "es": "Tenis de mesa 🇪🇸",
+        "fr": "Tennis de table 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Badminton",
+      "translations": {
+        "tr": "Badminton 🇹🇷",
+        "emoji": "🏸",
+        "de": "Badminton 🇩🇪",
+        "it": "Badminton 🇮🇹",
+        "es": "Bádminton 🇪🇸",
+        "fr": "Badminton 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Surfing",
+      "translations": {
+        "tr": "Sörf 🇹🇷",
+        "emoji": "🏄",
+        "de": "Surfen 🇩🇪",
+        "it": "Surf 🇮🇹",
+        "es": "Surf 🇪🇸",
+        "fr": "Surf 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Snowboarding",
+      "translations": {
+        "tr": "Snowboard 🇹🇷",
+        "emoji": "🏂",
+        "de": "Snowboarden 🇩🇪",
+        "it": "Snowboard 🇮🇹",
+        "es": "Snowboard 🇪🇸",
+        "fr": "Snowboard 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Skiing",
+      "translations": {
+        "tr": "Kayak 🇹🇷",
+        "emoji": "⛷️",
+        "de": "Skifahren 🇩🇪",
+        "it": "Sci 🇮🇹",
+        "es": "Esquí 🇪🇸",
+        "fr": "Ski 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Cricket",
+      "translations": {
+        "tr": "Kriket 🇹🇷",
+        "emoji": "🏏",
+        "de": "Cricket 🇩🇪",
+        "it": "Cricket 🇮🇹",
+        "es": "Críquet 🇪🇸",
+        "fr": "Cricket 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Rugby",
+      "translations": {
+        "tr": "Ragbi 🇹🇷",
+        "emoji": "🏉",
+        "de": "Rugby 🇩🇪",
+        "it": "Rugby 🇮🇹",
+        "es": "Rugby 🇪🇸",
+        "fr": "Rugby 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Skateboarding",
+      "translations": {
+        "tr": "Kaykay 🇹🇷",
+        "emoji": "🛹",
+        "de": "Skateboarden 🇩🇪",
+        "it": "Skateboard 🇮🇹",
+        "es": "Patineta 🇪🇸",
+        "fr": "Skateboard 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Darts",
+      "translations": {
+        "tr": "Dart 🇹🇷",
+        "emoji": "🎯",
+        "de": "Darts 🇩🇪",
+        "it": "Freccette 🇮🇹",
+        "es": "Dardos 🇪🇸",
+        "fr": "Fléchettes 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Archery",
+      "translations": {
+        "tr": "Okçuluk 🇹🇷",
+        "emoji": "🏹",
+        "de": "Bogenschießen 🇩🇪",
+        "it": "Tiro con l'arco 🇮🇹",
+        "es": "Tiro con arco 🇪🇸",
+        "fr": "Tir à l'arc 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Wrestling",
+      "translations": {
+        "tr": "Güreş 🇹🇷",
+        "emoji": "🤼",
+        "de": "Ringen 🇩🇪",
+        "it": "Lotta 🇮🇹",
+        "es": "Lucha 🇪🇸",
+        "fr": "Lutte 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Judo",
+      "translations": {
+        "tr": "Judo 🇹🇷",
+        "emoji": "🥋",
+        "de": "Judo 🇩🇪",
+        "it": "Judo 🇮🇹",
+        "es": "Judo 🇪🇸",
+        "fr": "Judo 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Karate",
+      "translations": {
+        "tr": "Karate 🇹🇷",
+        "emoji": "🥋",
+        "de": "Karate 🇩🇪",
+        "it": "Karate 🇮🇹",
+        "es": "Karate 🇪🇸",
+        "fr": "Karaté 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Fencing",
+      "translations": {
+        "tr": "Eskrim 🇹🇷",
+        "emoji": "🤺",
+        "de": "Fechten 🇩🇪",
+        "it": "Scherma 🇮🇹",
+        "es": "Esgrima 🇪🇸",
+        "fr": "Escrime 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Taekwondo",
+      "translations": {
+        "tr": "Tekvando 🇹🇷",
+        "emoji": "🥋",
+        "de": "Taekwondo 🇩🇪",
+        "it": "Taekwondo 🇮🇹",
+        "es": "Taekwondo 🇪🇸",
+        "fr": "Taekwondo 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Muay Thai",
+      "translations": {
+        "tr": "Muay Thai 🇹🇷",
+        "emoji": "🥊",
+        "de": "Muay Thai 🇩🇪",
+        "it": "Muay Thai 🇮🇹",
+        "es": "Muay Thai 🇪🇸",
+        "fr": "Muay Thai 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Skating",
+      "translations": {
+        "tr": "Paten 🇹🇷",
+        "emoji": "⛸️",
+        "de": "Eislaufen 🇩🇪",
+        "it": "Pattinaggio 🇮🇹",
+        "es": "Patinaje 🇪🇸",
+        "fr": "Patinage 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Rowing",
+      "translations": {
+        "tr": "Kürek 🇹🇷",
+        "emoji": "🚣",
+        "de": "Rudern 🇩🇪",
+        "it": "Canottaggio 🇮🇹",
+        "es": "Remo 🇪🇸",
+        "fr": "Aviron 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Kayaking",
+      "translations": {
+        "tr": "Kano 🇹🇷",
+        "emoji": "🛶",
+        "de": "Kajakfahren 🇩🇪",
+        "it": "Kayak 🇮🇹",
+        "es": "Kayak 🇪🇸",
+        "fr": "Kayak 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Fishing",
+      "translations": {
+        "tr": "Balık Tutma 🇹🇷",
+        "emoji": "🎣",
+        "de": "Angeln 🇩🇪",
+        "it": "Pesca 🇮🇹",
+        "es": "Pesca 🇪🇸",
+        "fr": "Pêche 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Billiards",
+      "translations": {
+        "tr": "Bilardo 🇹🇷",
+        "emoji": "🎱",
+        "de": "Billard 🇩🇪",
+        "it": "Biliardo 🇮🇹",
+        "es": "Billar 🇪🇸",
+        "fr": "Billard 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Bowling",
+      "translations": {
+        "tr": "Bowling 🇹🇷",
+        "emoji": "🎳",
+        "de": "Bowling 🇩🇪",
+        "it": "Bowling 🇮🇹",
+        "es": "Boliche 🇪🇸",
+        "fr": "Bowling 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Pole Vault",
+      "translations": {
+        "tr": "Sırıkla Atlama 🇹🇷",
+        "emoji": "🦯",
+        "de": "Stabhochsprung 🇩🇪",
+        "it": "Salto con l'asta 🇮🇹",
+        "es": "Salto con pértiga 🇪🇸",
+        "fr": "Saut à la perche 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Shot Put",
+      "translations": {
+        "tr": "Gülle Atma 🇹🇷",
+        "emoji": "🏅",
+        "de": "Kugelstoßen 🇩🇪",
+        "it": "Getto del peso 🇮🇹",
+        "es": "Lanzamiento de bala 🇪🇸",
+        "fr": "Lancer de poids 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Discus Throw",
+      "translations": {
+        "tr": "Disk Atma 🇹🇷",
+        "emoji": "🥏",
+        "de": "Diskuswerfen 🇩🇪",
+        "it": "Lancio del disco 🇮🇹",
+        "es": "Lanzamiento de disco 🇪🇸",
+        "fr": "Lancer du disque 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Javelin Throw",
+      "translations": {
+        "tr": "Cirit Atma 🇹🇷",
+        "emoji": "🏹",
+        "de": "Speerwurf 🇩🇪",
+        "it": "Lancio del giavellotto 🇮🇹",
+        "es": "Lanzamiento de jabalina 🇪🇸",
+        "fr": "Lancer de javelot 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "High Jump",
+      "translations": {
+        "tr": "Yüksek Atlama 🇹🇷",
+        "emoji": "🏅",
+        "de": "Hochsprung 🇩🇪",
+        "it": "Salto in alto 🇮🇹",
+        "es": "Salto de altura 🇪🇸",
+        "fr": "Saut en hauteur 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Long Jump",
+      "translations": {
+        "tr": "Uzun Atlama 🇹🇷",
+        "emoji": "🏅",
+        "de": "Weitsprung 🇩🇪",
+        "it": "Salto in lungo 🇮🇹",
+        "es": "Salto de longitud 🇪🇸",
+        "fr": "Saut en longueur 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Triathlon",
+      "translations": {
+        "tr": "Triatlon 🇹🇷",
+        "emoji": "🏊🚴🏃",
+        "de": "Triathlon 🇩🇪",
+        "it": "Triathlon 🇮🇹",
+        "es": "Triatlón 🇪🇸",
+        "fr": "Triathlon 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
+      "word": "Paragliding",
+      "translations": {
+        "tr": "Yamaç Paraşütü 🇹🇷",
+        "emoji": "🪂",
+        "de": "Gleitschirmfliegen 🇩🇪",
+        "it": "Parapendio 🇮🇹",
+        "es": "Parapente 🇪🇸",
+        "fr": "Parapente 🇫🇷"
+      },
+      "categoryId": 6
+    },
+    {
       "word": "Beef",
       "translations": {
         "tr": "Sığır Eti 🇹🇷",
