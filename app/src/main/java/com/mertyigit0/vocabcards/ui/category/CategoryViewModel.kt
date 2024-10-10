@@ -25,12 +25,14 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
 
     private fun loadCategories() {
         viewModelScope.launch {
-            if (repository.getAllCategories().isEmpty()) { // Eğer kategoriler yoksa
-                repository.loadCategoriesFromJson()
-            }
+            // Her zaman kategorileri yükle
+            repository.loadCategoriesFromJson()
+
+            // Kategorileri güncelle
             _categories.value = repository.getAllCategories()
         }
     }
+
 
     fun loadWordCounts() {
         viewModelScope.launch {

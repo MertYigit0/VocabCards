@@ -33,10 +33,10 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
         viewModelScope.launch {
             val words = repository.getAllWords()
             Log.d("WordListViewModela", "All words from database: $words")
-            if (words.isEmpty()) {
-                repository.loadWordsFromJson()
-                updateWordList()
-            }
+
+            repository.loadWordsFromJson()
+            updateWordList()
+
         }
     }
 

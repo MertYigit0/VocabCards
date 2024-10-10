@@ -3649,6 +3649,246 @@
         "fr": "Égypte 🇫🇷"
       },
       "categoryId": 16
+    },
+    {
+      "word": "One",
+      "translations": {
+        "tr": "Bir 🇹🇷",
+        "emoji": "1️⃣",
+        "de": "Eins 🇩🇪",
+        "it": "Uno 🇮🇹",
+        "es": "Uno 🇪🇸",
+        "fr": "Un 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Two",
+      "translations": {
+        "tr": "İki 🇹🇷",
+        "emoji": "2️⃣",
+        "de": "Zwei 🇩🇪",
+        "it": "Due 🇮🇹",
+        "es": "Dos 🇪🇸",
+        "fr": "Deux 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Three",
+      "translations": {
+        "tr": "Üç 🇹🇷",
+        "emoji": "3️⃣",
+        "de": "Drei 🇩🇪",
+        "it": "Tre 🇮🇹",
+        "es": "Tres 🇪🇸",
+        "fr": "Trois 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Four",
+      "translations": {
+        "tr": "Dört 🇹🇷",
+        "emoji": "4️⃣",
+        "de": "Vier 🇩🇪",
+        "it": "Quattro 🇮🇹",
+        "es": "Cuatro 🇪🇸",
+        "fr": "Quatre 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Five",
+      "translations": {
+        "tr": "Beş 🇹🇷",
+        "emoji": "5️⃣",
+        "de": "Fünf 🇩🇪",
+        "it": "Cinque 🇮🇹",
+        "es": "Cinco 🇪🇸",
+        "fr": "Cinq 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Six",
+      "translations": {
+        "tr": "Altı 🇹🇷",
+        "emoji": "6️⃣",
+        "de": "Sechs 🇩🇪",
+        "it": "Sei 🇮🇹",
+        "es": "Seis 🇪🇸",
+        "fr": "Six 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Seven",
+      "translations": {
+        "tr": "Yedi 🇹🇷",
+        "emoji": "7️⃣",
+        "de": "Sieben 🇩🇪",
+        "it": "Sette 🇮🇹",
+        "es": "Siete 🇪🇸",
+        "fr": "Sept 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Eight",
+      "translations": {
+        "tr": "Sekiz 🇹🇷",
+        "emoji": "8️⃣",
+        "de": "Acht 🇩🇪",
+        "it": "Otto 🇮🇹",
+        "es": "Ocho 🇪🇸",
+        "fr": "Huit 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Nine",
+      "translations": {
+        "tr": "Dokuz 🇹🇷",
+        "emoji": "9️⃣",
+        "de": "Neun 🇩🇪",
+        "it": "Nove 🇮🇹",
+        "es": "Nueve 🇪🇸",
+        "fr": "Neuf 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Ten",
+      "translations": {
+        "tr": "On 🇹🇷",
+        "emoji": "🔟",
+        "de": "Zehn 🇩🇪",
+        "it": "Dieci 🇮🇹",
+        "es": "Diez 🇪🇸",
+        "fr": "Dix 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Eleven",
+      "translations": {
+        "tr": "On Bir 🇹🇷",
+        "emoji": "1️⃣1️⃣",
+        "de": "Elf 🇩🇪",
+        "it": "Undici 🇮🇹",
+        "es": "Once 🇪🇸",
+        "fr": "Onze 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Twelve",
+      "translations": {
+        "tr": "On İki 🇹🇷",
+        "emoji": "1️⃣2️⃣",
+        "de": "Zwölf 🇩🇪",
+        "it": "Dodici 🇮🇹",
+        "es": "Doce 🇪🇸",
+        "fr": "Douze 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Thirteen",
+      "translations": {
+        "tr": "On Üç 🇹🇷",
+        "emoji": "1️⃣3️⃣",
+        "de": "Dreizehn 🇩🇪",
+        "it": "Tredici 🇮🇹",
+        "es": "Trece 🇪🇸",
+        "fr": "Treize 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Fourteen",
+      "translations": {
+        "tr": "On Dört 🇹🇷",
+        "emoji": "1️⃣4️⃣",
+        "de": "Vierzehn 🇩🇪",
+        "it": "Quattordici 🇮🇹",
+        "es": "Catorce 🇪🇸",
+        "fr": "Quatorze 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Fifteen",
+      "translations": {
+        "tr": "On Beş 🇹🇷",
+        "emoji": "1️⃣5️⃣",
+        "de": "Fünfzehn 🇩🇪",
+        "it": "Quindici 🇮🇹",
+        "es": "Quince 🇪🇸",
+        "fr": "Quinze 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Sixteen",
+      "translations": {
+        "tr": "On Altı 🇹🇷",
+        "emoji": "1️⃣6️⃣",
+        "de": "Sechzehn 🇩🇪",
+        "it": "Sedici 🇮🇹",
+        "es": "Dieciséis 🇪🇸",
+        "fr": "Seize 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Seventeen",
+      "translations": {
+        "tr": "On Yedi 🇹🇷",
+        "emoji": "1️⃣7️⃣",
+        "de": "Siebzehn 🇩🇪",
+        "it": "Diciassette 🇮🇹",
+        "es": "Diecisiete 🇪🇸",
+        "fr": "Dix-sept 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Eighteen",
+      "translations": {
+        "tr": "On Sekiz 🇹🇷",
+        "emoji": "1️⃣8️⃣",
+        "de": "Achtzehn 🇩🇪",
+        "it": "Diciotto 🇮🇹",
+        "es": "Dieciocho 🇪🇸",
+        "fr": "Dix-huit 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Nineteen",
+      "translations": {
+        "tr": "On Dokuz 🇹🇷",
+        "emoji": "1️⃣9️⃣",
+        "de": "Neunzehn 🇩🇪",
+        "it": "Diciannove 🇮🇹",
+        "es": "Diecinueve 🇪🇸",
+        "fr": "Dix-neuf 🇫🇷"
+      },
+      "categoryId": 17
+    },
+    {
+      "word": "Twenty",
+      "translations": {
+        "tr": "Yirmi 🇹🇷",
+        "emoji": "2️⃣0️⃣",
+        "de": "Zwanzig 🇩🇪",
+        "it": "Venti 🇮🇹",
+        "es": "Veinte 🇪🇸",
+        "fr": "Vingt 🇫🇷"
+      },
+      "categoryId": 17
     }
 
 

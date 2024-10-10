@@ -28,10 +28,12 @@ class WordRepository(private val context: Context) {
             val inputStream = context.resources.openRawResource(R.raw.words)
             val reader = InputStreamReader(inputStream)
 
+            // JSON'dan kelimeleri çekiyoruz
             val wordListType = object : TypeToken<WordListResponse>() {}.type
             val wordListResponse: WordListResponse = Gson().fromJson(reader, wordListType)
 
-            val words = wordListResponse.words.map { response ->
+            // JSON'daki kelimeleri Word objesine çeviriyoruz
+            val wordsFromJson = wordListResponse.words.map { response ->
                 Word(
                     english = response.word,
                     turkish = response.translations.turkish,
@@ -40,13 +42,28 @@ class WordRepository(private val context: Context) {
                     italian = response.translations.italian,
                     spanish = response.translations.spanish,
                     french = response.translations.french,
-                    categoryId =response.categoryId
-
+                    categoryId = response.categoryId
                 )
             }
-            db.wordDao().insertAll(words)
+
+            // Veritabanındaki mevcut kelimeleri alıyoruz
+            val existingWords = db.wordDao().getAllWords()
+
+            // JSON'dan gelen kelimeleri mevcut veritabanı ile karşılaştırıyoruz
+            val newWords = wordsFromJson.filter { jsonWord ->
+                existingWords.none { it.english == jsonWord.english } // Aynı ingilizce kelime veritabanında yoksa ekleyeceğiz
+            }
+
+            // Yeni kelimeleri veritabanına ekliyoruz
+            if (newWords.isNotEmpty()) {
+                db.wordDao().insertAll(newWords)
+                Log.d("WordRepository", "Added ${newWords.size} new words to the database")
+            } else {
+                Log.d("WordRepository", "No new words to add")
+            }
         }
     }
+
 
     suspend fun getAllWords(): List<Word> {
         return withContext(Dispatchers.IO) {
@@ -108,56 +125,71 @@ class WordRepository(private val context: Context) {
             val categoryListType = object : TypeToken<List<Category>>() {}.type
             val categoryList: List<Category> = Gson().fromJson(reader, categoryListType)
 
-            db.categoryDao().insertAll(categoryList) // Tüm kategorileri ekle
-        }
-    }
-/*
-    suspend fun loadCategoriesFromFirestore(): List<Category> {
-        return withContext(Dispatchers.IO) {
-            try {
-                val firestore = FirebaseFirestore.getInstance()
+            // Veritabanındaki mevcut kategorileri al
+            val existingCategories = db.categoryDao().getAllCategories()
 
-                // Firestore'dan kategorileri çek
-                val result = firestore.collection("categories").get().await()
+            // Yeni kategorileri bul: Eğer kategori veritabanında yoksa ekle
+            val newCategories = categoryList.filter { jsonCategory ->
+                existingCategories.none { it.id == jsonCategory.id }  // Aynı kategori ID'si veritabanında yoksa
+            }
 
-                // Verileri map ile Category objelerine çevir
-                val categories = result.map { document ->
-                    // 'id' değerini güvenli bir şekilde alma
-                    val idValue = document.get("id")
-                    val id = when (idValue) {
-                        is Number -> idValue.toInt()  // Eğer id Number ise Int'e çevir
-                        is String -> idValue.toIntOrNull() ?: 0  // Eğer id String ise ve sayıya çevrilebiliyorsa çevir
-                        else -> 0  // Diğer durumlarda varsayılan olarak 0
-                    }
-
-                    Category(
-                        id = id,
-                        name = document.getString("name") ?: "",
-                        emoji = document.getString("emoji") ?: ""
-                    )
-                }
-
-                // Mevcut kategorileri kontrol et
-                val existingCategories = db.categoryDao().getAllCategories() // Tüm kategorileri al
-                val existingCategorySet = existingCategories.map { it.name }.toSet() // Mevcut kategorileri Set olarak al
-
-                // Yeni kategorileri filtrele
-                val newCategories = categories.filter { it.name !in existingCategorySet }
-
-                // Room veritabanına yalnızca yeni kategorileri kaydet
-                if (newCategories.isNotEmpty()) {
-                    db.categoryDao().insertAll(newCategories)
-                }
-
-                // Yeni kategorileri döndür
-                return@withContext newCategories
-            } catch (e: Exception) {
-                Log.e("FirestoreError", "Kategoriler Firestore'dan çekilirken hata oluştu", e)
-                return@withContext emptyList()
+            // Yeni kategorileri veritabanına ekle
+            if (newCategories.isNotEmpty()) {
+                db.categoryDao().insertAll(newCategories)
+                Log.d("CategoryRepository", "Added ${newCategories.size} new categories to the database")
+            } else {
+                Log.d("CategoryRepository", "No new categories to add")
             }
         }
     }
-*/
+
+    /*
+        suspend fun loadCategoriesFromFirestore(): List<Category> {
+            return withContext(Dispatchers.IO) {
+                try {
+                    val firestore = FirebaseFirestore.getInstance()
+
+                    // Firestore'dan kategorileri çek
+                    val result = firestore.collection("categories").get().await()
+
+                    // Verileri map ile Category objelerine çevir
+                    val categories = result.map { document ->
+                        // 'id' değerini güvenli bir şekilde alma
+                        val idValue = document.get("id")
+                        val id = when (idValue) {
+                            is Number -> idValue.toInt()  // Eğer id Number ise Int'e çevir
+                            is String -> idValue.toIntOrNull() ?: 0  // Eğer id String ise ve sayıya çevrilebiliyorsa çevir
+                            else -> 0  // Diğer durumlarda varsayılan olarak 0
+                        }
+
+                        Category(
+                            id = id,
+                            name = document.getString("name") ?: "",
+                            emoji = document.getString("emoji") ?: ""
+                        )
+                    }
+
+                    // Mevcut kategorileri kontrol et
+                    val existingCategories = db.categoryDao().getAllCategories() // Tüm kategorileri al
+                    val existingCategorySet = existingCategories.map { it.name }.toSet() // Mevcut kategorileri Set olarak al
+
+                    // Yeni kategorileri filtrele
+                    val newCategories = categories.filter { it.name !in existingCategorySet }
+
+                    // Room veritabanına yalnızca yeni kategorileri kaydet
+                    if (newCategories.isNotEmpty()) {
+                        db.categoryDao().insertAll(newCategories)
+                    }
+
+                    // Yeni kategorileri döndür
+                    return@withContext newCategories
+                } catch (e: Exception) {
+                    Log.e("FirestoreError", "Kategoriler Firestore'dan çekilirken hata oluştu", e)
+                    return@withContext emptyList()
+                }
+            }
+        }
+    */
 
 
 /*
