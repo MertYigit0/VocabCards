@@ -16,6 +16,7 @@ import androidx.navigation.fragment.navArgs
 import com.airbnb.lottie.LottieAnimationView
 import com.mertyigit0.vocabcards.R
 import com.mertyigit0.vocabcards.data.model.Word
+import com.mertyigit0.vocabcards.data.model.WordResponse
 import com.mertyigit0.vocabcards.databinding.FragmentWordDetailBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -48,48 +49,10 @@ class WordDetailFragment : Fragment() {
         observeLearnedStatus()
         setupLearnedButton()
 
-    // Show ProgressBar and hide content initially
-    // binding.loadingContainer.visibility = View.VISIBLE
-    // binding.contentContainer.visibility = View.GONE
+        showLoadingState()
+        viewModel.fetchWordDetails(word.english)
 
-    // Trigger fetching word details from the API
-    // viewModel.fetchWordDetails(word.english)
-
-        /*
-        // Observe word details from the API
-        viewModel.wordDetail.observe(viewLifecycleOwner) { wordResponse ->
-            wordResponse?.let {
-                // Hide ProgressBar and show content when data is loaded
-                binding.loadingContainer.visibility = View.GONE
-                binding.contentContainer.visibility = View.VISIBLE
-
-                // Set up the TextViews
-                binding.tvPhonetic.text = it.phonetic
-                binding.tvDefinitions.text = ""
-
-                // Set up the button to play audio
-                val audioUrl = it.phonetics.firstOrNull()?.audio ?: ""
-                binding.btnPlayAudio.setOnClickListener {
-                    viewModel.playAudio(audioUrl)
-
-                    val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
-                    lottiePlayAnimation.playAnimation()
-
-
-                    CoroutineScope(Dispatchers.Main).launch {
-                        delay(1500) // 1500 ms = 1.5 saniye
-                        lottiePlayAnimation.pauseAnimation()
-                    }
-                }
-
-              //  binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
-               // binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
-
-                binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.INVISIBLE
-            }
-        }
-*/
-
+        observeWordDetails()
     }
 
     // ActionBar'ı ayarlayan fonksiyon
@@ -101,13 +64,13 @@ class WordDetailFragment : Fragment() {
     private fun setupViewModel() {
         viewModel = ViewModelProvider(this)[WordDetailViewModel::class.java]
         word = args.word
-        viewModel.checkIfWordIsLearned(word)  // Kelimenin öğrenilip öğrenilmediğini kontrol eder
+        viewModel.checkIfWordIsLearned(word)
     }
 
     private fun setupUI() {
         binding.tvDetailEnglishWord.text = word.english
         binding.tvDetailTurkishWord.text = word.turkish
-        binding.tvEmoji.text = word.emoji ?: ""  // Eğer emoji varsa ayarlar
+        binding.tvEmoji.text = word.emoji ?: ""
         binding.tvGermanWord.text = word.german ?: "N/A"
         binding.tvItalianWord.text = word.italian ?: "N/A"
         binding.tvSpanishWord.text = word.spanish ?: "N/A"
@@ -121,7 +84,17 @@ class WordDetailFragment : Fragment() {
         }
     }
 
-    // Öğrenme butonunu ayarlayan fonksiyon
+    // Kelime detaylarını gözlemleyen fonksiyon
+    private fun observeWordDetails() {
+        viewModel.wordDetail.observe(viewLifecycleOwner) { wordResponse ->
+            wordResponse?.let {
+                hideLoadingState()
+                updateWordDetails(it)
+            }
+        }
+    }
+
+    // Buton ve ses oynatma işlemlerini ayarlayan fonksiyon
     private fun setupLearnedButton() {
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
@@ -133,9 +106,9 @@ class WordDetailFragment : Fragment() {
     // Öğrenme durumuna göre mesaj gösteren fonksiyon
     private fun showLearnedStatusMessage() {
         val message = if (viewModel.isLearned.value == true) {
-            getString(R.string.word_unlearned_message)  // "Kelime öğrenilmekten çıkarıldı."
+            getString(R.string.word_unlearned_message)
         } else {
-            getString(R.string.word_learned_message)  // "Kelime öğrenildi."
+            getString(R.string.word_learned_message)
         }
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
@@ -150,6 +123,50 @@ class WordDetailFragment : Fragment() {
         findNavController().navigate(action)
     }
 
+    // Yükleme durumunu gösteren fonksiyon
+    private fun showLoadingState() {
+        binding.loadingContainer.visibility = View.VISIBLE
+        binding.contentContainer.visibility = View.GONE
+    }
+
+    // Yükleme durumunu gizleyen fonksiyon
+    private fun hideLoadingState() {
+        binding.loadingContainer.visibility = View.GONE
+        binding.contentContainer.visibility = View.VISIBLE
+    }
+
+    // Kelime detaylarını güncelleyen fonksiyon
+    private fun updateWordDetails(wordResponse: WordResponse) {
+        binding.tvPhonetic.text = wordResponse.phonetic
+        binding.tvDefinitions.text = ""
+
+        val audioUrl = wordResponse.phonetics.firstOrNull()?.audio ?: ""
+        setupAudioPlayer(audioUrl)
+
+        binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+        binding.lottiePlayAnimation.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
+        binding.pronunciationLayout.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.INVISIBLE
+    }
+
+    // Ses oynatma işlemini yöneten fonksiyon
+    private fun setupAudioPlayer(audioUrl: String) {
+        binding.btnPlayAudio.setOnClickListener {
+            viewModel.playAudio(audioUrl)
+            playAnimation()
+        }
+    }
+
+    // Animasyon oynatma fonksiyonu
+    private fun playAnimation() {
+        val lottiePlayAnimation: LottieAnimationView = binding.lottiePlayAnimation
+        lottiePlayAnimation.playAnimation()
+
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(1500)
+            lottiePlayAnimation.pauseAnimation()
+        }
+    }
+
     private fun updateButton(isLearned: Boolean) {
         binding.learnedButton.text = if (isLearned) {
             getString(R.string.unlearn)
@@ -157,12 +174,12 @@ class WordDetailFragment : Fragment() {
             getString(R.string.learn)
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
-        mediaPlayer?.release() // Release media player when the fragment is destroyed
+        mediaPlayer?.release()
     }
 }
-
 
 
 

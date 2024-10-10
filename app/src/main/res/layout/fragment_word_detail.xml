@@ -20,6 +20,19 @@
             android:orientation="vertical">
 
             <!-- ProgressBar -->
+            <LinearLayout
+                android:id="@+id/loadingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
 
             <!-- Other UI elements, initially hidden -->
@@ -65,7 +78,14 @@
                             android:layout_gravity="center_vertical" />
 
                         <!-- Phonetic -->
-
+                        <TextView
+                            android:id="@+id/tvPhonetic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:paddingStart="8dp"
+                            android:text="@string/tvphonetic"
+                            android:layout_gravity="center_vertical" />
 
                     </LinearLayout>
 
@@ -123,20 +143,73 @@
                             android:paddingTop="18dp" />
 
                         <!-- Definitions -->
-
+                        <TextView
+                            android:id="@+id/tvDefinitions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:text="@string/definitions" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/learnedButton"
-                    android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:backgroundTint="#ED7A27"
-                android:text="@string/learned" />
+                <LinearLayout
+                    android:id="@+id/pronunciationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <!-- English Pronunciation TextView -->
+                    <TextView
+                        android:id="@+id/tvEnglishPronunciation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/listen_english_pronunciation"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- LinearLayout with Button and LottieAnimationView -->
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="-50dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnPlayAudio"
+                            android:layout_width="60dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/playcircle" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottiePlayAnimation"
+                            android:layout_width="200dp"
+                            android:layout_height="190dp"
+                            android:layout_marginStart="50dp"
+                            app:lottie_autoPlay="false"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/audio" />
+                    </LinearLayout>
+
+                    <!-- Button below the animation -->
+                    <Button
+                        android:id="@+id/learnedButton"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-20dp"
+                        android:gravity="center"
+                        android:backgroundTint="#ED7A27"
+                        android:text="@string/learned" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
