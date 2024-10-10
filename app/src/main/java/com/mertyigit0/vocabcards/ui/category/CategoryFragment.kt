@@ -23,12 +23,7 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        //kelimlerin uygulama ilk yuklendiginde jsondan cekilmesi icin
-        val wordListViewModel = ViewModelProvider(this)[WordListViewModel::class.java]
-
-
+        initializeViewModels()
     }
 
     override fun onCreateView(
@@ -40,10 +35,34 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupActionBar()
+        setupRecyclerView(view)
+        observeCategoryData()
+        observeWordCounts()
+    }
+
+    // ViewModel'leri initialize eden fonksiyon
+    private fun initializeViewModels() {
+        categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
+        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+
+        // Kelimelerin uygulama ilk yüklendiğinde JSON'dan çekilmesi için
+        val wordListViewModel = ViewModelProvider(this)[WordListViewModel::class.java]
+    }
+
+    // ActionBar başlığını ayarlayan fonksiyon
+    private fun setupActionBar() {
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.categories)
+    }
+
+    // RecyclerView'i kuran fonksiyon
+    private fun setupRecyclerView(view: View) {
         recyclerView = view.findViewById(R.id.categoryRecyclerView)
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+    }
 
+    // Kategorileri gözlemleyen fonksiyon
+    private fun observeCategoryData() {
         categoryViewModel.categories.observe(viewLifecycleOwner) { categories ->
             categoryAdapter = CategoryAdapter(categories, this)
             recyclerView.adapter = categoryAdapter
@@ -51,15 +70,20 @@ class CategoryFragment : Fragment(), OnCategoryClickListener {
             // Kelime sayılarını yükle
             categoryViewModel.loadWordCounts()
         }
+    }
 
+    // Kelime sayılarını gözlemleyen fonksiyon
+    private fun observeWordCounts() {
         categoryViewModel.wordCountMap.observe(viewLifecycleOwner) { wordCounts ->
             categoryAdapter.updateWordCounts(wordCounts) // Kelime sayılarını güncelle
         }
     }
 
+    // Kategori tıklamasını işleyen fonksiyon
     override fun onCategoryClick(categoryId: Int) {
         sharedViewModel.categoryId = categoryId
         findNavController().navigate(R.id.action_categoryFragment_to_wordListFragment)
     }
 }
+
 

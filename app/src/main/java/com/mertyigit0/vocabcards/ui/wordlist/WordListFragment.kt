@@ -43,36 +43,57 @@ class WordListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Log.d("FragmentLifecycle", "onViewCreated: MyFragment")
         setHasOptionsMenu(true)
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_list)
+        setupActionBar()
+        setupViewModels()
+        setupRecyclerView()
+        setupSwipeToRefresh()
+
+        observeWordList()
+    }
+
+    // AppBar'ın başlığını ayarlayan metod
+    private fun setupActionBar() {
+        (activity as? AppCompatActivity)?.supportActionBar?.title = getString(R.string.word_list)
+    }
+
+    // ViewModel'leri ayarlayan metod
+    private fun setupViewModels() {
         sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         viewModel = ViewModelProvider(this)[WordListViewModel::class.java]
+
+
+        sharedViewModel.categoryId?.let { categoryId ->
+            viewModel.setCategoryId(categoryId)
+        }
+
+    }
+
+    // RecyclerView ayarlarını ve adapter'ı ayarlayan metod
+    private fun setupRecyclerView() {
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = WordAdapter(viewModel.wordList.value ?: emptyList()) { word ->
             val action = WordListFragmentDirections.actionWordListFragmentToWordDetailFragment(word)
             findNavController().navigate(action)
         }
         binding.recyclerView.adapter = adapter
-        viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
-            adapter.updateData(wordList)
-        }
+    }
 
+    // Swipe to refresh işlevini ayarlayan metod
+    private fun setupSwipeToRefresh() {
         binding.swipeRefreshLayout.setOnRefreshListener {
             viewModel.shuffleWords()
             binding.swipeRefreshLayout.isRefreshing = false
         }
-
-        val categoryId = sharedViewModel.categoryId
-        if (categoryId != null) {
-            Log.d("WordListFragmenta", "Category ID: $categoryId")
-            viewModel.setCategoryId(categoryId)
-        } else {
-            Log.d("WordListFragmenta", "Category ID is null")
-        }
-
-
-
     }
 
+
+
+    // WordList değişikliklerini gözlemleyen metod
+    private fun observeWordList() {
+        viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
+            adapter.updateData(wordList)
+        }
+    }
 
     @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -42,35 +42,18 @@ class WordDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_details)
+        setupActionBar()
+        setupViewModel()
+        setupUI()
+        observeLearnedStatus()
+        setupLearnedButton()
 
-        viewModel = ViewModelProvider(this)[WordDetailViewModel::class.java]
-        word = args.word
+    // Show ProgressBar and hide content initially
+    // binding.loadingContainer.visibility = View.VISIBLE
+    // binding.contentContainer.visibility = View.GONE
 
-        // Show ProgressBar and hide content initially
-       // binding.loadingContainer.visibility = View.VISIBLE
-       // binding.contentContainer.visibility = View.GONE
-
-        // Setup UI
-        binding.tvDetailEnglishWord.text = word.english
-        binding.tvDetailTurkishWord.text = word.turkish
-        binding.tvEmoji.text = word.emoji ?: "" // Set emoji if available
-        binding.tvGermanWord.text = word.german ?: "N/A"
-        binding.tvItalianWord.text = word.italian ?: "N/A"
-        binding.tvSpanishWord.text = word.spanish ?: "N/A"
-        binding.tvFrenchWord.text = word.french ?: "N/A"
-
-        // Observe learned status
-        viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
-            updateButton(isLearned)
-        }
-
-        // Check if the word is learned
-        viewModel.checkIfWordIsLearned(word)
-
-        // Trigger fetching word details from the API
-       // viewModel.fetchWordDetails(word.english)
-
+    // Trigger fetching word details from the API
+    // viewModel.fetchWordDetails(word.english)
 
         /*
         // Observe word details from the API
@@ -99,7 +82,6 @@ class WordDetailFragment : Fragment() {
                     }
                 }
 
-
               //  binding.btnPlayAudio.visibility = if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
                // binding.lottiePlayAnimation.visibility= if (audioUrl.isNotEmpty()) View.VISIBLE else View.GONE
 
@@ -108,28 +90,64 @@ class WordDetailFragment : Fragment() {
         }
 */
 
+    }
+
+    // ActionBar'ı ayarlayan fonksiyon
+    private fun setupActionBar() {
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.word_details)
+    }
+
+    // ViewModel'i başlatan fonksiyon
+    private fun setupViewModel() {
+        viewModel = ViewModelProvider(this)[WordDetailViewModel::class.java]
+        word = args.word
+        viewModel.checkIfWordIsLearned(word)  // Kelimenin öğrenilip öğrenilmediğini kontrol eder
+    }
+
+    private fun setupUI() {
+        binding.tvDetailEnglishWord.text = word.english
+        binding.tvDetailTurkishWord.text = word.turkish
+        binding.tvEmoji.text = word.emoji ?: ""  // Eğer emoji varsa ayarlar
+        binding.tvGermanWord.text = word.german ?: "N/A"
+        binding.tvItalianWord.text = word.italian ?: "N/A"
+        binding.tvSpanishWord.text = word.spanish ?: "N/A"
+        binding.tvFrenchWord.text = word.french ?: "N/A"
+    }
+
+    // Kelimenin öğrenilmiş olup olmadığını gözlemleyen fonksiyon
+    private fun observeLearnedStatus() {
+        viewModel.isLearned.observe(viewLifecycleOwner) { isLearned ->
+            updateButton(isLearned)
+        }
+    }
+
+    // Öğrenme butonunu ayarlayan fonksiyon
+    private fun setupLearnedButton() {
         binding.learnedButton.setOnClickListener {
             viewModel.toggleWordLearningStatus(word)
-
-
-            // Mesaj göster
-            val message = if (viewModel.isLearned.value == true) {
-                getString(R.string.word_unlearned_message)// Örneğin: "Kelime öğrenildi."
-            } else {
-                getString(R.string.word_learned_message)
-                // Örneğin: "Kelime öğrenilmekten çıkarıldı."
-            }
-            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-
-            // Navigate based on updated status
-            val action = if (viewModel.isLearned.value == true) {
-                WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
-            } else {
-                WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
-            }
-            findNavController().navigate(action)
+            showLearnedStatusMessage()
+            navigateBasedOnLearnedStatus()
         }
+    }
 
+    // Öğrenme durumuna göre mesaj gösteren fonksiyon
+    private fun showLearnedStatusMessage() {
+        val message = if (viewModel.isLearned.value == true) {
+            getString(R.string.word_unlearned_message)  // "Kelime öğrenilmekten çıkarıldı."
+        } else {
+            getString(R.string.word_learned_message)  // "Kelime öğrenildi."
+        }
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    // Öğrenme durumuna göre yönlendirme yapan fonksiyon
+    private fun navigateBasedOnLearnedStatus() {
+        val action = if (viewModel.isLearned.value == true) {
+            WordDetailFragmentDirections.actionWordDetailFragmentToLearnedListFragment()
+        } else {
+            WordDetailFragmentDirections.actionWordDetailFragmentToWordListFragment()
+        }
+        findNavController().navigate(action)
     }
 
     private fun updateButton(isLearned: Boolean) {

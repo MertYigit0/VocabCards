@@ -42,7 +42,7 @@ class WordListViewModel(application: Application) : AndroidViewModel(application
 
     private fun updateWordList() {
         viewModelScope.launch {
-            val allWords = categoryId?.let { repository.getWordsByCategory(it) }?.shuffled() ?: emptyList()
+            val allWords = categoryId?.let { repository.getWordsByCategory(it) }?: emptyList()
             Log.d("WordListViewModela", "All words from category: $allWords")
             _wordList.value = allWords.filter { !it.isLearned }
         }

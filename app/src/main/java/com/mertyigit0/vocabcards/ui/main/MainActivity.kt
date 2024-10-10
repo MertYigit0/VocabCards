@@ -34,65 +34,67 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // WorkManager'ı başlat
        // SyncDataWorker.scheduleSyncDataWork(applicationContext)
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        checkOnboarding()
+        setupStatusBar()
+        setAppLanguage()
+        setupBinding()
+        if (savedInstanceState == null) {
+            setupNavigation()
+        }
+        handleBottomNavigationClicks()
+        checkNotificationPermissionOrSyncData()
 
+    }
 
-        // Onboarding kontrolü
-        val sharedPreferencess = getSharedPreferences("prefs", MODE_PRIVATE)
-        val isOnboardingCompleted = sharedPreferencess.getBoolean("isOnboardingCompleted", false)
+    // Onboarding tamamlanmış mı kontrol eden fonksiyon
+    private fun checkOnboarding() {
+        val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        val isOnboardingCompleted = sharedPreferences.getBoolean("isOnboardingCompleted", false)
 
-        // Eğer onboarding tamamlanmadıysa OnboardingActivity'e yönlendir
         if (!isOnboardingCompleted) {
             startActivity(Intent(this, OnboardingActivity::class.java))
-            finish() // MainActivity'yi bitir
-            return // Onboarding işlemi tamamlandığı için burada dur
+            finish()
+            return
         }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Status bar rengini ayarlayan fonksiyon
+    private fun setupStatusBar() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
+    }
 
+    // Uygulamanın dilini ayarlayan fonksiyon
+    private fun setAppLanguage() {
         val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         val languageCode = sharedPreferences.getString("language_code", "en")
         languageCode?.let { setLocale(it) }
+    }
 
+    // Binding ve layout setup işlemleri için fonksiyon
+    private fun setupBinding() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
 
-
-        if (savedInstanceState == null) {
-            val navHostFragment = supportFragmentManager
-                .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-            val navController = navHostFragment.navController
-
-            val appBarConfiguration = AppBarConfiguration(navController.graph)
-            setSupportActionBar(findViewById(R.id.toolbar))
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-            binding.bottomNavigationView.setupWithNavController(navController)
-        }
-
+    // Navigation ve toolbar ayarlayan fonksiyon
+    private fun setupNavigation() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
-        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
         val appBarConfiguration = AppBarConfiguration(navController.graph)
+        setSupportActionBar(findViewById(R.id.toolbar))
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-
         binding.bottomNavigationView.setupWithNavController(navController)
+    }
+
+    // Alt navigasyon menüsü tıklamalarını yönet
+    private fun handleBottomNavigationClicks() {
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -107,31 +109,15 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-        // Android 13 ve üzeri cihazlar için POST_NOTIFICATIONS iznini kontrol et
+    }
+
+    // Android 13'te bildirim izni kontrolünü veya veri senkronizasyonunu başlatır
+    private fun checkNotificationPermissionOrSyncData() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             checkNotificationPermission()
         } else {
-            // Daha düşük sürümlerde izne gerek yok, işlemleri yap
             startSyncDataWork()
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     // İzin sonuçlarını dinlemek için launcher

@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.mertyigit0.vocabcards.R
+import com.mertyigit0.vocabcards.data.model.Word
 import com.mertyigit0.vocabcards.ui.wordlist.WordAdapter
 import com.mertyigit0.vocabcards.databinding.FragmentLearnedListBinding
 
@@ -33,39 +34,64 @@ class LearnedListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setHasOptionsMenu(true)
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.learned_words)
+        setActionBarTitle()
 
-        // Initialize ViewModel
-        viewModel = ViewModelProvider(this)[LearnedListViewModel::class.java]
+        initializeViewModel()
+        setupRecyclerView()
+        observeViewModelData()
 
-        // Initialize RecyclerView
-        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        adapter = WordAdapter(emptyList()) { word ->
-            val action = LearnedListFragmentDirections.actionLearnedListFragmentToWordDetailFragment(word)
-            findNavController().navigate(action)
-        }
-        binding.recyclerView.adapter = adapter
-
-        // Observe data changes
-        viewModel.learnedWords.observe(viewLifecycleOwner) { words ->
-            adapter.updateData(words)
-        }
-        viewModel.noWordsMessage.observe(viewLifecycleOwner) { message ->
-            val tvNoWords = view.findViewById<TextView>(R.id.tvNoWords)
-            if (message != null) {
-                tvNoWords.text = message
-                tvNoWords.visibility = View.VISIBLE
-            } else {
-                tvNoWords.visibility = View.GONE
-            }
-        }
-
-
-        // Update data when fragment resumes
+        // Verileri güncellemek için
         viewModel.updateLearnedWords()
     }
 
+    // ActionBar başlığını ayarlayan fonksiyon
+    private fun setActionBarTitle() {
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.learned_words)
+    }
+
+    // ViewModel'i initialize eden fonksiyon
+    private fun initializeViewModel() {
+        viewModel = ViewModelProvider(this)[LearnedListViewModel::class.java]
+    }
+
+    // RecyclerView'i ayarlayan fonksiyon
+    private fun setupRecyclerView() {
+        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        adapter = WordAdapter(emptyList()) { word ->
+            navigateToWordDetailFragment(word)
+        }
+        binding.recyclerView.adapter = adapter
+    }
+
+    // ViewModel'deki verileri gözlemleyen fonksiyon
+    private fun observeViewModelData() {
+        viewModel.learnedWords.observe(viewLifecycleOwner) { words ->
+            adapter.updateData(words)
+        }
+
+        viewModel.noWordsMessage.observe(viewLifecycleOwner) { message ->
+            handleNoWordsMessage(message)
+        }
+    }
+
+    // Kelime detaylarına gitmek için navigation işlemi
+    private fun navigateToWordDetailFragment(word: Word) {
+        val action = LearnedListFragmentDirections.actionLearnedListFragmentToWordDetailFragment(word)
+        findNavController().navigate(action)
+    }
+
+    // Kelime listesi boş olduğunda mesaj gösteren fonksiyon
+    private fun handleNoWordsMessage(message: String?) {
+        val tvNoWords = view?.findViewById<TextView>(R.id.tvNoWords)
+        if (message != null) {
+            tvNoWords?.text = message
+            tvNoWords?.visibility = View.VISIBLE
+        } else {
+            tvNoWords?.visibility = View.GONE
+        }
+    }
 
 
     @Deprecated("Deprecated in Java")
