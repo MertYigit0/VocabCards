@@ -32,69 +32,56 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // WorkManager'ı başlat
-       // SyncDataWorker.scheduleSyncDataWork(applicationContext)
-
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        checkOnboarding()
-        setupStatusBar()
-        setAppLanguage()
-        setupBinding()
-        if (savedInstanceState == null) {
-            setupNavigation()
-        }
-        handleBottomNavigationClicks()
-        checkNotificationPermissionOrSyncData()
 
-    }
-
-    // Onboarding tamamlanmış mı kontrol eden fonksiyon
-    private fun checkOnboarding() {
-        val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
-        val isOnboardingCompleted = sharedPreferences.getBoolean("isOnboardingCompleted", false)
-
-        if (!isOnboardingCompleted) {
-            startActivity(Intent(this, OnboardingActivity::class.java))
-            finish()
+        // Onboarding kontrolü
+        if (!isOnboardingCompleted()) {
+            navigateToOnboarding()
             return
         }
+
+        setupUI()
+
+        // Android 13 ve üzeri cihazlar için bildirim izni kontrolü
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            checkNotificationPermission()
+        } else {
+            startSyncDataWork()
+        }
     }
 
-    // Status bar rengini ayarlayan fonksiyon
-    private fun setupStatusBar() {
+    private fun isOnboardingCompleted(): Boolean {
+        val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        return sharedPreferences.getBoolean("isOnboardingCompleted", false)
+    }
+
+    private fun navigateToOnboarding() {
+        startActivity(Intent(this, OnboardingActivity::class.java))
+        finish()
+    }
+
+    private fun setupUI() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
-    }
 
-    // Uygulamanın dilini ayarlayan fonksiyon
-    private fun setAppLanguage() {
-        val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-        val languageCode = sharedPreferences.getString("language_code", "en")
+        // Dil ayarlarını kontrol et
+        val languageCode = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+            .getString("language_code", "en")
         languageCode?.let { setLocale(it) }
-    }
 
-    // Binding ve layout setup işlemleri için fonksiyon
-    private fun setupBinding() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupNavigation()
     }
 
-    // Navigation ve toolbar ayarlayan fonksiyon
     private fun setupNavigation() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        setSupportActionBar(findViewById(R.id.toolbar))
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+        setSupportActionBar(binding.toolbar)
+        NavigationUI.setupActionBarWithNavController(this, navController, AppBarConfiguration(navController.graph))
         binding.bottomNavigationView.setupWithNavController(navController)
-    }
-
-    // Alt navigasyon menüsü tıklamalarını yönet
-    private fun handleBottomNavigationClicks() {
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -111,24 +98,26 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Android 13'te bildirim izni kontrolünü veya veri senkronizasyonunu başlatır
-    private fun checkNotificationPermissionOrSyncData() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            checkNotificationPermission()
-        } else {
-            startSyncDataWork()
+    private fun checkNotificationPermission() {
+        when {
+            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED -> {
+                startSyncDataWork()
+            }
+            shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) -> {
+                Toast.makeText(this, "Bildirim izni gerekli.", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
         }
     }
 
-    // İzin sonuçlarını dinlemek için launcher
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { isGranted: Boolean ->
         if (isGranted) {
-            // İzin verildi, WorkManager işlemini başlat
             startSyncDataWork()
         } else {
-            // İzin reddedildi
             Toast.makeText(this, "Bildirim izni gerekli.", Toast.LENGTH_SHORT).show()
         }
     }
@@ -171,22 +160,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeLanguage(languageCode: String) {
-
-        val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-        with(sharedPreferences.edit()) {
+        getSharedPreferences("app_prefs", Context.MODE_PRIVATE).edit().apply {
             putString("language_code", languageCode)
             apply()
         }
-        val locale = Locale(languageCode)
-        Locale.setDefault(locale)
-        val config = Configuration(resources.configuration)
-        config.setLocale(locale)
-        resources.updateConfiguration(config, resources.displayMetrics)
-
+        updateLocale(languageCode)
         recreate()
     }
 
     private fun setLocale(languageCode: String) {
+        updateLocale(languageCode)
+    }
+
+    private fun updateLocale(languageCode: String) {
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = Configuration(resources.configuration)
@@ -194,29 +180,9 @@ class MainActivity : AppCompatActivity() {
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 
-    private fun checkNotificationPermission() {
-        when {
-            ContextCompat.checkSelfPermission(
-                this, Manifest.permission.POST_NOTIFICATIONS
-            ) == PackageManager.PERMISSION_GRANTED -> {
-                // İzin zaten verilmiş, WorkManager işlemini başlat
-                startSyncDataWork()
-            }
-            shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) -> {
-                // Kullanıcı izni reddetmiş ancak tekrar sorabilirsiniz
-                Toast.makeText(this, "Bildirim izni gerekli.", Toast.LENGTH_SHORT).show()
-            }
-            else -> {
-                // İzin isteme
-                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-            }
-        }
-    }
-
     private fun startSyncDataWork() {
         // Burada WorkManager işlerinizi başlatabilirsiniz
-     //   SyncDataWorker.scheduleSyncDataWork(applicationContext)
+        // SyncDataWorker.scheduleSyncDataWork(applicationContext)
     }
-
 }
 
