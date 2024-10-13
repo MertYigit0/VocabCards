@@ -3889,8 +3889,211 @@
         "fr": "Vingt 🇫🇷"
       },
       "categoryId": 17
-    }
-
+    },
+    {
+        "word": "Doctor",
+        "translations": {
+          "tr": "Doktor 🇹🇷",
+          "emoji": "👨‍⚕️",
+          "de": "Arzt 🇩🇪",
+          "it": "Dottore 🇮🇹",
+          "es": "Doctor 🇪🇸",
+          "fr": "Médecin 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Engineer",
+        "translations": {
+          "tr": "Mühendis 🇹🇷",
+          "emoji": "👨‍🔧",
+          "de": "Ingenieur 🇩🇪",
+          "it": "Ingegnere 🇮🇹",
+          "es": "Ingeniero 🇪🇸",
+          "fr": "Ingénieur 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Teacher",
+        "translations": {
+          "tr": "Öğretmen 🇹🇷",
+          "emoji": "👩‍🏫",
+          "de": "Lehrer 🇩🇪",
+          "it": "Insegnante 🇮🇹",
+          "es": "Profesor 🇪🇸",
+          "fr": "Professeur 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Nurse",
+        "translations": {
+          "tr": "Hemşire 🇹🇷",
+          "emoji": "👩‍⚕️",
+          "de": "Krankenschwester 🇩🇪",
+          "it": "Infermiere 🇮🇹",
+          "es": "Enfermera 🇪🇸",
+          "fr": "Infirmière 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Artist",
+        "translations": {
+          "tr": "Sanatçı 🇹🇷",
+          "emoji": "🎨",
+          "de": "Künstler 🇩🇪",
+          "it": "Artista 🇮🇹",
+          "es": "Artista 🇪🇸",
+          "fr": "Artiste 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Chef",
+        "translations": {
+          "tr": "Aşçı 🇹🇷",
+          "emoji": "👨‍🍳",
+          "de": "Koch 🇩🇪",
+          "it": "Cuoco 🇮🇹",
+          "es": "Chef 🇪🇸",
+          "fr": "Chef 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Scientist",
+        "translations": {
+          "tr": "Bilim İnsanı 🇹🇷",
+          "emoji": "🔬",
+          "de": "Wissenschaftler 🇩🇪",
+          "it": "Scienziato 🇮🇹",
+          "es": "Científico 🇪🇸",
+          "fr": "Scientifique 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Pilot",
+        "translations": {
+          "tr": "Pilot 🇹🇷",
+          "emoji": "✈️",
+          "de": "Pilot 🇩🇪",
+          "it": "Pilota 🇮🇹",
+          "es": "Piloto 🇪🇸",
+          "fr": "Pilote 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Musician",
+        "translations": {
+          "tr": "Müzisyen 🇹🇷",
+          "emoji": "🎶",
+          "de": "Musiker 🇩🇪",
+          "it": "Musicista 🇮🇹",
+          "es": "Músico 🇪🇸",
+          "fr": "Musicien 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Lawyer",
+        "translations": {
+          "tr": "Avukat 🇹🇷",
+          "emoji": "⚖️",
+          "de": "Anwalt 🇩🇪",
+          "it": "Avvocato 🇮🇹",
+          "es": "Abogado 🇪🇸",
+          "fr": "Avocat 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Designer",
+        "translations": {
+          "tr": "Tasarımcı 🇹🇷",
+          "emoji": "🎨",
+          "de": "Designer 🇩🇪",
+          "it": "Designer 🇮🇹",
+          "es": "Diseñador 🇪🇸",
+          "fr": "Designer 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Accountant",
+        "translations": {
+          "tr": "Muhasebeci 🇹🇷",
+          "emoji": "💼",
+          "de": "Buchhalter 🇩🇪",
+          "it": "Contabile 🇮🇹",
+          "es": "Contador 🇪🇸",
+          "fr": "Comptable 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Firefighter",
+        "translations": {
+          "tr": "İtfaiyeci 🇹🇷",
+          "emoji": "🚒",
+          "de": "Feuerwehrmann 🇩🇪",
+          "it": "Vigile del fuoco 🇮🇹",
+          "es": "Bombero 🇪🇸",
+          "fr": "Pompier 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Electrician",
+        "translations": {
+          "tr": "Elektrikçi 🇹🇷",
+          "emoji": "⚡",
+          "de": "Elektriker 🇩🇪",
+          "it": "Elettricista 🇮🇹",
+          "es": "Electricista 🇪🇸",
+          "fr": "Électricien 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Photographer",
+        "translations": {
+          "tr": "Fotoğrafçı 🇹🇷",
+          "emoji": "📸",
+          "de": "Fotograf 🇩🇪",
+          "it": "Fotografo 🇮🇹",
+          "es": "Fotógrafo 🇪🇸",
+          "fr": "Photographe 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Veterinarian",
+        "translations": {
+          "tr": "Veteriner 🇹🇷",
+          "emoji": "🐾",
+          "de": "Tierarzt 🇩🇪",
+          "it": "Veterinario 🇮🇹",
+          "es": "Veterinario 🇪🇸",
+          "fr": "Vétérinaire 🇫🇷"
+        },
+        "categoryId": 18
+      },
+      {
+        "word": "Writer",
+        "translations": {
+          "tr": "Yazar 🇹🇷",
+          "emoji": "✍️",
+          "de": "Schriftsteller 🇩🇪",
+          "it": "Scrittore 🇮🇹",
+          "es": "Escritor 🇪🇸",
+          "fr": "Écrivain 🇫🇷"
+        },
+        "categoryId": 18
+      }
 
 
   ]

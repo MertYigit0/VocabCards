@@ -199,17 +199,18 @@
                     </LinearLayout>
 
                     <!-- Button below the animation -->
-                    <Button
-                        android:id="@+id/learnedButton"
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-20dp"
-                        android:gravity="center"
-                        android:backgroundTint="#ED7A27"
-                        android:text="@string/learned" />
+
 
                 </LinearLayout>
-
+                <Button
+                    android:id="@+id/learnedButton"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#ED7A27"
+                    android:text="@string/learned" />
 
             </LinearLayout>
         </LinearLayout>

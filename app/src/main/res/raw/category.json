@@ -15,5 +15,6 @@
   { "id": 14, "name": "Weather", "emoji": "🌧️" },
   { "id": 15, "name": "Nature", "emoji": "🌳" },
   { "id": 16, "name": "Countries", "emoji": "🌍" },
-  { "id": 17, "name": "Numbers", "emoji": "🔢" }
+  { "id": 17, "name": "Numbers", "emoji": "🔢" },
+  { "id": 18, "name": "Occupations", "emoji": "👔"}
 ]
