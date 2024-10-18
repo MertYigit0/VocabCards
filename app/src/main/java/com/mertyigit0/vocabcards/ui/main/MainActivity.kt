@@ -15,20 +15,34 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.mertyigit0.vocabcards.MyApplication
 import com.mertyigit0.vocabcards.R
 //import com.mertyigit0.vocabcards.data.workmanager.SyncDataWorker
 import com.mertyigit0.vocabcards.databinding.ActivityMainBinding
 import com.mertyigit0.vocabcards.ui.onboarding.OnboardingActivity
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    // DataStore tanımı
+    private val dataStore by lazy { (application as MyApplication).dataStore }
+
+    // Dil tercihini saklamak için kullanılacak anahtar
+    val LANGUAGE_KEY = stringPreferencesKey("language_code")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,10 +77,14 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
 
-        // Dil ayarlarını kontrol et
-        val languageCode = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-            .getString("language_code", "en")
-        languageCode?.let { setLocale(it) }
+        // DataStore'dan dil tercihini oku
+        val languageCode = runBlocking {
+            dataStore.data
+                .map { preferences ->
+                    preferences[LANGUAGE_KEY] ?: "en"
+                }.first()
+        }
+        setLocale(languageCode)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -160,12 +178,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeLanguage(languageCode: String) {
-        getSharedPreferences("app_prefs", Context.MODE_PRIVATE).edit().apply {
-            putString("language_code", languageCode)
-            apply()
+        lifecycleScope.launch {
+            dataStore.edit { preferences ->
+                preferences[LANGUAGE_KEY] = languageCode
+            }
+            updateLocale(languageCode)
+            recreate()
         }
-        updateLocale(languageCode)
-        recreate()
     }
 
     private fun setLocale(languageCode: String) {

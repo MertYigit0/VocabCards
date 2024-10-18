@@ -15,7 +15,7 @@ android {
         applicationId = "com.mertyigit0.vocabcards"
         minSdk = 24
         targetSdk = 34
-        versionCode = 14
+        versionCode = 15
         versionName = "1.9.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -71,6 +71,10 @@ dependencies {
 
     implementation(libs.androidx.viewpager2)
     implementation (libs.material.v180)
+
+
+    implementation(libs.androidx.datastore.preferences)
+
 
 
 
