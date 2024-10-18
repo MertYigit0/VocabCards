@@ -5,7 +5,7 @@ The Vocabulary Cards application is an Android app designed to help users learn 
 
 
 <img src="https://github.com/user-attachments/assets/5c8daf4b-8a25-4322-a8d1-1fab68fad298" width="200" height="400">
-<img src="https://github.com/user-attachments/assets/8344efdf-9081-4d63-8b61-0309daac3894" width="200" height="400">
+<img src="https://github.com/user-attachments/assets/b35b0d92-843a-42e2-b747-d148996c19c2" width="200" height="400">
 <img src="https://github.com/user-attachments/assets/5455372c-48b0-481a-83f0-f0125be6f4f2" width="200" height="400">
 <img src="https://github.com/user-attachments/assets/27899487-038a-4ea4-b929-2805eb14e3c3" width="200" height="400">
 
@@ -34,6 +34,14 @@ Lottie: Utilized for displaying animations in the app.
 ViewBinding: Simplifies the process of accessing and manipulating views in the layout.
 
 Navigation Component: Manages fragment transactions and navigation within the app, including custom animations.
+
+Room: Provides a robust database solution for local data storage and management.
+
+ViewPager2: Facilitates swipe navigation between fragments, enhancing the user experience.
+
+WorkManager: Handles background tasks and ensures they are executed even if the app is closed.
+
+Splash Screen: Implements a visually appealing launch screen to improve the initial user experience.
 
 # Project Structure
 ui: Contains the user interface components, including Fragments and ViewModels.
