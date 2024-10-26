@@ -203,5 +203,6 @@ class MainActivity : AppCompatActivity() {
         // Burada WorkManager işlerinizi başlatabilirsiniz
         // SyncDataWorker.scheduleSyncDataWork(applicationContext)
     }
+
 }
 
