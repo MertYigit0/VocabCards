@@ -10,20 +10,26 @@ The Vocabulary Cards application is an Android app designed to help users learn 
   <tr>
    <th>Splash Screen</th>
     <th>Categories Screen</th>
-    <th>Word Detail Screen</th>
-    <th>Learned Words List</th>
   </tr>
 
   <tr>
     <td><img src="https://github.com/user-attachments/assets/5c8daf4b-8a25-4322-a8d1-1fab68fad298" height="500"></td>
     <td><img src="https://github.com/user-attachments/assets/b35b0d92-843a-42e2-b747-d148996c19c2" height="500"></td>
-    <td><img src="https://github.com/user-attachments/assets/5455372c-48b0-481a-83f0-f0125be6f4f2" height="500"></td>
-     <td><img src="https://github.com/user-attachments/assets/27899487-038a-4ea4-b929-2805eb14e3c3" height="500"></td>
   </tr>
 </table>
 
 
+<table>
+  <tr>
+    <th>Word Detail Screen</th>
+    <th>Learned Words List</th>
+  </tr>
 
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/5455372c-48b0-481a-83f0-f0125be6f4f2" height="500"></td>
+     <td><img src="https://github.com/user-attachments/assets/27899487-038a-4ea4-b929-2805eb14e3c3" height="500"></td>
+  </tr>
+</table>
 
 </br>
 
