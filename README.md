@@ -69,6 +69,19 @@ WorkManager: Handles background tasks and ensures they are executed even if the 
 
 Splash Screen: Implements a visually appealing launch screen to improve the initial user experience.
 
+
+
+## 	:gear: Library Versions :  
+| Library | Version |  
+| ----------------- | ----------------- |  
+| Retrofit | 2.11.0 |  
+| Lottie | 6.5.2 |  
+| Navigation Component | 2.8.0 |  
+| Room | 2.6.1 |  
+| ViewPager2 | 1.1.0 |  
+| WorkManager | 2.9.1 |  
+| Splash Screen | 1.0.1 |  
+
 # Project Structure
 ui: Contains the user interface components, including Fragments and ViewModels.
 
