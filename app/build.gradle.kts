@@ -9,14 +9,14 @@ plugins {
 
 android {
     namespace = "com.mertyigit0.vocabcards"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.mertyigit0.vocabcards"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 16
-        versionName = "2.0.0"
+        targetSdk = 35
+        versionCode = 17
+        versionName = "2.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
