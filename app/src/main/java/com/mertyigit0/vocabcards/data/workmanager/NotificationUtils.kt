@@ -10,7 +10,6 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.mertyigit0.vocabcards.ui.main.MainActivity
-import com.mertyigit0.vocabcards.ui.splash.SplashActivity
 /*
 object NotificationUtils {
 
@@ -45,9 +44,10 @@ object NotificationUtils {
         }
 
         // Uygulama açılması gereken Intent oluştur
-        val intent = Intent(context, SplashActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // Yeni bir görev olarak başlat, eski yığın temizlensin
-        }
+      val intent = Intent(context, MainActivity::class.java).apply {
+    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+}
+
 
         // PendingIntent oluştur
         val pendingIntent: PendingIntent = PendingIntent.getActivity(
