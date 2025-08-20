@@ -2,83 +2,106 @@ package com.mertyigit0.vocabcards.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContextCompat
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
-import com.mertyigit0.vocabcards.R
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import com.mertyigit0.vocabcards.ui.main.MainActivity
+import com.mertyigit0.vocabcards.ui.onboarding.OnboardingPage1
+import com.google.accompanist.pager.HorizontalPager
+import com.google.accompanist.pager.rememberPagerState
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.graphics.Color
+import kotlinx.coroutines.launch
+import androidx.core.content.edit
 
-class OnboardingActivity : AppCompatActivity() {
-
-    private lateinit var viewPager: ViewPager2
-    private lateinit var tabLayout: TabLayout
+class OnboardingActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.d("OnboardingActivity", "onCreate called")
-
-        setupNightMode()
-        setStatusBarColor()
-        if (isOnboardingCompleted()) {
-            navigateToMainActivity()
+        // Onboarding tamamlanmış mı kontrol
+        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
+        if (prefs.getBoolean("isOnboardingCompleted", false)) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
             return
         }
 
-        setContentView(R.layout.activity_onboarding)
-        initializeViews()
-        setupViewPager()
-        setupTabLayout()
+        setContent {
+            MaterialTheme {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    OnboardingPager(
+                        onFinish = {
+                            prefs.edit { putBoolean("isOnboardingCompleted", true) }
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        }
+                    )
+                }
+            }
+        }
     }
+}
 
-    // Gece modunu kapatır
-    private fun setupNightMode() {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+@Composable
+fun OnboardingPager(onFinish: () -> Unit) {
+    val pagerState = rememberPagerState()
+    val scope = rememberCoroutineScope()
+    val totalPages = 3
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        HorizontalPager(
+            count = totalPages,
+            state = pagerState,
+            modifier = Modifier.weight(1f) // Pager alanını doldur
+        ) { page ->
+            when (page) {
+                0 -> OnboardingPage1()
+                1 -> OnboardingPage2()
+                2 -> OnboardingPage3(onFinishClick = { onFinish() })
+            }
+        }
+
+        // Dots
+        DotsIndicator(totalDots = totalPages, selectedIndex = pagerState.currentPage)
+
     }
+}
 
-    // Durum çubuğu rengini ayarlayan fonksiyon
-    private fun setStatusBarColor() {
-        window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
-    }
 
-    // Onboarding işleminin tamamlanıp tamamlanmadığını kontrol eden fonksiyon
-    private fun isOnboardingCompleted(): Boolean {
-        val sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
-        val isCompleted = sharedPreferences.getBoolean("isOnboardingCompleted", false)
-        Log.d("OnboardingActivity", "Onboarding completed: $isCompleted")
-        return isCompleted
-    }
-
-    // MainActivity'ye geçiş yapan fonksiyon
-    private fun navigateToMainActivity() {
-        Log.d("OnboardingActivity", "Onboarding already completed, navigating to MainActivity")
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
-    }
-
-    // View'ları initialize eden fonksiyon
-    private fun initializeViews() {
-        viewPager = findViewById(R.id.viewPager)
-        tabLayout = findViewById(R.id.tabLayout)
-    }
-
-    // ViewPager'ı kuran fonksiyon
-    private fun setupViewPager() {
-        val fragments = listOf(
-            OnboardingFragment1(),
-            OnboardingFragment2(),
-            OnboardingFragment3()
-        )
-        val adapter = OnboardingPagerAdapter(this, fragments)
-        viewPager.adapter = adapter
-    }
-
-    // TabLayout'u ViewPager ile eşleştiren fonksiyon
-    private fun setupTabLayout() {
-        TabLayoutMediator(tabLayout, viewPager) { _, _ -> }.attach()
+@Composable
+fun DotsIndicator(totalDots: Int, selectedIndex: Int) {
+    Row(
+        horizontalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        repeat(totalDots) { index ->
+            Box(
+                modifier = Modifier
+                    .size(if (index == selectedIndex) 16.dp else 12.dp)
+                    .padding(4.dp)
+                    .background(
+                        color = if (index == selectedIndex) Color(0xFFED7A27) else Color.Gray,
+                        shape = androidx.compose.foundation.shape.CircleShape
+                    )
+            )
+        }
     }
 }
