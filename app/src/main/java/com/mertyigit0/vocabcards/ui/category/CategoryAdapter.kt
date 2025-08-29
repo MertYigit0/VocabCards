@@ -90,7 +90,7 @@ class CategoryAdapter(
                     progressBar.visibility = View.GONE // İsteğe bağlı, progress barı gizleyebilirsin
                 } else {
                     // Normal görünüm için eski rengi ayarla
-                    cardView.setCardBackgroundColor(ContextCompat.getColor(itemView.context, R.color.lllorange))
+                    cardView.setCardBackgroundColor(ContextCompat.getColor(itemView.context, R.color.vocabCardColor))
                     progressBar.visibility = View.VISIBLE
                 }
             } else {

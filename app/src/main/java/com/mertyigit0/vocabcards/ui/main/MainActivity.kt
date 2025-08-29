@@ -1,7 +1,7 @@
 package com.mertyigit0.vocabcards.ui.main
 
+//import com.mertyigit0.vocabcards.data.workmanager.SyncDataWorker
 import android.Manifest
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -17,7 +17,6 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -26,7 +25,6 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.mertyigit0.vocabcards.MyApplication
 import com.mertyigit0.vocabcards.R
-//import com.mertyigit0.vocabcards.data.workmanager.SyncDataWorker
 import com.mertyigit0.vocabcards.databinding.ActivityMainBinding
 import com.mertyigit0.vocabcards.ui.onboarding.OnboardingActivity
 import kotlinx.coroutines.flow.first
@@ -75,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupUI() {
-        window.statusBarColor = ContextCompat.getColor(this, R.color.lightorange)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.toolbarColor)
 
         // DataStore'dan dil tercihini oku
         val languageCode = runBlocking {

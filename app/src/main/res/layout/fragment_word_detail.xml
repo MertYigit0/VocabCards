@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    app:cardBackgroundColor="@color/lllorange"
+                    app:cardBackgroundColor="@color/vocabCardColor"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp">
 

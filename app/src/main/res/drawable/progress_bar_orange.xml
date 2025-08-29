@@ -4,14 +4,14 @@
     <item android:id="@android:id/background">
         <shape>
             <corners android:radius="5dp" />
-            <solid android:color="@color/light_gray" />
+            <solid android:color="@color/progressBarBackground" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
         <clip>
             <shape>
                 <corners android:radius="5dp" />
-                <solid android:color="@color/turuncu" /> <!-- Turuncu rengini burada ayarlıyoruz -->
+                <solid android:color="@color/progressBarFill" /> <!-- Turuncu rengini burada ayarlıyoruz -->
             </shape>
         </clip>
     </item>
