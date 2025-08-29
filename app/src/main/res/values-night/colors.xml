@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_colorPrimary">#90A9D9</color>
-    <color name="dark_colorOnPrimary">#0D1B2E</color>
-    <color name="dark_colorPrimaryContainer">#314768</color>
-    <color name="dark_colorOnPrimaryContainer">#DEE6F7</color>
+    <!-- Temel renkler -->
+    <color name="black">#FF000000</color>
+    <color name="white">#1C222E</color> <!-- Dark mode için white yerine bu -->
 
-    <color name="dark_colorSecondary">#A7B4C4</color>
-    <color name="dark_colorOnSecondary">#1A252F</color>
-    <color name="dark_colorSecondaryContainer">#3D4B5C</color>
-    <color name="dark_colorOnSecondaryContainer">#E2E9F1</color>
+    <!-- Tema renkleri (dokunma) -->
+    <color name="colorPrimary">#69d2e7</color>
+    <color name="colorPrimaryLight">#a7dbd8</color>
+    <color name="colorAccent">#e0e4cc</color>
 
-    <color name="dark_colorBackground">#161C26</color>
-    <color name="dark_colorOnBackground">#E4E6EB</color>
-    <color name="dark_colorSurface">#1D232E</color>
-    <color name="dark_colorOnSurface">#E4E6EB</color>
-    <color name="dark_colorSurfaceVariant">#3E495A</color>
-    <color name="dark_colorOnSurfaceVariant">#C8D0DA</color>
+    <!-- Toolbar / Navigation -->
+    <color name="navBarColor">#91a9d9</color> <!-- Nav bar genelde sabit, dokunmadım -->
+    <color name="toolbarColor">#91A9D9</color> <!-- Dark mode toolbar -->
+
+    <!-- Vocabulary Cards -->
+    <color name="vocabCardColor">#252D3A</color> <!-- Dark mode card arka planı -->
+
+    <!-- Progress bar -->
+    <color name="progressBarBackground">#F3F3F3</color> <!-- Dolmamış progress -->
+    <color name="progressBarFill">#1C222E</color>       <!-- Dolu progress -->
+
+    <!-- Extra Orange -->
+    <color name="secondaryOrange">#91a9d9</color>
 </resources>
