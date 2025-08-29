@@ -4,12 +4,12 @@ package com.mertyigit0.vocabcards.ui.worddetail
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -125,13 +125,13 @@ class WordDetailFragment : Fragment() {
 
     // Yükleme durumunu gösteren fonksiyon
     private fun showLoadingState() {
-        binding.loadingContainer.visibility = View.VISIBLE
+        binding.progressBar.visibility = View.VISIBLE
         binding.contentContainer.visibility = View.GONE
     }
 
     // Yükleme durumunu gizleyen fonksiyon
     private fun hideLoadingState() {
-        binding.loadingContainer.visibility = View.GONE
+        binding.progressBar.visibility = View.GONE
         binding.contentContainer.visibility = View.VISIBLE
     }
 
