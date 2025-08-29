@@ -23,6 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mertyigit0.hotelreservation.ui.theme.LightOrange
 import com.mertyigit0.vocabcards.R
 
 @Composable
@@ -67,7 +68,7 @@ fun OnboardingPage3(onFinishClick: () -> Unit) {
                 .fillMaxWidth()
                 .padding(top = 80.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFED7A27) // XML’deki arka plan rengi
+                containerColor = LightOrange// XML’deki arka plan rengi
             )
             // Compose 3 Material renkleri kullanıyoruz
         ) {

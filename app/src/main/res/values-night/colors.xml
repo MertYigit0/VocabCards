@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Dark mode için renkler -->
-    <color name="black">#FFFFFFFF</color> <!-- Beyaz metin koyu arka plan için -->
-    <color name="white">#FF121212</color> <!-- Koyu arka plan -->
-    <color name="colorPrimary">#80DEEA</color> <!-- Hafif daha koyu tonlar, göz yormayan pastel mavi -->
-    <color name="colorPrimaryLight">#4DD0E1</color> <!-- Biraz daha koyu mavi, light moddaki gibi parlak değil -->
-    <color name="colorAccent">#A8D5BA</color> <!-- Daha pastel, koyu yeşilimsi accent rengi -->
-    <color name="lightorange">#F57C00</color> <!-- Parlak portakal tonlarını hafif koyu tuttuk -->
-    <color name="orange">#FF8A00</color> <!-- Doygun, parlak turuncu -->
-    <color name="llorange">#FFAB40</color> <!-- Hafif daha yumuşak tonlar -->
-    <color name="lllorange">#FFE0B2</color> <!-- Yumuşak ve pastel turuncu alt ton -->
+    <color name="dark_colorPrimary">#90A9D9</color>
+    <color name="dark_colorOnPrimary">#0D1B2E</color>
+    <color name="dark_colorPrimaryContainer">#314768</color>
+    <color name="dark_colorOnPrimaryContainer">#DEE6F7</color>
+
+    <color name="dark_colorSecondary">#A7B4C4</color>
+    <color name="dark_colorOnSecondary">#1A252F</color>
+    <color name="dark_colorSecondaryContainer">#3D4B5C</color>
+    <color name="dark_colorOnSecondaryContainer">#E2E9F1</color>
+
+    <color name="dark_colorBackground">#161C26</color>
+    <color name="dark_colorOnBackground">#E4E6EB</color>
+    <color name="dark_colorSurface">#1D232E</color>
+    <color name="dark_colorOnSurface">#E4E6EB</color>
+    <color name="dark_colorSurfaceVariant">#3E495A</color>
+    <color name="dark_colorOnSurfaceVariant">#C8D0DA</color>
 </resources>
